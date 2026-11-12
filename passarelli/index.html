@@ -1,0 +1,1611 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Passarelli Burger | Hambúrguer Artesanal em Mococa - SP</title>
+  <meta name="description" content="Passarelli Burger — hamburgueria em Mococa, SP. Burgers artesanais no ponto, feitos para conquistar na primeira mordida. Peça pelo WhatsApp e receba em casa.">
+  <meta name="theme-color" content="#0c0908">
+  <!-- DEMO PRIVADA: fora do Google, fora de IAs e sem renderização por bots.
+       Remover esta linha (e o robots.txt) quando o site for publicado de verdade. -->
+  <meta name="robots" content="noindex, nofollow, noimageindex">
+  <meta name="googlebot" content="noindex, nofollow, noimageindex">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Passarelli Burger">
+  <meta property="og:locale" content="pt_BR">
+  <!-- EDITÁVEL: substitua pela URL definitiva quando o site for publicado -->
+  <!-- <meta property="og:url" content="https://www.passarelliburger.com.br/"> -->
+  <meta property="og:title" content="Passarelli Burger | Hambúrguer Artesanal em Mococa - SP">
+  <meta property="og:description" content="Seu próximo burger favorito está aqui. Peça pelo WhatsApp e conquiste-se na primeira mordida.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1553979459-d2229ba7433b?q=80&w=1200&auto=format&fit=crop">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicon provisório (SVG embutido — substitua pelo oficial quando houver) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230c0908'/%3E%3Cpath d='M14 25c0-8 8-13 18-13s18 5 18 13v1H14v-1z' fill='%23ff5d24'/%3E%3Crect x='12' y='30' width='40' height='7' rx='3.5' fill='%23ffb25e'/%3E%3Cpath d='M14 41h36c0 6-5 9-11 9H25c-6 0-11-3-11-9z' fill='%23ff5d24'/%3E%3C/svg%3E">
+
+  <!-- Fontes: Archivo (display expandido + texto) e Space Mono (preços / etiquetas) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preconnect" href="https://takeat-imgs.takeat.app" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <!--
+    ============================================================
+    DADOS ESTRUTURADOS (Schema.org)
+    ATENÇÃO: endereço, telefone e horários são PROVISÓRIOS,
+    coletados em diretórios públicos, e precisam de validação
+    junto ao estabelecimento antes da publicação oficial.
+    ============================================================
+  -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Passarelli Burger",
+    "description": "Hamburgueria artesanal em Mococa, SP. Burgers no ponto, pedidos pelo WhatsApp.",
+    "servesCuisine": ["Hambúrguer", "Fast food"],
+    "priceRange": "$$",
+    "telephone": "+55-19-99884-3444",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua Paschoal Raniere Mazili — Jardim Santa Cecília",
+      "addressLocality": "Mococa",
+      "addressRegion": "SP",
+      "addressCountry": "BR"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "18:30",
+      "closes": "22:30"
+    }
+  }
+  </script>
+
+  <style>
+    /* ==========================================================
+       PASSARELLI BURGER — "Brasa & Letra"
+       Identidade: preto quente de churrasqueira, gradiente de
+       brasa, display expandido (Archivo wdth 125) e Space Mono
+       para preços/etiquetas (clima de prancheta de lanchonete).
+       ========================================================== */
+
+    :root {
+      --bg:        #0c0908;
+      --bg-2:      #120e0c;
+      --surface:   #171211;
+      --surface-2: #1f1815;
+      --line:      rgba(255, 224, 200, .10);
+      --line-soft: rgba(255, 224, 200, .06);
+      --text:      #f4ece4;
+      --muted:     #b3a59a;
+      --muted-2:   #8a7d72;
+      --accent:    #ff5d24;
+      --accent-2:  #ffb25e;
+      --accent-deep: #c63d12;
+      --ember: linear-gradient(100deg, #ffb25e 0%, #ff5d24 45%, #c63d12 100%);
+      --ink-on-accent: #1a0e08;
+      --radius: 14px;
+      --radius-sm: 10px;
+      --header-h: 76px;
+      --font-display: "Archivo", "Arial Black", sans-serif;
+      --font-body: "Archivo", "Helvetica Neue", Arial, sans-serif;
+      --font-mono: "Space Mono", "Courier New", monospace;
+      --ease: cubic-bezier(.22, .61, .21, 1);
+    }
+
+    /* ---------- Reset / base ---------- */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: 1rem;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    body.no-scroll { overflow: hidden; }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; }
+    ::selection { background: var(--accent); color: var(--ink-on-accent); }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+
+    h1, h2, h3 {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-stretch: 118%;
+      text-transform: uppercase;
+      line-height: .98;
+      letter-spacing: -.005em;
+      margin: 0;
+      text-wrap: balance;
+    }
+    p { margin: 0; }
+
+    .skip-link {
+      position: absolute; left: 16px; top: -60px; z-index: 100;
+      background: var(--accent); color: var(--ink-on-accent);
+      font: 700 .85rem var(--font-body); padding: 10px 18px; border-radius: var(--radius-sm);
+      text-decoration: none; transition: top .2s var(--ease);
+    }
+    .skip-link:focus { top: 12px; }
+
+    .container { width: min(1180px, 100% - 48px); margin-inline: auto; }
+    .section { padding-block: clamp(72px, 9vw, 120px); position: relative; scroll-margin-top: calc(var(--header-h) + 8px); }
+
+    /* Etiqueta superior das seções (prancheta) */
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      font: 700 .78rem/1 var(--font-mono);
+      letter-spacing: .22em; text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 18px;
+    }
+    .eyebrow::before { content: ""; width: 26px; height: 2px; background: var(--ember); border-radius: 2px; }
+
+    .section-head { max-width: 720px; margin-bottom: clamp(36px, 5vw, 56px); }
+    .section-title { font-size: clamp(2.1rem, 5vw, 3.6rem); }
+    .section-title em {
+      font-style: normal;
+      background: var(--ember);
+      -webkit-background-clip: text; background-clip: text;
+      color: transparent;
+    }
+    .section-sub { color: var(--muted); margin-top: 18px; font-size: 1.05rem; max-width: 56ch; }
+
+    /* ---------- Botões ---------- */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      min-height: 54px; padding: 0 26px;
+      border-radius: 12px; border: 1px solid transparent;
+      font: 800 .92rem/1 var(--font-display); font-stretch: 108%;
+      letter-spacing: .09em; text-transform: uppercase;
+      text-decoration: none; cursor: pointer; white-space: nowrap;
+      transition: transform .2s var(--ease), box-shadow .25s var(--ease),
+                  background-color .2s var(--ease), border-color .2s var(--ease), color .2s var(--ease);
+    }
+    .btn svg { width: 18px; height: 18px; flex: none; }
+    .btn-primary { background: var(--ember); color: var(--ink-on-accent); box-shadow: 0 10px 32px -12px rgba(255, 93, 36, .55); }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 16px 40px -12px rgba(255, 93, 36, .7); }
+    .btn-primary:active { transform: translateY(0) scale(.98); }
+    .btn-ghost { background: transparent; color: var(--text); border-color: var(--line); }
+    .btn-ghost:hover { border-color: var(--accent); color: var(--accent-2); transform: translateY(-2px); }
+    .btn-ghost:active { transform: translateY(0) scale(.98); }
+    .btn-sm { min-height: 44px; padding: 0 18px; font-size: .78rem; }
+
+    /* ---------- Header ---------- */
+    .header {
+      position: fixed; inset-inline: 0; top: 0; z-index: 60;
+      transition: background-color .3s var(--ease), border-color .3s var(--ease), box-shadow .3s var(--ease);
+      border-bottom: 1px solid transparent;
+    }
+    .header.is-scrolled {
+      background: rgba(12, 9, 8, .88);
+      -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
+      border-color: var(--line-soft);
+      box-shadow: 0 12px 40px -20px rgba(0, 0, 0, .8);
+    }
+    .header-inner { display: flex; align-items: center; gap: 28px; height: var(--header-h); }
+
+    .logo { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; }
+    .logo-mark { width: 38px; height: 38px; flex: none; }
+    .logo-text { display: flex; flex-direction: column; line-height: 1; }
+    .logo-name {
+      font: 900 1.06rem var(--font-display); font-stretch: 125%;
+      text-transform: uppercase; letter-spacing: .01em;
+    }
+    .logo-tag {
+      font: 700 .58rem var(--font-mono);
+      letter-spacing: .42em; text-transform: uppercase;
+      color: var(--accent); margin-top: 4px;
+    }
+
+    .nav { margin-left: auto; }
+    .nav-list { display: flex; gap: clamp(18px, 2.6vw, 36px); list-style: none; margin: 0; padding: 0; }
+    .nav-link {
+      position: relative; text-decoration: none;
+      font: 700 .82rem/1 var(--font-body);
+      letter-spacing: .14em; text-transform: uppercase;
+      color: var(--muted); padding: 8px 0;
+      transition: color .2s var(--ease);
+    }
+    .nav-link::after {
+      content: ""; position: absolute; left: 0; bottom: 0;
+      width: 100%; height: 2px; border-radius: 2px;
+      background: var(--ember);
+      transform: scaleX(0); transform-origin: left;
+      transition: transform .25s var(--ease);
+    }
+    .nav-link:hover, .nav-link.is-active { color: var(--text); }
+    .nav-link:hover::after, .nav-link.is-active::after { transform: scaleX(1); }
+    .header-cta { margin-left: 6px; }
+
+    /* Botão hambúrguer */
+    .menu-toggle {
+      display: none; margin-left: auto;
+      width: 48px; height: 48px; border-radius: var(--radius-sm);
+      background: transparent; border: 1px solid var(--line); cursor: pointer;
+      position: relative;
+    }
+    .menu-toggle span {
+      position: absolute; left: 13px; right: 13px; height: 2px; border-radius: 2px;
+      background: var(--text); transition: transform .28s var(--ease), opacity .2s var(--ease), top .28s var(--ease);
+    }
+    .menu-toggle span:nth-child(1) { top: 17px; }
+    .menu-toggle span:nth-child(2) { top: 23px; }
+    .menu-toggle span:nth-child(3) { top: 29px; }
+    .menu-toggle[aria-expanded="true"] span:nth-child(1) { top: 23px; transform: rotate(45deg); }
+    .menu-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+    .menu-toggle[aria-expanded="true"] span:nth-child(3) { top: 23px; transform: rotate(-45deg); }
+
+    /* Menu mobile */
+    .mobile-menu {
+      position: fixed; inset: 0; z-index: 50;
+      background: rgba(12, 9, 8, .97);
+      -webkit-backdrop-filter: blur(18px); backdrop-filter: blur(18px);
+      display: flex; flex-direction: column; justify-content: center;
+      padding: calc(var(--header-h) + 24px) 28px 40px;
+      opacity: 0; visibility: hidden; transform: translateY(-12px);
+      transition: opacity .3s var(--ease), transform .3s var(--ease), visibility .3s;
+    }
+    .mobile-menu.is-open { opacity: 1; visibility: visible; transform: translateY(0); }
+    .mobile-menu-list { list-style: none; margin: 0 0 36px; padding: 0; display: flex; flex-direction: column; }
+    .mobile-menu-list a {
+      display: block; padding: 16px 4px;
+      font: 900 clamp(1.9rem, 8vw, 2.6rem) var(--font-display); font-stretch: 122%;
+      text-transform: uppercase; text-decoration: none; color: var(--text);
+      border-bottom: 1px solid var(--line-soft);
+      transition: color .2s var(--ease), padding-left .2s var(--ease);
+    }
+    .mobile-menu-list a:hover { color: var(--accent); padding-left: 12px; }
+    .mobile-menu-cta { display: grid; gap: 14px; }
+    .mobile-menu-note { margin-top: 22px; font: 400 .8rem/1.6 var(--font-mono); color: var(--muted-2); }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      position: relative; min-height: 100svh;
+      display: flex; align-items: center;
+      padding-top: calc(var(--header-h) + 24px); padding-bottom: 110px;
+      overflow: hidden;
+      background:
+        radial-gradient(52% 44% at 78% 40%, rgba(255, 93, 36, .12), transparent 70%),
+        radial-gradient(40% 36% at 12% 88%, rgba(198, 61, 18, .10), transparent 70%),
+        var(--bg);
+    }
+    .hero-grid {
+      display: grid; grid-template-columns: 1.12fr .88fr;
+      gap: clamp(36px, 5vw, 72px); align-items: center;
+    }
+    .hero-grid > *, .about-grid > *, .contact-grid > *, .menu-top > * { min-width: 0; }
+    .hero-title { font-size: clamp(2.7rem, 6.6vw, 4.9rem); }
+    .hero-title .line { display: block; }
+    .hero-title .word-ember {
+      background: linear-gradient(100deg, #ffb25e, #ff5d24 30%, #ffd9a8 50%, #c63d12 72%, #ff5d24);
+      background-size: 260% 100%;
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+      filter: drop-shadow(0 0 22px rgba(255, 93, 36, .35));
+      animation: ember-shift 7s var(--ease) infinite alternate;
+    }
+    @keyframes ember-shift {
+      0%   { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+    .hero-sub { color: var(--muted); font-size: clamp(1rem, 1.6vw, 1.18rem); max-width: 44ch; margin-top: 26px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 36px; }
+    .hero-info {
+      display: flex; flex-wrap: wrap; align-items: center; gap: 10px 22px;
+      margin-top: 34px; font: 400 .82rem/1.5 var(--font-mono); color: var(--muted-2);
+    }
+    .hero-info .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 12px rgba(255, 93, 36, .8); flex: none; }
+
+    .hero-visual { position: relative; justify-self: center; }
+    .hero-figure { position: relative; width: min(440px, 82vw); aspect-ratio: 4 / 4.6; }
+    .hero-figure::before {
+      content: ""; position: absolute; inset: -11%;
+      background: radial-gradient(46% 42% at 50% 52%, rgba(255, 93, 36, .4), transparent 72%);
+      filter: blur(30px); z-index: 0;
+      animation: glow-pulse 5.5s ease-in-out infinite alternate;
+    }
+    @keyframes glow-pulse { from { opacity: .55; } to { opacity: 1; } }
+    .hero-figure img {
+      position: relative; z-index: 1;
+      width: 100%; height: 100%; object-fit: cover;
+      border-radius: 22px;
+      border: 1px solid rgba(255, 178, 94, .22);
+      box-shadow: 0 40px 90px -30px rgba(0, 0, 0, .9);
+    }
+    .hero-figure::after {
+      content: ""; position: absolute; z-index: 2; inset: 0;
+      border-radius: 22px; border: 1px solid rgba(255, 178, 94, .16);
+      transform: translate(16px, 16px); pointer-events: none;
+      background:
+        linear-gradient(180deg, rgba(198, 61, 18, .18), transparent 40%),
+        linear-gradient(160deg, rgba(255, 93, 36, .1), transparent 45%);
+    }
+    .chip {
+      position: absolute; z-index: 3;
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(18, 14, 12, .82);
+      -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+      border: 1px solid var(--line); border-radius: 12px;
+      padding: 10px 14px;
+      font: 700 .72rem/1 var(--font-mono); letter-spacing: .12em; text-transform: uppercase;
+      color: var(--accent-2);
+      box-shadow: 0 14px 30px -14px rgba(0, 0, 0, .9);
+    }
+    .chip svg { width: 15px; height: 15px; color: var(--accent); }
+    .chip-1 { top: 8%; left: -14%; animation: chip-float 6s ease-in-out infinite alternate; }
+    .chip-2 { bottom: 10%; right: -12%; animation: chip-float 7s .6s ease-in-out infinite alternate; }
+    @keyframes chip-float { from { transform: translateY(-6px); } to { transform: translateY(8px); } }
+
+    .hero-scroll-hint {
+      position: absolute; left: 50%; bottom: 18px; transform: translateX(-50%);
+      font: 400 .68rem var(--font-mono); letter-spacing: .3em; text-transform: uppercase;
+      color: var(--muted-2); display: flex; flex-direction: column; align-items: center; gap: 8px;
+    }
+    .hero-scroll-hint::after {
+      content: ""; width: 1px; height: 34px;
+      background: linear-gradient(to bottom, var(--accent), transparent);
+      animation: hint-drop 1.8s var(--ease) infinite;
+    }
+    @keyframes hint-drop { from { transform: scaleY(0); transform-origin: top; } 55% { transform: scaleY(1); } to { transform: scaleY(1); opacity: 0; } }
+
+    /* ---------- Letreiro rolante ---------- */
+    .marquee {
+      overflow: hidden; background: var(--bg-2);
+      border-block: 1px solid var(--line-soft);
+      padding-block: 18px; position: relative;
+    }
+    .marquee-track { display: flex; width: max-content; animation: marquee 30s linear infinite; }
+    .marquee:hover .marquee-track { animation-play-state: paused; }
+    .marquee-list { display: flex; align-items: center; gap: 34px; margin: 0; padding: 0 17px; list-style: none; }
+    .marquee-list li {
+      display: flex; align-items: center; gap: 34px;
+      font: 900 1.05rem var(--font-display); font-stretch: 125%;
+      letter-spacing: .12em; text-transform: uppercase; white-space: nowrap;
+      color: rgba(244, 236, 228, .8);
+    }
+    .marquee-list li::after { content: "✦"; color: var(--accent); font-size: .8rem; }
+    @keyframes marquee { to { transform: translateX(-50%); } }
+
+    /* ---------- Sobre / Nossa história ---------- */
+    .about-grid {
+      display: grid; grid-template-columns: .95fr 1.05fr;
+      gap: clamp(36px, 6vw, 84px); align-items: center;
+    }
+    .about-media { position: relative; }
+    .about-media img { border-radius: 18px; border: 1px solid var(--line); object-fit: cover; }
+    .about-img-main { width: 86%; aspect-ratio: 4 / 4.4; }
+    .about-img-prep {
+      position: absolute; right: 0; bottom: -9%;
+      width: 52%; aspect-ratio: 1 / 1;
+      box-shadow: 0 30px 60px -24px rgba(0, 0, 0, .9);
+      border-color: rgba(255, 178, 94, .25);
+    }
+    .about-badge {
+      position: absolute; top: -20px; right: 4%;
+      background: var(--ember); color: var(--ink-on-accent);
+      border-radius: 12px; padding: 14px 18px;
+      font: 900 .82rem/1.25 var(--font-display); font-stretch: 115%;
+      letter-spacing: .06em; text-transform: uppercase;
+      box-shadow: 0 18px 40px -16px rgba(255, 93, 36, .6);
+    }
+    .about-copy .section-sub { margin-top: 20px; }
+    .about-quote {
+      margin-top: 30px; padding: 22px 26px;
+      border-left: 3px solid var(--accent);
+      background: var(--surface); border-radius: 0 var(--radius) var(--radius) 0;
+      font-size: 1.06rem; color: var(--text);
+    }
+    .about-quote strong { color: var(--accent-2); }
+    .about-points { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+    .about-points span {
+      font: 700 .74rem var(--font-mono); letter-spacing: .14em; text-transform: uppercase;
+      color: var(--muted); border: 1px solid var(--line); border-radius: 999px;
+      padding: 9px 16px;
+    }
+
+    /* ---------- Cardápio ---------- */
+    .menu-section { background: var(--bg-2); border-block: 1px solid var(--line-soft); }
+    .menu-top { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 20px 36px; margin-bottom: 34px; }
+    .menu-top .section-head { margin-bottom: 0; flex: 1 1 420px; }
+
+    .menu-tabs { display: flex; flex-wrap: wrap; gap: 10px; }
+    .menu-tab {
+      border: 1px solid var(--line); background: transparent; color: var(--muted);
+      border-radius: 12px; padding: 12px 20px; cursor: pointer;
+      font: 800 .82rem/1 var(--font-display); font-stretch: 110%;
+      letter-spacing: .1em; text-transform: uppercase;
+      transition: color .2s var(--ease), border-color .2s var(--ease), background-color .2s var(--ease);
+    }
+    .menu-tab:hover { color: var(--text); border-color: rgba(255, 178, 94, .35); }
+    .menu-tab[aria-selected="true"] {
+      background: var(--ember); border-color: transparent; color: var(--ink-on-accent);
+      box-shadow: 0 10px 26px -12px rgba(255, 93, 36, .6);
+    }
+
+    .menu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .menu-group { display: none; }
+    .menu-group.is-active { display: grid; grid-template-columns: subgrid; grid-column: 1 / -1; }
+    .menu-card {
+      display: flex; flex-direction: column;
+      background: var(--surface); border: 1px solid var(--line-soft); border-radius: var(--radius);
+      overflow: hidden;
+      transition: transform .3s var(--ease), border-color .3s var(--ease), box-shadow .3s var(--ease);
+    }
+    .menu-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(255, 178, 94, .32);
+      box-shadow: 0 30px 60px -30px rgba(0, 0, 0, .85);
+    }
+    .menu-card-media { position: relative; aspect-ratio: 16 / 11; overflow: hidden; }
+    .menu-card-media img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform .5s var(--ease);
+    }
+    .menu-card:hover .menu-card-media img { transform: scale(1.06); }
+    .menu-card-media::after {
+      content: ""; position: absolute; inset: 40% 0 0;
+      background: linear-gradient(to top, var(--surface), transparent);
+      pointer-events: none;
+    }
+    .menu-tag {
+      position: absolute; top: 14px; left: 14px; z-index: 1;
+      background: var(--ember); color: var(--ink-on-accent);
+      font: 700 .66rem/1 var(--font-mono); letter-spacing: .16em; text-transform: uppercase;
+      padding: 8px 12px; border-radius: 8px;
+    }
+    .menu-card-body { display: flex; flex-direction: column; flex: 1; padding: 20px 22px 22px; }
+    .menu-card-title-row { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; }
+    .menu-card-name { font-size: 1.22rem; font-stretch: 112%; letter-spacing: .01em; }
+    .menu-card-price { font: 700 1.02rem var(--font-mono); color: var(--accent); white-space: nowrap; }
+    .menu-card-price.is-tbd { color: var(--muted-2); font-weight: 400; }
+    .menu-card-desc { color: var(--muted); font-size: .93rem; line-height: 1.65; margin-top: 10px; flex: 1; }
+    .menu-card-order {
+      margin-top: 18px; align-self: flex-start;
+      display: inline-flex; align-items: center; gap: 9px;
+      border: 1px solid rgba(255, 178, 94, .4); border-radius: 10px;
+      background: transparent; color: var(--accent-2); cursor: pointer;
+      padding: 11px 16px;
+      font: 700 .74rem/1 var(--font-body); letter-spacing: .1em; text-transform: uppercase;
+      transition: background-color .2s var(--ease), color .2s var(--ease), border-color .2s var(--ease), transform .2s var(--ease);
+    }
+    .menu-card-order svg { width: 16px; height: 16px; }
+    .menu-card-order:hover { background: var(--accent); border-color: var(--accent); color: var(--ink-on-accent); transform: translateY(-2px); }
+    .menu-card-order:active { transform: translateY(0) scale(.97); }
+
+    .menu-note { margin-top: 26px; font: 400 .8rem/1.6 var(--font-mono); color: var(--muted-2); }
+    .menu-note a { color: var(--accent-2); }
+
+    /* ---------- Diferenciais ---------- */
+    .features-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .feature {
+      background: var(--surface); border: 1px solid var(--line-soft); border-radius: var(--radius);
+      padding: 30px 26px;
+      transition: transform .3s var(--ease), border-color .3s var(--ease);
+    }
+    .feature:hover { transform: translateY(-5px); border-color: rgba(255, 178, 94, .3); }
+    .feature-icon {
+      width: 52px; height: 52px; border-radius: 12px;
+      display: grid; place-items: center;
+      background: rgba(255, 93, 36, .1); border: 1px solid rgba(255, 178, 94, .22);
+      color: var(--accent); margin-bottom: 20px;
+    }
+    .feature-icon svg { width: 24px; height: 24px; }
+    .feature h3 { font-size: 1.08rem; font-stretch: 112%; }
+    .feature p { color: var(--muted); font-size: .92rem; margin-top: 10px; }
+
+    /* ---------- Galeria ---------- */
+    .gallery-section { padding-top: 0; }
+    .gallery-grid {
+      display: grid; grid-template-columns: repeat(6, 1fr);
+      grid-auto-rows: clamp(140px, 18vw, 240px); gap: 14px;
+    }
+    .g-item { position: relative; overflow: hidden; border-radius: var(--radius); border: 1px solid var(--line-soft); }
+    .g-item img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform .6s var(--ease), filter .6s var(--ease);
+    }
+    .g-item:hover img { transform: scale(1.07); filter: brightness(1.1); }
+    .g-item figcaption {
+      position: absolute; inset-inline: 0; bottom: 0; z-index: 1;
+      padding: 40px 18px 14px;
+      background: linear-gradient(to top, rgba(12, 9, 8, .85), transparent);
+      font: 700 .72rem var(--font-mono); letter-spacing: .16em; text-transform: uppercase;
+      color: var(--accent-2);
+      opacity: 0; transform: translateY(8px);
+      transition: opacity .3s var(--ease), transform .3s var(--ease);
+    }
+    .g-item:hover figcaption { opacity: 1; transform: translateY(0); }
+    .g-item--a { grid-column: span 3; grid-row: span 2; }
+    .g-item--b { grid-column: span 3; }
+    .g-item--c { grid-column: span 3; }
+    .g-item--d { grid-column: span 3; }
+    .g-item--e { grid-column: span 3; }
+
+    /* ---------- Chamada comercial ---------- */
+    .cta {
+      position: relative; overflow: hidden; text-align: center;
+      padding-block: clamp(90px, 12vw, 150px);
+      background: var(--bg-2);
+      border-block: 1px solid var(--line-soft);
+      isolation: isolate;
+    }
+    .cta-bg {
+      position: absolute; inset: 0; z-index: -1;
+      background-image: var(--cta-img);
+      background-size: cover; background-position: center 30%;
+      opacity: .16; filter: saturate(1.15);
+    }
+    .cta::before {
+      content: ""; position: absolute; inset: 0; z-index: -1;
+      background:
+        radial-gradient(60% 70% at 50% 30%, rgba(255, 93, 36, .16), transparent 72%),
+        linear-gradient(to bottom, var(--bg-2) 0%, transparent 30%, transparent 70%, var(--bg-2) 100%);
+    }
+    .cta-title { font-size: clamp(2.6rem, 7vw, 5rem); }
+    .cta-sub { color: var(--muted); font-size: 1.12rem; margin: 20px auto 0; max-width: 44ch; }
+    .cta .btn { margin-top: 38px; min-height: 62px; padding: 0 40px; font-size: 1rem; }
+    .cta-note { margin-top: 18px; font: 400 .8rem var(--font-mono); color: var(--muted-2); letter-spacing: .08em; }
+
+    /* ---------- Contato / Localização ---------- */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(28px, 4vw, 56px); align-items: stretch; }
+    .contact-card {
+      background: var(--surface); border: 1px solid var(--line-soft); border-radius: var(--radius);
+      padding: clamp(26px, 3.4vw, 40px);
+      display: flex; flex-direction: column;
+    }
+    .contact-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 22px; }
+    .contact-item { display: flex; gap: 16px; align-items: flex-start; }
+    .contact-item-icon {
+      width: 44px; height: 44px; flex: none; border-radius: 12px;
+      display: grid; place-items: center;
+      background: rgba(255, 93, 36, .1); border: 1px solid rgba(255, 178, 94, .22);
+      color: var(--accent);
+    }
+    .contact-item-icon svg { width: 20px; height: 20px; }
+    .contact-item h3 { font-size: .98rem; font-stretch: 110%; letter-spacing: .06em; }
+    .contact-item p { color: var(--muted); font-size: .94rem; margin-top: 5px; }
+    .contact-item a { color: var(--muted); text-decoration: none; border-bottom: 1px solid transparent; transition: color .2s, border-color .2s; }
+    .contact-item a:hover { color: var(--accent-2); border-color: var(--accent-2); }
+    .contact-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: auto; padding-top: 30px; }
+    .map-wrap {
+      position: relative; border-radius: var(--radius); overflow: hidden;
+      border: 1px solid var(--line); min-height: 380px;
+      background: var(--surface-2);
+    }
+    .map-wrap iframe {
+      position: absolute; inset: 0; width: 100%; height: 100%; border: 0;
+      filter: grayscale(1) invert(.9) hue-rotate(180deg) contrast(.92) brightness(.9);
+    }
+
+    /* ---------- Footer ---------- */
+    .footer { background: #0a0706; border-top: 1px solid var(--line-soft); padding-top: clamp(56px, 7vw, 80px); }
+    .footer-grid {
+      display: grid; grid-template-columns: 1.4fr 1fr 1fr;
+      gap: clamp(32px, 5vw, 64px); padding-bottom: 48px;
+    }
+    .footer-brand p { color: var(--muted-2); font-size: .94rem; margin-top: 18px; max-width: 34ch; }
+    .footer h3 { font: 700 .76rem var(--font-mono); letter-spacing: .22em; text-transform: uppercase; color: var(--accent); margin-bottom: 18px; }
+    .footer-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+    .footer-list a {
+      text-decoration: none; color: var(--muted); font-size: .94rem;
+      display: inline-flex; align-items: center; gap: 10px;
+      transition: color .2s var(--ease);
+    }
+    .footer-list a:hover { color: var(--accent-2); }
+    .footer-list svg { width: 16px; height: 16px; color: var(--accent); flex: none; }
+    .footer-bottom {
+      border-top: 1px solid var(--line-soft);
+      padding-block: 22px;
+      display: flex; flex-wrap: wrap; gap: 10px 24px; align-items: center; justify-content: space-between;
+      font: 400 .78rem var(--font-mono); color: var(--muted-2);
+    }
+    .footer-bottom a { color: var(--muted); text-decoration: none; }
+    .footer-bottom a:hover { color: var(--accent-2); }
+
+    /* ---------- Botão flutuante WhatsApp ---------- */
+    .wa-float {
+      position: fixed; right: 22px; bottom: 22px; z-index: 70;
+      width: 58px; height: 58px; border-radius: 50%;
+      display: grid; place-items: center;
+      background: var(--ember); color: var(--ink-on-accent);
+      box-shadow: 0 16px 38px -12px rgba(255, 93, 36, .65);
+      transition: transform .25s var(--ease), box-shadow .25s var(--ease);
+    }
+    .wa-float svg { width: 27px; height: 27px; }
+    .wa-float:hover { transform: translateY(-4px) scale(1.05); box-shadow: 0 22px 44px -12px rgba(255, 93, 36, .8); }
+    .wa-float::before {
+      content: ""; position: absolute; inset: 0; border-radius: 50%;
+      border: 2px solid rgba(255, 93, 36, .55);
+      animation: wa-ring 2.6s var(--ease) infinite;
+    }
+    @keyframes wa-ring {
+      from { transform: scale(1); opacity: .9; }
+      to   { transform: scale(1.55); opacity: 0; }
+    }
+
+    /* ---------- Textura de grão ---------- */
+    .grain {
+      position: fixed; inset: 0; z-index: 80; pointer-events: none;
+      opacity: .05; mix-blend-mode: overlay;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+    }
+
+    /* ---------- Animações de entrada ---------- */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s var(--ease), transform .7s var(--ease); transition-delay: var(--d, 0s); }
+    .reveal.is-in { opacity: 1; transform: translateY(0); }
+    .menu-group.is-active .menu-card { animation: card-in .55s var(--ease) both; }
+    .menu-group.is-active .menu-card:nth-child(2) { animation-delay: .06s; }
+    .menu-group.is-active .menu-card:nth-child(3) { animation-delay: .12s; }
+    .menu-group.is-active .menu-card:nth-child(4) { animation-delay: .18s; }
+    .menu-group.is-active .menu-card:nth-child(5) { animation-delay: .24s; }
+    .menu-group.is-active .menu-card:nth-child(6) { animation-delay: .3s; }
+    @keyframes card-in { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* ---------- Responsivo ---------- */
+    @media (max-width: 1020px) {
+      .menu-grid { grid-template-columns: repeat(2, 1fr); }
+      .menu-group.is-active { grid-template-columns: repeat(2, 1fr); }
+      .features-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .footer-brand { grid-column: 1 / -1; }
+    }
+    @media (max-width: 900px) {
+      :root { --header-h: 66px; }
+      .nav, .header-cta { display: none; }
+      .menu-toggle { display: block; }
+      .hero { min-height: 0; padding-bottom: 64px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 44px; }
+      .hero-visual { order: -1; margin-top: 8px; }
+      .hero-figure { width: min(400px, 88vw); aspect-ratio: 1 / 1; }
+      .hero-scroll-hint { display: none; }
+      .about-grid { grid-template-columns: 1fr; }
+      .about-media { margin-inline: auto; width: min(520px, 100%); }
+      .contact-grid { grid-template-columns: 1fr; }
+      .map-wrap { min-height: 300px; }
+    }
+    @media (max-width: 640px) {
+      .container { width: min(1180px, 100% - 32px); }
+      .menu-grid, .menu-group.is-active { grid-template-columns: 1fr; }
+      .features-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 150px; }
+      .g-item--a { grid-column: span 2; grid-row: span 2; }
+      .g-item--b, .g-item--c, .g-item--d, .g-item--e { grid-column: span 1; }
+      .g-item--d { grid-column: span 2; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .hero-actions .btn { flex: 1 1 100%; }
+      .chip-1 { left: 0; }
+      .chip-2 { right: 0; }
+      .wa-float { right: 16px; bottom: 16px; }
+    }
+
+    /* ---------- Movimento reduzido ---------- */
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+      .reveal { opacity: 1; transform: none; }
+      .marquee-track { animation: none; }
+      .wa-float::before { animation: none; opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <a class="skip-link" href="#cardapio">Pular para o cardápio</a>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a class="logo" href="#inicio" aria-label="Passarelli Burger — voltar ao início">
+        <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" rx="14" fill="#171211" stroke="rgba(255,178,94,.25)"/>
+          <path d="M14 25c0-8 8-13 18-13s18 5 18 13v1H14v-1z" fill="#ff5d24"/>
+          <rect x="12" y="30" width="40" height="7" rx="3.5" fill="#ffb25e"/>
+          <path d="M14 41h36c0 6-5 9-11 9H25c-6 0-11-3-11-9z" fill="#ff5d24"/>
+        </svg>
+        <span class="logo-text">
+          <span class="logo-name">Passarelli</span>
+          <span class="logo-tag">Burger</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Navegação principal">
+        <ul class="nav-list">
+          <li><a class="nav-link is-active" href="#inicio">Início</a></li>
+          <li><a class="nav-link" href="#cardapio">Cardápio</a></li>
+          <li><a class="nav-link" href="#historia">Nossa História</a></li>
+          <li><a class="nav-link" href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <a class="btn btn-primary btn-sm header-cta js-wa" href="#" target="_blank" rel="noopener">Peça agora</a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Menu mobile -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <ul class="mobile-menu-list">
+      <li><a href="#inicio">Início</a></li>
+      <li><a href="#cardapio">Cardápio</a></li>
+      <li><a href="#historia">Nossa História</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+    <div class="mobile-menu-cta">
+      <a class="btn btn-primary js-wa" href="#" target="_blank" rel="noopener">Peça agora</a>
+      <a class="btn btn-ghost" href="#cardapio">Ver cardápio</a>
+    </div>
+    <p class="mobile-menu-note" data-bind="hours"></p>
+  </div>
+
+  <main id="main">
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Hamburgueria • Mococa/SP</p>
+          <h1 class="hero-title">
+            <span class="line">Seu próximo</span>
+            <span class="line word-ember">Burger</span>
+            <span class="line">favorito</span>
+            <span class="line">está aqui.</span>
+          </h1>
+          <p class="hero-sub">Uma experiência de sabor que começa no primeiro olhar e conquista na primeira mordida.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#cardapio">
+              Ver cardápio
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn-ghost js-wa" href="#" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+              Fazer pedido
+            </a>
+          </div>
+          <p class="hero-info">
+            <span class="dot" aria-hidden="true"></span>
+            <span data-bind="hours"></span>
+            <span aria-hidden="true">•</span>
+            <span>Pedidos direto no WhatsApp</span>
+          </p>
+        </div>
+
+        <div class="hero-visual">
+          <figure class="hero-figure">
+            <img
+              src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?q=80&w=900&auto=format&fit=crop"
+              width="440" height="506"
+              alt="Hambúrguer artesanal de dois andares com queijo derretido e bacon, em fundo escuro"
+              fetchpriority="high">
+            <span class="chip chip-1">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-7.6 7-12.5A7 7 0 005 8.5C5 13.4 12 21 12 21z"/><circle cx="12" cy="8.5" r="2.5"/></svg>
+              Mococa • SP
+            </span>
+            <span class="chip chip-2">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+              Ter–Dom • 18h30–22h30
+            </span>
+          </figure>
+        </div>
+      </div>
+      <p class="hero-scroll-hint" aria-hidden="true">Role</p>
+    </section>
+
+    <!-- ================= LETREIRO ================= -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <ul class="marquee-list">
+          <li>Sabor</li><li>Artesanal</li><li>Mococa</li><li>Primeira mordida</li><li>Passarelli Burger</li>
+        </ul>
+        <ul class="marquee-list">
+          <li>Sabor</li><li>Artesanal</li><li>Mococa</li><li>Primeira mordida</li><li>Passarelli Burger</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ================= NOSSA HISTÓRIA / PROPOSTA ================= -->
+    <section class="section" id="historia">
+      <div class="container about-grid">
+        <div class="about-media reveal">
+          <img
+            class="about-img-main"
+            src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?q=80&w=700&auto=format&fit=crop"
+            width="700" height="770"
+            alt="Hambúrguer artesanal acompanhado de porção de batatas fritas em bancada de madeira"
+            loading="lazy" decoding="async">
+          <img
+            class="about-img-prep"
+            src="https://images.unsplash.com/photo-1558030006-450675393462?q=80&w=520&auto=format&fit=crop"
+            width="520" height="520"
+            alt="Carne fresca fatiada em tábua, retratando o cuidado com o preparo"
+            loading="lazy" decoding="async">
+          <span class="about-badge">O ponto certo</span>
+        </div>
+
+        <div class="about-copy">
+          <p class="eyebrow reveal">Nossa proposta</p>
+          <h2 class="section-title reveal" style="--d:.05s">Mais que um hambúrguer. Uma <em>experiência.</em></h2>
+          <!-- TEXTO EDITÁVEL: conteúdo institucional genérico, sem dados factuais.
+               Substitua pela história oficial quando fornecida pelo estabelecimento. -->
+          <p class="section-sub reveal" style="--d:.1s">
+            O Passarelli Burger existe para um momento muito específico: aquele em que você
+            decide que o dia merece algo melhor. É o burger que chega com cara de celebração —
+            suculento no centro, crocante nas bordas e com aquele cheiro que enche a sala.
+          </p>
+          <p class="section-sub reveal" style="--d:.15s">
+            Da primeira mordida ao último pedaço, tudo é pensado para que a experiência seja
+            do jeito que burger bom tem que ser: sem frescura, com personalidade.
+          </p>
+          <blockquote class="about-quote reveal" style="--d:.2s">
+            “A gente não faz burger pra aparecer. A gente faz burger pra <strong>quebrar a dieta</strong>
+            e não deixar ninguém com vergonha.”
+          </blockquote>
+          <div class="about-points reveal" style="--d:.25s">
+            <span>Primeira mordida</span>
+            <span>Feito pra você</span>
+            <span>Mococa — SP</span>
+            <span>Pede no WhatsApp</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CARDÁPIO ================= -->
+    <section class="section menu-section" id="cardapio">
+      <div class="container">
+        <div class="menu-top">
+          <div class="section-head">
+            <p class="eyebrow reveal">Cardápio</p>
+            <h2 class="section-title reveal" style="--d:.05s">Escolha seu próximo <em>favorito.</em></h2>
+            <p class="section-sub reveal" style="--d:.1s">Do clássico da casa ao duplo para os famintos. Escolheu? É só tocar no botão e o pedido já sai montado no WhatsApp.</p>
+          </div>
+          <div class="menu-tabs reveal" role="tablist" aria-label="Categorias do cardápio" id="menu-tabs"></div>
+        </div>
+
+        <div class="menu-grid" id="menu-grid">
+          <noscript><p class="menu-note">Ative o JavaScript para visualizar o cardápio — ou chame a gente direto no WhatsApp que enviamos o menu completo.</p></noscript>
+        </div>
+
+        <p class="menu-note reveal">
+          <!-- Cardápio oficial (fonte: TakeAT). Edite itens, preços e fotos em MENU_DATA (final do arquivo). -->
+          Cardápio ilustrativo com valores de demonstração. Consulte preços, itens e disponibilidade
+          <a class="js-wa" href="#" target="_blank" rel="noopener">pelo WhatsApp</a>.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= DIFERENCIAIS ================= -->
+    <section class="section" id="diferenciais">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow reveal">Por que Passarelli</p>
+          <h2 class="section-title reveal" style="--d:.05s">O que faz a <em>diferença.</em></h2>
+        </div>
+        <div class="features-grid">
+          <article class="feature reveal">
+            <span class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/></svg>
+            </span>
+            <h3>Sabor em cada detalhe</h3>
+            <p>Do ponto do blend ao último toque no pão, cada etapa existe para a mordida valer a pena.</p>
+          </article>
+          <article class="feature reveal" style="--d:.08s">
+            <span class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 019.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+            </span>
+            <h3>Ingredientes selecionados</h3>
+            <p>Escolha criteriosa de cada ingrediente, para o sabor ser o mesmo de sempre — em todos os pedidos.</p>
+          </article>
+          <article class="feature reveal" style="--d:.16s">
+            <span class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            </span>
+            <h3>Preparado para você</h3>
+            <p>Seu pedido é feito na hora em que você manda, do jeitinho que você pediu. Sem espera surpresa.</p>
+          </article>
+          <article class="feature reveal" style="--d:.24s">
+            <span class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 01-8.5 8.5c-1.16 0-2.28-.23-3.3-.66L4 21l1.66-5.2A8.5 8.5 0 1121 11.5z"/></svg>
+            </span>
+            <h3>Atendimento próximo</h3>
+            <p>Você fala direto com a gente no WhatsApp — do primeiro “deu fome” até a porta da sua casa.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= GALERIA ================= -->
+    <section class="section gallery-section" id="galeria">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow reveal">Galeria</p>
+          <h2 class="section-title reveal" style="--d:.05s">Dá água na <em>boca.</em></h2>
+        </div>
+        <div class="gallery-grid">
+          <figure class="g-item g-item--a reveal">
+            <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?q=80&w=800&auto=format&fit=crop"
+                 width="800" height="800"
+                 alt="Hambúrguer com queijo derretido e batatas fritas douradas sobre tábua de madeira"
+                 loading="lazy" decoding="async">
+            <figcaption>Burger + fritas</figcaption>
+          </figure>
+          <figure class="g-item g-item--b reveal" style="--d:.06s">
+            <img src="https://images.unsplash.com/photo-1558030006-450675393462?q=80&w=800&auto=format&fit=crop"
+                 width="800" height="400"
+                 alt="Carne fresca selecionada sobre tábua, retrato do preparo"
+                 loading="lazy" decoding="async">
+            <figcaption>Seleção da carne</figcaption>
+          </figure>
+          <figure class="g-item g-item--c reveal" style="--d:.12s">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800&auto=format&fit=crop"
+                 width="800" height="400"
+                 alt="Porção grelhada na chapa, ao estilo da casa"
+                 loading="lazy" decoding="async">
+            <figcaption>Na chapa</figcaption>
+          </figure>
+          <figure class="g-item g-item--d reveal" style="--d:.18s">
+            <img src="https://images.unsplash.com/photo-1585109649139-366815a0d713?q=80&w=800&auto=format&fit=crop"
+                 width="800" height="400"
+                 alt="Batatas fritas crocantes servidas em tigela"
+                 loading="lazy" decoding="async">
+            <figcaption>Crocância</figcaption>
+          </figure>
+          <figure class="g-item g-item--e reveal" style="--d:.24s">
+            <img src="https://images.unsplash.com/photo-1598679253544-2c97992403ea?q=80&w=800&auto=format&fit=crop"
+                 width="800" height="400"
+                 alt="Batatas fritas com molho de acompanhamento em composição rústica"
+                 loading="lazy" decoding="async">
+            <figcaption>Com molho da casa</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CHAMADA COMERCIAL ================= -->
+    <section class="cta" aria-labelledby="cta-title">
+      <div class="cta-bg" style="background-image:url('https://images.unsplash.com/photo-1553979459-d2229ba7433b?q=80&w=1600&auto=format&fit=crop')" aria-hidden="true"></div>
+      <div class="container">
+        <p class="eyebrow reveal" style="justify-content:center">Peça agora</p>
+        <h2 class="cta-title reveal" id="cta-title" style="--d:.05s">Deu fome? A gente <em>resolve.</em></h2>
+        <p class="cta-sub reveal" style="--d:.1s">Seu próximo burger está a poucos cliques de distância.</p>
+        <a class="btn btn-primary reveal js-wa" style="--d:.15s" href="#" target="_blank" rel="noopener">
+          Faça seu pedido
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        </a>
+        <p class="cta-note reveal" style="--d:.2s" data-bind="hours"></p>
+      </div>
+    </section>
+
+    <!-- ================= LOCALIZAÇÃO E CONTATO ================= -->
+    <section class="section" id="contato">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow reveal">Localização &amp; contato</p>
+          <h2 class="section-title reveal" style="--d:.05s">Vem pro <em>burger.</em></h2>
+          <p class="section-sub reveal" style="--d:.1s">Peça pelo WhatsApp e receba em casa, retire no balcão ou venha se sentar com a gente.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-card reveal">
+            <ul class="contact-list">
+              <li class="contact-item">
+                <span class="contact-item-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-7.6 7-12.5A7 7 0 005 8.5C5 13.4 12 21 12 21z"/><circle cx="12" cy="8.5" r="2.5"/></svg>
+                </span>
+                <div>
+                  <h3>Endereço</h3>
+                  <!-- DADO PROVISÓRIO — coletado em diretórios; validar com o estabelecimento. Editável em CONFIG. -->
+                  <p data-bind="address"></p>
+                </div>
+              </li>
+              <li class="contact-item">
+                <span class="contact-item-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>
+                </span>
+                <div>
+                  <h3>WhatsApp</h3>
+                  <!-- NÚMERO PROVISÓRIO — validar com o estabelecimento. Editável em CONFIG. -->
+                  <p><a class="js-wa" data-msg="Olá! Vim pelo site e gostaria de mais informações." href="#" target="_blank" rel="noopener">(19) 99884-3444</a></p>
+                </div>
+              </li>
+              <li class="contact-item">
+                <span class="contact-item-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                </span>
+                <div>
+                  <h3>Horários</h3>
+                  <!-- HORÁRIO PROVISÓRIO — coletado em diretórios; validar com o estabelecimento. Editável em CONFIG. -->
+                  <p data-bind="hours"></p>
+                </div>
+              </li>
+            </ul>
+            <div class="contact-actions">
+              <a class="btn btn-ghost js-maps" href="#" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-7.6 7-12.5A7 7 0 005 8.5C5 13.4 12 21 12 21z"/><circle cx="12" cy="8.5" r="2.5"/></svg>
+                Como chegar
+              </a>
+              <a class="btn btn-primary js-wa" href="#" target="_blank" rel="noopener">Fale conosco</a>
+            </div>
+          </div>
+
+          <div class="map-wrap reveal" style="--d:.1s">
+            <iframe
+              id="map"
+              title="Mapa com a localização do Passarelli Burger em Mococa - SP"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="logo" href="#inicio" aria-label="Passarelli Burger — voltar ao início">
+            <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true">
+              <rect width="64" height="64" rx="14" fill="#171211" stroke="rgba(255,178,94,.25)"/>
+              <path d="M14 25c0-8 8-13 18-13s18 5 18 13v1H14v-1z" fill="#ff5d24"/>
+              <rect x="12" y="30" width="40" height="7" rx="3.5" fill="#ffb25e"/>
+              <path d="M14 41h36c0 6-5 9-11 9H25c-6 0-11-3-11-9z" fill="#ff5d24"/>
+            </svg>
+            <span class="logo-text">
+              <span class="logo-name">Passarelli</span>
+              <span class="logo-tag">Burger</span>
+            </span>
+          </a>
+          <p>Hamburgueria artesanal em Mococa — SP. O burger que conquista na primeira mordida.</p>
+        </div>
+
+        <div>
+          <h3>Navegação</h3>
+          <ul class="footer-list">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#cardapio">Cardápio</a></li>
+            <li><a href="#historia">Nossa História</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Contato</h3>
+          <ul class="footer-list">
+            <!-- DADOS PROVISÓRIOS — validar com o estabelecimento. Editáveis em CONFIG. -->
+            <li><span data-bind="address"></span></li>
+            <li><a class="js-wa" href="#" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>
+              (19) 99884-3444
+            </a></li>
+            <li><span data-bind="hours"></span></li>
+            <li><a class="js-instagram" href="#" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".8" fill="currentColor" stroke="none"/></svg>
+              Instagram
+            </a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span id="year">2025</span> Passarelli Burger. Todos os direitos reservados.</p>
+        <p>Hamburgueria em Mococa — SP</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botão flutuante WhatsApp -->
+  <a class="wa-float js-wa" href="#" target="_blank" rel="noopener" aria-label="Pedir pelo WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  </a>
+
+  <script>
+  (() => {
+    'use strict';
+
+    /* ============================================================
+       CONFIGURAÇÃO GERAL — EDITE AQUI
+       ------------------------------------------------------------
+       WhatsApp: NÚMERO PROVISÓRIO (coletado em diretórios).
+       Formato: código do país + DDD + número, somente dígitos.
+       ============================================================ */
+    const CONFIG = {
+      whatsappNumber: '5519998843444',
+      defaultMessage: 'Olá! Gostaria de fazer um pedido no Passarelli Burger.',
+      displayPhone: '(19) 99884-3444',
+      address: 'Rua Paschoal Raniere Mazili — Jardim Santa Cecília, Mococa - SP',
+      hours: 'Terça a domingo • 18h30 às 22h30',
+      mapsQuery: 'Rua Paschoal Raniere Mazili, Jardim Santa Cecília, Mococa - SP',
+      instagramUrl: '', // PROVISÓRIO: informe o perfil oficial quando confirmado
+    };
+
+    /* ============================================================
+       CARDÁPIO — DADOS DEMONSTRATIVOS (EXEMPLOS EDITÁVEIS)
+       ------------------------------------------------------------
+       Os itens, ingredientes e preços abaixo são APENAS EXEMPLOS
+       para visualização do layout. Substitua pelos produtos e
+       valores oficiais do Passarelli Burger antes de publicar.
+       - price: número em reais
+       - img:   URL da foto (substitua pelas fotos reais)
+       - tag:   selo opcional exibido sobre a foto
+       ============================================================ */
+    /* Fotos do cardápio: CDN oficial do TakeAT (takeat-imgs.takeat.app) */
+
+    /* ============================================================
+       CARDÁPIO OFICIAL — itens, preços e fotos extraídos do cardápio
+       no TakeAT (pedido.takeat.app/mcqburger). Fotos hospedadas no
+       CDN do TakeAT (takeat-imgs.takeat.app).
+       ATENÇÃO: `price: null` = sem preço visível no TakeAT no momento
+       da extração (Combos Família e Bebidas) — preencha quando confirmar.
+       ============================================================ */
+    const MENU_DATA = {
+      entradas: {
+        label: 'Entradas',
+        items: [
+          {
+            name: 'Fritas com Costela',
+            desc: 'Fritas fininha, sequinha e crocante com costela desfiada, acompanhada de Catupiry Scala. Porção de 300g.',
+            price: 35,
+            img: 'https://takeat-imgs.takeat.app/4d3a328798f31d48f72ecb3e23fa32cb.webp',
+            alt: 'Porção de fritas crocantes com costela desfiada e Catupiry',
+          },
+          {
+            name: 'Fritas com Cheddar e Bacon',
+            desc: 'Fritas fininha, sequinha e crocante coberta com molho especial e bacon crocante. Porção de 300g.',
+            price: 30,
+            img: 'https://takeat-imgs.takeat.app/14a30fe7e987b026509b3ee5f4f5b345.webp',
+            alt: 'Porção de fritas cobertas com cheddar e bacon crocante',
+          },
+          {
+            name: 'Fritas',
+            desc: 'Fritas fininha, sequinha e crocante. Porção de 300g.',
+            price: 19,
+            img: 'https://takeat-imgs.takeat.app/2ee58f5604a73f5ed1d25d48863d136a.webp',
+            alt: 'Porção de batatas fritas douradas e crocantes',
+          },
+          {
+            name: 'Fritas Individual',
+            desc: 'Fritas fininha, sequinha e crocante. Porção de 120g.',
+            price: 12,
+            img: 'https://takeat-imgs.takeat.app/6da42fe08b3d67b10ae415b3e8023868.webp',
+            alt: 'Porção individual de batatas fritas crocantes',
+          },
+        ],
+      },
+      comboFamilia: {
+        label: 'Combo Família',
+        items: [
+          {
+            name: 'Combo Box 2 Burgers + Fritas',
+            desc: '2 burgers + fritas, servidos na caixa.',
+            price: null,
+            img: 'https://takeat-imgs.takeat.app/3e362a06ffdd3f68f9036300ccad5aa2.webp',
+            alt: 'Caixa combo com dois burgers e fritas',
+            tag: 'Destaque',
+          },
+          {
+            name: 'Combo 2 Burgers',
+            desc: '2 burgers da casa.',
+            price: null,
+            img: 'https://takeat-imgs.takeat.app/2a15d066a9f6be0b1ac08b8a701119c5.webp',
+            alt: 'Dois burgers da casa embalados para viagem',
+          },
+          {
+            name: 'Combo 4 Burgers',
+            desc: '4 burgers da casa.',
+            price: null,
+            img: 'https://takeat-imgs.takeat.app/fdad38de97f45acbf4c3b8a5545857cf.webp',
+            alt: 'Quatro burgers da casa embalados para viagem',
+          },
+          {
+            name: 'Combo 4 Burgers + Fritas',
+            desc: '4 burgers da casa + fritas.',
+            price: null,
+            img: 'https://takeat-imgs.takeat.app/5b47f8e95b59380b2feac8bbca40e5c0.webp',
+            alt: 'Quatro burgers da casa acompanhados de fritas',
+          },
+        ],
+      },
+      comboIndividual: {
+        label: 'Combo Individual',
+        items: [
+          {
+            name: 'Especial + Batata P + Refri',
+            desc: 'Burger Especial + batata pequena + refrigerante.',
+            price: 49.9,
+            img: 'https://takeat-imgs.takeat.app/fc4cf74038042fe6f325c08e9ad6153e.webp',
+            alt: 'Combo com burger especial, batata pequena e refrigerante',
+          },
+          {
+            name: 'Salada + Batata P + Refri',
+            desc: 'Burger Salada + batata pequena + refrigerante.',
+            price: 44.9,
+            img: 'https://takeat-imgs.takeat.app/7208bafad06c411cd1117832f1fe4f37.webp',
+            alt: 'Combo com burger salada, batata pequena e refrigerante',
+          },
+          {
+            name: 'Original + Refri Lata',
+            desc: 'Burger Original + refrigerante lata.',
+            price: 29.9,
+            img: 'https://takeat-imgs.takeat.app/cbe6a56ec349cdfd8c0ce010cfee6901.webp',
+            alt: 'Combo com burger original e refrigerante lata',
+          },
+        ],
+      },
+      smash: {
+        label: 'Smash Burgers',
+        items: [
+          {
+            name: 'Duplo Smash Bacon + Refri Lata',
+            desc: 'Pão brioche, quatro carnes smash de 50g cada, queijo, cebola caramelizada, bacon e maionese defumada + 1 refri lata à sua escolha.',
+            price: 39.9,
+            img: 'https://takeat-imgs.takeat.app/0592cb3931a2cb7641da02ff20805701.webp',
+            alt: 'Smash burger duplo com bacon, cebola caramelizada e refrigerante lata',
+            tag: 'Destaque',
+          },
+          {
+            name: 'Smash Original',
+            desc: 'Pão brioche, duas carnes smash de 50g cada, queijo cheddar e molho.',
+            price: 20,
+            img: 'https://takeat-imgs.takeat.app/a562d44588c0a2178b9552d68f1d9af2.webp',
+            alt: 'Smash burger com queijo cheddar no pão brioche',
+          },
+          {
+            name: 'Smash Salada',
+            desc: 'Pão brioche, duas carnes smash de 50g cada, queijo, alface, tomate, cebola roxa e molho.',
+            price: 24,
+            img: 'https://takeat-imgs.takeat.app/83cca2acc1cb1eaaf17976f95ac316be.webp',
+            alt: 'Smash burger com alface, tomate e cebola roxa',
+          },
+          {
+            name: 'Smash Bacon',
+            desc: 'Pão brioche, duas carnes smash de 50g cada, queijo, cebola caramelizada, bacon e maionese defumada.',
+            price: 25,
+            img: 'https://takeat-imgs.takeat.app/793fd4c159d50aa2af4eb3082f33894a.webp',
+            alt: 'Smash burger com bacon e cebola caramelizada',
+          },
+          {
+            name: 'Smash Especial',
+            desc: 'Pão brioche, duas carnes smash de 50g cada, queijo cheddar, bacon, alface, tomate, picles e molho especial.',
+            price: 29,
+            img: 'https://takeat-imgs.takeat.app/ab56aaea2151d586c5b84c51466337d3.webp',
+            alt: 'Smash burger completo com bacon, picles e molho especial',
+          },
+          {
+            name: 'Smash Furioso',
+            desc: 'Pão brioche, duas carnes smash de 50g cada, queijo, onion ring e molho BBQ.',
+            price: 32,
+            img: 'https://takeat-imgs.takeat.app/db151b0f7e40aaa7d51d8b103108c1ef.webp',
+            alt: 'Smash burger com onion rings e molho barbecue',
+          },
+        ],
+      },
+      burgers: {
+        label: 'Burgers',
+        items: [
+          {
+            name: 'Costela Prime',
+            desc: 'Pão brioche, burger de 120g de carne bovina, escolha seu queijo, costela desfiada com Catupiry Scala e molho barbecue.',
+            price: 35,
+            img: 'https://takeat-imgs.takeat.app/8fe0ec4b65494afc20b889fad8fe2d08.webp',
+            alt: 'Burger de costela desfiada com Catupiry no pão brioche',
+          },
+          {
+            name: 'Especial',
+            desc: 'Pão brioche, burger de 120g de carne bovina, queijo cheddar, bacon, alface, tomate, picles e molho especial.',
+            price: 32,
+            img: 'https://takeat-imgs.takeat.app/1af739efcb8e62b109d6f0389f66b45d.webp',
+            alt: 'Burger completo com cheddar, bacon, picles e molho especial',
+          },
+          {
+            name: 'Cheese Bacon',
+            desc: 'Pão brioche, burger de 120g de carne bovina, queijo, cebola caramelizada, bacon e maionese defumada.',
+            price: 30,
+            img: 'https://takeat-imgs.takeat.app/5bbc8295633e9f88f47b3c6ed9102236.webp',
+            alt: 'Cheese burger com bacon e cebola caramelizada',
+          },
+          {
+            name: 'Cheese Salada',
+            desc: 'Pão brioche, burger de 120g de carne bovina, queijo, alface, tomate, cebola roxa e molho.',
+            price: 30,
+            img: 'https://takeat-imgs.takeat.app/20a7ea08a0da849240689d1ebcb7ab43.webp',
+            alt: 'Cheese burger com alface, tomate e cebola roxa',
+          },
+          {
+            name: 'Furioso',
+            desc: 'Pão brioche, burger de 120g de carne bovina, queijo, onion ring e molho BBQ.',
+            price: 32,
+            img: 'https://takeat-imgs.takeat.app/8aad85860dc457cdf5beb5195be37740.webp',
+            alt: 'Burger com onion rings e molho barbecue',
+          },
+          {
+            name: 'Original',
+            desc: 'Pão brioche, burger de 120g de carne bovina, queijo cheddar e molho.',
+            price: 25,
+            img: 'https://takeat-imgs.takeat.app/65a08a31f63700905ea224bf02d2ef41.webp',
+            alt: 'Burger com queijo cheddar no pão brioche',
+          },
+          {
+            name: 'Chicken Salad',
+            desc: 'Pão brioche, hambúrguer de frango, queijo, alface, tomate, cebola roxa e molho.',
+            price: 25,
+            img: 'https://takeat-imgs.takeat.app/81c204568c71ada502c43e35e81c159e.webp',
+            alt: 'Hambúrguer de frango com alface, tomate e cebola roxa',
+            tag: 'Destaque',
+          },
+        ],
+      },
+      bebidas: {
+        label: 'Bebidas',
+        items: [
+          {
+            name: 'Coca Cola 1L',
+            desc: 'Coca-Cola garrafa 1L bem gelada.',
+            price: null,
+            img: 'https://takeat-imgs.takeat.app/770cfdefb8901bc8db33f1662a20df3a.webp',
+            alt: 'Garrafa de Coca-Cola de 1 litro',
+          },
+          {
+            name: 'Coca Lata',
+            desc: 'Coca-Cola lata bem gelada.',
+            price: null,
+            img: 'https://takeat-imgs.takeat.app/1c8817da43cd9c45dc672d3d59191bb8.webp',
+            alt: 'Lata de Coca-Cola gelada',
+          },
+          {
+            name: 'Coca Zero Lata',
+            desc: 'Coca-Cola Zero lata bem gelada.',
+            price: null,
+            img: 'https://takeat-imgs.takeat.app/12d64b780a36393e87a0020b0197aef9.webp',
+            alt: 'Lata de Coca-Cola Zero gelada',
+          },
+          {
+            name: 'Guaraná Lata',
+            desc: 'Guaraná lata bem gelado.',
+            price: null,
+            img: 'https://takeat-imgs.takeat.app/e5fecb2a4a9fd4893265d4539abc0e76.webp',
+            alt: 'Lata de guaraná gelada',
+          },
+          {
+            name: 'Água sem gás',
+            desc: 'Água mineral sem gás.',
+            price: null,
+            img: 'https://takeat-imgs.takeat.app/2118f37b2c3593cd99ea781727940957.webp',
+            alt: 'Garrafa de água mineral sem gás',
+          },
+          {
+            name: 'Água com gás',
+            desc: 'Água mineral com gás.',
+            price: null,
+            img: 'https://takeat-imgs.takeat.app/0b6031cbb9c8612f646b320450f64b58.webp',
+            alt: 'Garrafa de água mineral com gás',
+          },
+        ],
+      },
+      molhos: {
+        label: 'Molhos',
+        items: [
+          {
+            name: 'Maionese defumada',
+            desc: 'Maionese grill, sabor defumada. *Todos os lanches já acompanham uma maionese da casa.',
+            price: 3,
+            img: 'https://takeat-imgs.takeat.app/d1abb6d850f4adb50d1f91185d8ab3c0.webp',
+            alt: 'Porção de maionese defumada da casa',
+          },
+          {
+            name: 'Maionese da Casa',
+            desc: 'Maionese artesanal à base de leite, preparada diariamente. *Todos os lanches já acompanham uma maionese da casa.',
+            price: 2,
+            img: 'https://takeat-imgs.takeat.app/6a5305abd0882707964afd8d77381ef4.webp',
+            alt: 'Porção de maionese artesanal da casa',
+          },
+        ],
+      },
+    };
+
+    /* ---------- Helpers ---------- */
+    const $ = (sel, ctx = document) => ctx.querySelector(sel);
+    const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
+    const waLink = (msg) => `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(msg || CONFIG.defaultMessage)}`;
+    const orderMessage = (name) => `Olá! Gostaria de pedir o ${name}.`;
+    const formatPrice = (n) => n.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+
+    /* ---------- Bind de dados editáveis (endereço, horários etc.) ---------- */
+    $$('[data-bind]').forEach((el) => {
+      const key = el.getAttribute('data-bind');
+      if (CONFIG[key]) el.textContent = CONFIG[key];
+    });
+
+    /* ---------- Links de WhatsApp ---------- */
+    $$('.js-wa').forEach((a) => {
+      a.href = waLink(a.getAttribute('data-msg'));
+    });
+
+    /* ---------- Instagram (provisório) ---------- */
+    $$('.js-instagram').forEach((a) => {
+      if (CONFIG.instagramUrl) {
+        a.href = CONFIG.instagramUrl;
+      } else {
+        a.removeAttribute('target');
+        a.removeAttribute('rel');
+        a.setAttribute('href', '#');
+        a.setAttribute('title', 'Em breve');
+      }
+    });
+
+    /* ---------- Mapa + "Como chegar" ---------- */
+    const mapFrame = $('#map');
+    if (mapFrame) {
+      mapFrame.src = `https://maps.google.com/maps?q=${encodeURIComponent(CONFIG.mapsQuery)}&z=16&output=embed`;
+    }
+    $$('.js-maps').forEach((a) => {
+      a.href = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(CONFIG.mapsQuery)}`;
+    });
+
+    /* ---------- Render do cardápio ---------- */
+    const tabsWrap = $('#menu-tabs');
+    const gridWrap = $('#menu-grid');
+    const categories = Object.keys(MENU_DATA);
+
+    function buildCard(item) {
+      const card = document.createElement('article');
+      card.className = 'menu-card';
+      const tag = item.tag ? `<span class="menu-tag">${item.tag}</span>` : '';
+      card.innerHTML = `
+        <div class="menu-card-media">
+          ${tag}
+          <img src="${item.img}" width="800" height="550" alt="${item.alt}" loading="lazy" decoding="async">
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-card-title-row">
+            <h3 class="menu-card-name">${item.name}</h3>
+            <span class="menu-card-price${item.price == null ? ' is-tbd' : ''}">${item.price == null ? '—' : formatPrice(item.price)}</span>
+          </div>
+          <p class="menu-card-desc">${item.desc}</p>
+          <a class="menu-card-order" href="${waLink(orderMessage(item.name))}" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            Pedir pelo WhatsApp
+          </a>
+        </div>`;
+      return card;
+    }
+
+    function activateCategory(cat) {
+      $$('.menu-tab', tabsWrap).forEach((btn) => {
+        btn.setAttribute('aria-selected', String(btn.dataset.cat === cat));
+      });
+      $$('.menu-group', gridWrap).forEach((group) => {
+        group.classList.toggle('is-active', group.dataset.cat === cat);
+      });
+    }
+
+    if (tabsWrap && gridWrap) {
+      categories.forEach((cat) => {
+        const tab = document.createElement('button');
+        tab.type = 'button';
+        tab.className = 'menu-tab';
+        tab.dataset.cat = cat;
+        tab.setAttribute('role', 'tab');
+        tab.setAttribute('aria-selected', 'false');
+        tab.id = `tab-${cat}`;
+        tab.textContent = MENU_DATA[cat].label;
+        tab.addEventListener('click', () => activateCategory(cat));
+        tabsWrap.appendChild(tab);
+      });
+
+      tabsWrap.addEventListener('keydown', (e) => {
+        if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+        const tabs = $$('.menu-tab', tabsWrap);
+        const current = tabs.findIndex((t) => t.getAttribute('aria-selected') === 'true');
+        const next = (current + (e.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length;
+        tabs[next].focus();
+        tabs[next].click();
+      });
+
+      categories.forEach((cat) => {
+        const group = document.createElement('div');
+        group.className = 'menu-group';
+        group.dataset.cat = cat;
+        group.setAttribute('role', 'tabpanel');
+        group.setAttribute('aria-labelledby', `tab-${cat}`);
+        MENU_DATA[cat].items.forEach((item) => group.appendChild(buildCard(item)));
+        gridWrap.appendChild(group);
+      });
+
+      activateCategory(categories[0]);
+    }
+
+    /* ---------- Header inteligente ---------- */
+    const header = $('#header');
+    let ticking = false;
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        header.classList.toggle('is-scrolled', window.scrollY > 24);
+        ticking = false;
+      });
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    /* ---------- Menu mobile ---------- */
+    const toggle = $('.menu-toggle');
+    const mobileMenu = $('#mobile-menu');
+    function setMenu(open) {
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+      mobileMenu.classList.toggle('is-open', open);
+      mobileMenu.setAttribute('aria-hidden', String(!open));
+      document.body.classList.toggle('no-scroll', open);
+    }
+    toggle.addEventListener('click', () => setMenu(toggle.getAttribute('aria-expanded') !== 'true'));
+    $$('#mobile-menu a').forEach((a) => a.addEventListener('click', () => setMenu(false)));
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('is-open')) {
+        setMenu(false);
+        toggle.focus();
+      }
+    });
+
+    /* ---------- Animações de entrada (reveal) ---------- */
+    const revealEls = $$('.reveal');
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-in');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+      revealEls.forEach((el) => io.observe(el));
+    } else {
+      revealEls.forEach((el) => el.classList.add('is-in'));
+    }
+
+    /* ---------- Link ativo na navegação ---------- */
+    const navLinks = $$('.nav-link');
+    const sectionMap = new Map();
+    navLinks.forEach((link) => {
+      const id = link.getAttribute('href').slice(1);
+      const section = document.getElementById(id);
+      if (section) sectionMap.set(section, link);
+    });
+    if ('IntersectionObserver' in window && sectionMap.size) {
+      const navIo = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            navLinks.forEach((l) => l.classList.remove('is-active'));
+            const link = sectionMap.get(entry.target);
+            if (link) link.classList.add('is-active');
+          }
+        });
+      }, { rootMargin: '-40% 0px -55% 0px' });
+      sectionMap.forEach((_, section) => navIo.observe(section));
+    }
+
+    /* ---------- Ano automático ---------- */
+    $('#year').textContent = String(new Date().getFullYear());
+  })();
+  </script>
+</body>
+</html>
