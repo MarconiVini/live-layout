@@ -22,9 +22,8 @@
   <meta name="robots" content="noindex, nofollow, noimageindex">
   <meta name="googlebot" content="noindex, nofollow, noimageindex">
 
-  <!-- Favicon: provisório gerado em 2026-11-20 (sem logo oficial público — A confirmar) -->
+  <!-- Favicon: acento verde do logo oficial (enviado pelo dono, 2026-11-20) -->
   <link rel="icon" type="image/png" href="favicon-64.png">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -138,8 +137,11 @@
     }
     .topo.rolou { background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(10px); box-shadow: 0 1px 0 var(--linha); }
     .topo-inner { display: flex; align-items: center; justify-content: space-between; gap: 14px; }
-    .marca { display: flex; align-items: center; gap: 10px; text-decoration: none; font-family: 'Bricolage Grotesque'; font-weight: 800; font-size: 22px; letter-spacing: -.02em; }
-    .marca .pin { width: 17px; height: 17px; }
+    .marca {
+      display: inline-flex; align-items: center; text-decoration: none;
+      background: var(--papel); border-radius: 12px; padding: 9px 13px 7px;
+    }
+    .marca img { height: 31px; width: auto; display: block; }
     .acoes-topo { display: flex; gap: 10px; align-items: center; }
     .btn {
       display: inline-flex; align-items: center; gap: 8px;
@@ -340,7 +342,7 @@
     /* rodapé */
     .rodape { border-top: 1px solid var(--linha); padding: 60px 0 30px; }
     .rodape-final { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; }
-    .rodape .marca { font-size: 30px; }
+    .rodape .marca img { height: 34px; }
     .rodape small { display: block; margin-top: 10px; color: var(--fg-suave); font-size: 13px; }
     .rodape nav { display: flex; gap: 20px; flex-wrap: wrap; font-size: 14px; }
     .rodape nav a { color: var(--fg-suave); text-decoration: none; }
@@ -378,9 +380,9 @@
   <!-- ================= TOPO ================= -->
   <header class="topo" id="topo">
     <div class="wrap topo-inner">
+      <!-- Logo oficial enviado pelo dono (2026-11-20); chip de papel para contrastar no tema noite -->
       <a class="marca" href="#inicio" aria-label="ReÚne - Comida e Cultura">
-        <svg class="pin" viewBox="0 0 64 64" aria-hidden="true"><path d="M32,10 C23,10 17,17 17,24 C17,32 32,48 32,48 C32,48 47,32 47,24 C47,17 41,10 32,10 Z" fill="#D6452E"/><circle cx="32" cy="24" r="6" fill="#F3EAD9"/></svg>
-        re<span style="position:relative">u<svg viewBox="0 0 20 20" style="position:absolute;width:.42em;height:.42em;top:-.34em;left:50%;transform:translateX(-50%)" aria-hidden="true"><path d="M10,2 C6.5,2 4,4.7 4,7.5 C4,11 10,18 10,18 C10,18 16,11 16,7.5 C16,4.7 13.5,2 10,2 Z" fill="#D6452E"/></svg></span>ne
+        <img src="logo.png" alt="ReÚne — comida e cultura">
       </a>
       <div class="acoes-topo">
         <button class="btn-tema" id="troca-tema" aria-label="Alternar entre tema noite e tarde" title="Alternar tema">🌙</button>
@@ -621,7 +623,7 @@
   <footer class="rodape">
     <div class="wrap rodape-final">
       <div>
-        <span class="marca">re<span style="position:relative">u<svg viewBox="0 0 20 20" style="position:absolute;width:.4em;height:.4em;top:-.34em;left:50%;transform:translateX(-50%)" aria-hidden="true"><path d="M10,2 C6.5,2 4,4.7 4,7.5 C4,11 10,18 10,18 C10,18 16,11 16,7.5 C16,4.7 13.5,2 10,2 Z" fill="#D6452E"/></svg></span>ne</span>
+        <span class="marca"><img src="logo.png" alt="ReÚne — comida e cultura"></span>
         <small>Comida e cultura no coração do Barão Geraldo.</small>
       </div>
       <nav aria-label="Contatos">
