@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ReÚne - Comida e Cultura | Sanduicheria, bar e música ao vivo em Barão Geraldo, Campinas</title>
+  <meta name="description" content="ReÚne - Comida e Cultura: sandubas na chapa, opções vegetarianas, molhos artesanais, chope gelado e música ao vivo no Barão Geraldo, Campinas/SP. Qua a dom, 11h às 22h. WhatsApp (19) 99565-9012.">
+  <meta name="theme-color" content="#1C2420">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ReÚne - Comida e Cultura">
+  <meta property="og:locale" content="pt_BR">
+  <!-- EDITÁVEL: substitua pela URL definitiva quando o site for publicado -->
+  <meta property="og:title" content="ReÚne - Comida e Cultura | Barão Geraldo, Campinas">
+  <meta property="og:description" content="Sandubas na chapa, opções vegetarianas, chope e música ao vivo. O quintal onde o Barão se reúne — qua a dom, 11h às 22h.">
+  <!-- EDITÁVEL: trocar por URL absoluta quando o domínio definitivo existir -->
+  <meta property="og:image" content="foto-01-chapa-tofu.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- DEMO PRIVADA: fora do Google, fora de IAs e sem renderização por bots.
+       Remover esta linha (e o robots.txt) quando o site for publicado de verdade. -->
+  <meta name="robots" content="noindex, nofollow, noimageindex">
+  <meta name="googlebot" content="noindex, nofollow, noimageindex">
+
+  <!-- Favicon: provisório gerado em 2026-11-20 (sem logo oficial público — A confirmar) -->
+  <link rel="icon" type="image/png" href="favicon-64.png">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Fontes: Bricolage Grotesque (display, cara de flyer) e Epilogue (texto/UI) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Epilogue:ital,wght@0,300..800;1,400..700&display=swap" rel="stylesheet">
+
+  <!--
+    ============================================================
+    DADOS ESTRUTURADOS (Schema.org — Restaurant)
+    Fontes (coleta 2026-11-20, ver details/reune-comida-e-cultura/):
+    · Endereço: OSM + ViaCEP 13084-311 (coords do link Google Maps
+      conferem a ~2 m com a R. Josepha Antônia Maria Picelli, 53).
+      Um agregador (Restaurant Guru, jan/2026) cita o endereço antigo
+      Manoel Antunes Novo, 481 — VALIDAR com o cliente antes de publicar.
+    · Horários: Restaurant Guru (pág. atualizada 2026-01-03) — validar.
+    · Nota/avaliações: agregado do Google publicado pelo Restaurant Guru.
+    · Cardápio: destaques citados em avaliações públicas (RG).
+    · WhatsApp: A CONFIRMAR — número (19) 99565-9012 vem da ficha
+      Google via snippet de busca; confirmar qual número é WhatsApp.
+    ============================================================
+  -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "ReÚne - Comida e Cultura",
+    "alternateName": "ReÚne, Comida & Cultura",
+    "description": "Sanduicheria com opções vegetarianas, bar e casa de música ao vivo em Barão Geraldo, Campinas/SP. Sandubas na chapa, molhos artesanais, chope e agenda de shows de quarta a domingo.",
+    "servesCuisine": ["Sanduicheria", "Lanches", "Vegetariano", "Bar"],
+    "priceRange": "R$ 20–40 por pessoa",
+    "telephone": "+55-19-99565-9012",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua Josepha Antônia Maria Picelli, 53",
+      "addressNeighborhood": "Barão Geraldo",
+      "addressLocality": "Campinas",
+      "addressRegion": "SP",
+      "postalCode": "13084-311",
+      "addressCountry": "BR"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "11:00",
+      "closes": "22:00"
+    },
+    "sameAs": ["https://www.instagram.com/reune_comida_cultura"],
+    "hasMap": "https://maps.google.com/?q=Re%C3%9Ane+Comida+e+Cultura+Rua+Josepha+Antonia+Maria+Picelli+53+Bar%C3%A3o+Geraldo+Campinas",
+    "acceptsReservations": "False",
+    "amenityFeature": [
+      { "@type": "LocationFeatureSpecification", "name": "Música ao vivo", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Lugares ao ar livre", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Entrega", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Leve embora", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Acessível a cadeiras de rodas", "value": true }
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Cardápio",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "MenuItem", "name": "Sandubas na chapa" } },
+        { "@type": "Offer", "itemOffered": { "@type": "MenuItem", "name": "Chapa de tofu e cogumelos (veg)" } },
+        { "@type": "Offer", "itemOffered": { "@type": "MenuItem", "name": "Molhos artesanais e pimentas" } },
+        { "@type": "Offer", "itemOffered": { "@type": "MenuItem", "name": "Chope e drinks" } },
+        { "@type": "Offer", "itemOffered": { "@type": "MenuItem", "name": "Queijadas" } }
+      ]
+    }
+  }
+  </script>
+
+  <style>
+    /* ==========================================================
+       REÚNE — versão base
+       Direção: "a casa que reúne". Papel claro (mesa de dia),
+       tinta verde-noite e pimenta. O acento do Ú vira um pin de
+       ponto de encontro. Leve: zero JS, uma requisição de fonte.
+       ========================================================== */
+
+    :root {
+      --papel:    #F3EAD9;
+      --papel-2:  #EBDFC8;
+      --tinta:    #1C2420;
+      --madeira:  #4A3B30;
+      --pimenta:  #D6452E;
+      --lampada:  #E8A13D;
+      --folha:    #5F7D5C;
+      --linha:    rgba(28, 36, 32, .16);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Epilogue', system-ui, sans-serif;
+      background: var(--papel);
+      color: var(--tinta);
+      line-height: 1.6;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, .display {
+      font-family: 'Bricolage Grotesque', 'Epilogue', sans-serif;
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -.02em;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: inherit; }
+
+    .wrap { max-width: 1060px; margin: 0 auto; padding: 0 20px; }
+
+    /* ---------- header ---------- */
+    .topo {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(243, 234, 217, .92);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid var(--linha);
+    }
+    .topo-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 16px; padding: 12px 0;
+    }
+    .marca { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .marca img { height: 40px; width: auto; }
+    .marca small {
+      font-size: 11px; font-weight: 600; letter-spacing: .22em;
+      color: var(--pimenta); text-transform: uppercase; display: block; margin-top: -4px;
+    }
+    .topo-cta {
+      display: inline-block; background: var(--tinta); color: var(--papel);
+      text-decoration: none; font-weight: 700; font-size: 14px;
+      padding: 10px 18px; border-radius: 999px; white-space: nowrap;
+    }
+    .topo-cta:hover { background: var(--pimenta); }
+
+    /* ---------- hero ---------- */
+    .hero { padding: 64px 0 48px; border-bottom: 1px solid var(--linha); }
+    .hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 40px; align-items: center; }
+    .kicker {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 12px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase;
+      color: var(--pimenta); margin-bottom: 18px;
+    }
+    .kicker::before { content: ""; width: 26px; height: 2px; background: var(--pimenta); }
+    .hero h1 { font-size: clamp(40px, 7vw, 68px); }
+    .hero h1 em { font-style: normal; color: var(--pimenta); }
+    .hero p { margin: 18px 0 24px; font-size: 18px; max-width: 46ch; color: var(--madeira); }
+    .acoes { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 22px; border-radius: 999px; font-weight: 700; font-size: 15px;
+      text-decoration: none; border: 2px solid var(--tinta);
+    }
+    .btn-chefe { background: var(--tinta); color: var(--papel); }
+    .btn-chefe:hover { background: var(--pimenta); border-color: var(--pimenta); }
+    .btn-fantasma { color: var(--tinta); }
+    .btn-fantasma:hover { background: var(--tinta); color: var(--papel); }
+    .prova {
+      display: inline-flex; align-items: center; gap: 10px; margin-top: 22px;
+      font-size: 14px; font-weight: 600; color: var(--madeira);
+    }
+    .estrela { color: var(--lampada); font-size: 17px; letter-spacing: 2px; }
+    .hero-foto { position: relative; }
+    .hero-foto img {
+      border-radius: 18px; aspect-ratio: 4/5; object-fit: cover;
+      box-shadow: 14px 14px 0 var(--papel-2), 14px 14px 0 1px var(--linha);
+    }
+    .selo {
+      position: absolute; left: -14px; bottom: 26px;
+      background: var(--papel); border: 2px solid var(--tinta); border-radius: 14px;
+      padding: 10px 14px; font-size: 13px; font-weight: 700; line-height: 1.3;
+      box-shadow: 5px 5px 0 var(--pimenta);
+    }
+
+    /* ---------- faixa de ficha técnica ---------- */
+    .ficha { border-bottom: 1px solid var(--linha); background: var(--papel-2); }
+    .ficha-inner {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px;
+      padding: 18px 0; text-align: center;
+    }
+    .ficha b { font-size: 14px; display: block; }
+    .ficha span { font-size: 12.5px; color: var(--madeira); }
+
+    /* ---------- seções ---------- */
+    .secao { padding: 56px 0; border-bottom: 1px solid var(--linha); }
+    .secao-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 28px; }
+    .secao h2 { font-size: clamp(28px, 4vw, 40px); }
+    .secao-head p { font-size: 14.5px; color: var(--madeira); max-width: 40ch; }
+
+    /* cardápio */
+    .menu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .prato {
+      background: #FFFDF6; border: 1px solid var(--linha); border-radius: 14px;
+      padding: 18px 18px 16px;
+    }
+    .prato .tag {
+      display: inline-block; font-size: 10.5px; font-weight: 800; letter-spacing: .14em;
+      text-transform: uppercase; color: var(--folha); border: 1px solid currentColor;
+      border-radius: 999px; padding: 2px 9px; margin-bottom: 10px;
+    }
+    .prato .tag.veg { color: var(--folha); }
+    .prato .tag.casa { color: var(--pimenta); }
+    .prato h3 { font-size: 19px; margin-bottom: 6px; }
+    .prato p { font-size: 14px; color: var(--madeira); }
+
+    /* agenda */
+    .agenda-note {
+      background: var(--tinta); color: var(--papel); border-radius: 16px;
+      padding: 26px 28px; display: flex; gap: 18px; align-items: center; flex-wrap: wrap;
+    }
+    .agenda-note .icon { font-size: 30px; }
+    .agenda-note b { font-size: 18px; font-family: 'Bricolage Grotesque', sans-serif; }
+    .agenda-note p { font-size: 14.5px; color: rgba(243,234,217,.82); max-width: 60ch; }
+    .agenda-note a { color: var(--lampada); font-weight: 700; }
+
+    /* fotos */
+    .fotos { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
+    .fotos img { border-radius: 10px; aspect-ratio: 4/5; object-fit: cover; height: 100%; }
+
+    /* horários + local */
+    .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .info-card {
+      background: #FFFDF6; border: 1px solid var(--linha); border-radius: 14px; padding: 22px;
+    }
+    .info-card h3 { font-size: 20px; margin-bottom: 12px; }
+    .horas { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+    .horas td { padding: 5px 0; border-bottom: 1px dashed var(--linha); }
+    .horas td:last-child { text-align: right; font-weight: 600; }
+    .horas .fechado { color: var(--pimenta); font-weight: 600; }
+    .horas .hoje { background: rgba(232, 161, 61, .18); }
+    .info-card address { font-style: normal; font-size: 15px; color: var(--madeira); margin-bottom: 14px; }
+    .info-card .btn { margin-top: 4px; padding: 10px 16px; font-size: 13.5px; }
+    .obs { font-size: 12.5px; color: var(--madeira); margin-top: 12px; }
+
+    /* ---------- rodapé ---------- */
+    .rodape { background: var(--tinta); color: var(--papel); padding: 40px 0 28px; }
+    .rodape-inner { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; align-items: flex-start; }
+    .rodape img { height: 34px; filter: invert(.92) sepia(.18) saturate(1.1) hue-rotate(-12deg); }
+    .rodape small { display: block; margin-top: 10px; font-size: 12.5px; color: rgba(243,234,217,.6); }
+    .rodape nav { display: flex; gap: 18px; flex-wrap: wrap; font-size: 14px; }
+    .rodape a { color: rgba(243,234,217,.85); text-decoration: none; }
+    .rodape a:hover { color: var(--lampada); }
+
+    /* ---------- responsivo ---------- */
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 28px; }
+      .hero-foto { max-width: 420px; }
+      .ficha-inner { grid-template-columns: repeat(2, 1fr); row-gap: 14px; }
+      .menu-grid { grid-template-columns: repeat(2, 1fr); }
+      .fotos { grid-template-columns: repeat(3, 1fr); }
+      .fotos img:nth-child(n+4) { display: none; }
+    }
+    @media (max-width: 640px) {
+      .hero { padding: 44px 0 36px; }
+      .menu-grid, .info-grid { grid-template-columns: 1fr; }
+      .fotos { grid-template-columns: repeat(2, 1fr); }
+      .fotos img:nth-child(n+3) { display: none; }
+      .topo-cta span { display: none; }
+      .topo-cta { padding: 10px 14px; }
+    }
+
+    :focus-visible { outline: 3px solid var(--pimenta); outline-offset: 3px; border-radius: 4px; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="topo">
+    <div class="wrap topo-inner">
+      <a class="marca" href="#inicio" aria-label="ReÚne - Comida e Cultura, início">
+        <!-- Logo PROVISÓRIO (wordmark gerado em 2026-11-20). A confirmar: logo oficial -->
+        <img src="logo-provisorio.svg" alt="ReÚne — comida e cultura" width="150" height="38">
+      </a>
+      <a class="topo-cta" href="https://wa.me/5519995659012?text=Oi%2C%20Re%C3%9Ane!%20Queria%20fazer%20um%20pedido."
+         rel="noopener">
+        <!-- EDITÁVEL/A CONFIRMAR: número do WhatsApp oficial (fonte: ficha Google via snippet, 2026-11-20) -->
+        <span>Pedir pelo WhatsApp</span> 💬
+      </a>
+    </div>
+  </header>
+
+  <main id="inicio">
+
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="kicker">Barão Geraldo · Campinas</p>
+          <h1>Sanduba bom, chope gelado e <em>música ao vivo</em>.</h1>
+          <p>O ReÚne é o quintal do Barão: comida de verdade na chapa, molhos
+             artesanais com pimenta que vira assunto, e palco de quarta a domingo.
+             <strong>Comida e cultura no mesmo endereço.</strong></p>
+          <div class="acoes">
+            <a class="btn btn-chefe" href="https://wa.me/5519995659012?text=Oi%2C%20Re%C3%9Ane!%20Queria%20fazer%20um%20pedido." rel="noopener">Pedir pelo WhatsApp</a>
+            <a class="btn btn-fantasma" href="#horarios">Ver horários</a>
+          </div>
+          <p class="prova">
+            <span class="estrela" aria-hidden="true">★★★★★</span>
+            <strong>4,7</strong> no Google ·
+            <!-- A CONFIRMAR número exato na onboarding (Places API): agregado do Google via Restaurant Guru, jan/2026 -->
+            ~305 avaliações
+          </p>
+        </div>
+        <figure class="hero-foto">
+          <!-- Foto pública da ficha (via Restaurant Guru). EDITÁVEL: substituir por fotos oficiais do cliente -->
+          <img src="foto-01-chapa-tofu.jpg" alt="Chapa de tofu com shimeji, legumes grelhados e farofa — prato do ReÚne" width="550" height="688">
+          <figcaption class="selo">Qua–Dom<br>11h às 22h</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ================= FICHA TÉCNICA ================= -->
+    <section class="ficha" aria-label="Resumo">
+      <div class="wrap ficha-inner">
+        <div><b>Sandubas na chapa</b><span>pão, fogo e recheio honesto</span></div>
+        <div><b>Opções vegetarianas</b><span>chapa de tofu, grão e legumes</span></div>
+        <div><b>Música ao vivo</b><span>de quarta a domingo</span></div>
+        <div><b>Delivery e retirada</b><span>pedidos pelo WhatsApp</span></div>
+      </div>
+    </section>
+
+    <!-- ================= CARDÁPIO ================= -->
+    <section class="secao" id="cardapio">
+      <div class="wrap">
+        <div class="secao-head">
+          <h2>Saiu da chapa</h2>
+          <p>Destaques que o público elogia nas avaliações. Ticket médio:
+             R$ 20–40 por pessoa. Cardápio completo na casa e pelo WhatsApp.</p>
+        </div>
+        <!-- Itens vindos de avaliações públicas (Restaurant Guru, coleta 2026-11-20) -->
+        <div class="menu-grid">
+          <article class="prato">
+            <span class="tag casa">Assinatura</span>
+            <h3>Sanduba de carne de porco desfiada</h3>
+            <p>Lentamente desfiada, com os molhos da casa pra escolher.</p>
+          </article>
+          <article class="prato">
+            <span class="tag veg">Veg</span>
+            <h3>Chapa de tofu com shimeji</h3>
+            <p>Tofu grelhado, cogumelos, legumes na chapa e farofa.</p>
+          </article>
+          <article class="prato">
+            <span class="tag veg">Veg</span>
+            <h3>Sanduba de grão</h3>
+            <p>O queridinho vegano das avaliações — suculento e bem temperado.</p>
+          </article>
+          <article class="prato">
+            <span class="tag casa">Assinatura</span>
+            <h3>Molhos e pimentas da casa</h3>
+            <p>Pimenta defumada e tonkatsu: os diferenciados que o público cita.</p>
+          </article>
+          <article class="prato">
+            <span class="tag casa">Do bar</span>
+            <h3>Chope e drinks</h3>
+            <p>Chope bem tirado e caipirinha pra acompanhar o som.</p>
+          </article>
+          <article class="prato">
+            <span class="tag casa">Sobremesa</span>
+            <h3>Queijadas</h3>
+            <p>Para fechar em doce — as queijadas da casa são citação recorrente.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= AGENDA / MÚSICA ================= -->
+    <section class="secao" id="musica">
+      <div class="wrap">
+        <div class="secao-head">
+          <h2>Música ao vivo</h2>
+          <p>A identidade da casa: rock, reggae e tributos no quintal.</p>
+        </div>
+        <div class="agenda-note">
+          <span class="icon" aria-hidden="true">🎸</span>
+          <div>
+            <!-- EDITÁVEL: agenda real de shows — confirmar programação com o cliente -->
+            <b>De quarta a domingo, tem som na varanda.</b>
+            <p>A programação da semana sai primeiro no
+               <a href="https://www.instagram.com/reune_comida_cultura" rel="noopener">@reune_comida_cultura</a>.
+               Chega cedo, senta na mesa de madeira e deixa o dia terminar no baixo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FOTOS ================= -->
+    <section class="secao" aria-label="Fotos da casa">
+      <div class="wrap">
+        <div class="fotos">
+          <!-- Fotos públicas da ficha (via Restaurant Guru). EDITÁVEL: substituir pelas oficiais -->
+          <img src="foto-03-pratos-sandubas.jpg" alt="Sandubas e pratos servidos nas mesas de madeira" loading="lazy">
+          <img src="foto-05-pratos-chope-varanda.jpg" alt="Prato completo, chope e varanda com plantas" loading="lazy">
+          <img src="foto-02-chapa-tofu-2.jpg" alt="Chapa de tofu com cogumelos" loading="lazy">
+          <img src="foto-04-bar-drinks-sobremesa.jpg" alt="Bebidas da casa, drinks e sobremesa assada" loading="lazy">
+          <img src="foto-01-chapa-tofu.jpg" alt="Chapa de tofu com shimeji e legumes" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HORÁRIOS + LOCALIZAÇÃO ================= -->
+    <section class="secao" id="horarios">
+      <div class="wrap info-grid">
+        <div class="info-card">
+          <h3>Horários</h3>
+          <!-- Fonte: Restaurant Guru (pág. jan/2026). VALIDAR com o cliente antes de publicar -->
+          <table class="horas">
+            <tr><td>Segunda</td><td class="fechado">Fechado</td></tr>
+            <tr><td>Terça</td><td class="fechado">Fechado</td></tr>
+            <tr><td>Quarta</td><td>11h – 22h</td></tr>
+            <tr><td>Quinta</td><td>11h – 22h</td></tr>
+            <tr><td>Sexta</td><td>11h – 22h</td></tr>
+            <tr><td>Sábado</td><td>11h – 22h</td></tr>
+            <tr><td>Domingo</td><td>11h – 22h</td></tr>
+          </table>
+          <p class="obs">Ao ar livre, aceita cartões, sem reserva, acessível —
+          com estacionamento gratuito na rua.</p>
+        </div>
+        <div class="info-card">
+          <h3>Onde estamos</h3>
+          <!-- Fonte: OSM/ViaCEP (2026-11-20). Um agregador cita o endereço antigo
+               (Manoel Antunes Novo, 481). VALIDAR com o cliente antes de publicar -->
+          <address>
+            Rua Josepha Antônia Maria Picelli, 53<br>
+            Barão Geraldo — Campinas/SP · CEP 13084-311
+          </address>
+          <a class="btn btn-fantasma" target="_blank" rel="noopener"
+             href="https://maps.google.com/?q=Re%C3%9Ane+Comida+e+Cultura+Rua+Josepha+Antonia+Maria+Picelli+53+Bar%C3%A3o+Geraldo+Campinas">
+            Abrir no Google Maps ↗
+          </a>
+          <p class="obs">WhatsApp e encomendas:
+             <!-- EDITÁVEL/A CONFIRMAR: canal oficial -->
+             (19) 99565-9012 · <a href="https://www.instagram.com/reune_comida_cultura" rel="noopener">@reune_comida_cultura</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= RODAPÉ ================= -->
+  <footer class="rodape">
+    <div class="wrap rodape-inner">
+      <div>
+        <!-- Logo PROVISÓRIO. A confirmar: logo oficial -->
+        <img src="logo-provisorio.svg" alt="ReÚne — comida e cultura">
+        <small>Comida e cultura no coração do Barão Geraldo.</small>
+      </div>
+      <nav aria-label="Contatos">
+        <a href="https://wa.me/5519995659012" rel="noopener">WhatsApp</a>
+        <a href="https://www.instagram.com/reune_comida_cultura" rel="noopener">Instagram</a>
+        <a href="#cardapio">Cardápio</a>
+        <a href="#horarios">Horários</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>

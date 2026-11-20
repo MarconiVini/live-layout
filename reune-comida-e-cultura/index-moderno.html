@@ -1,0 +1,666 @@
+<!doctype html>
+<html lang="pt-BR" data-tema="noite">
+<head>
+  <meta charset="utf-8">
+  <script>document.documentElement.classList.add('js');</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ReÚne - Comida e Cultura | Barão Geraldo, Campinas — comida, chope e música ao vivo</title>
+  <meta name="description" content="ReÚne - Comida e Cultura: sandubas na chapa, opções vegetarianas, molhos artesanais, chope gelado e música ao vivo no Barão Geraldo, Campinas/SP. Qua a dom, 11h às 22h.">
+  <meta name="theme-color" content="#141B17">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ReÚne - Comida e Cultura">
+  <meta property="og:locale" content="pt_BR">
+  <!-- EDITÁVEL: substitua pela URL definitiva quando o site for publicado -->
+  <meta property="og:title" content="ReÚne - Comida e Cultura | Barão Geraldo, Campinas">
+  <meta property="og:description" content="Sandubas na chapa, chope gelado e música ao vivo. O quintal onde o Barão se reúne.">
+  <meta property="og:image" content="foto-01-chapa-tofu.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- DEMO PRIVADA: fora do Google, fora de IAs e sem renderização por bots.
+       Remover esta linha (e o robots.txt) quando o site for publicado de verdade. -->
+  <meta name="robots" content="noindex, nofollow, noimageindex">
+  <meta name="googlebot" content="noindex, nofollow, noimageindex">
+
+  <!-- Favicon: provisório gerado em 2026-11-20 (sem logo oficial público — A confirmar) -->
+  <link rel="icon" type="image/png" href="favicon-64.png">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Epilogue:ital,wght@0,300..800;1,400..700&display=swap" rel="stylesheet">
+
+  <!--
+    ============================================================
+    DADOS ESTRUTURADOS (Schema.org — Restaurant) — idênticos à
+    versão base; fontes e avisos de validação no comentário de lá.
+    Coleta 2026-11-20 (ver details/reune-comida-e-cultura/).
+    ============================================================
+  -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "ReÚne - Comida e Cultura",
+    "alternateName": "ReÚne, Comida & Cultura",
+    "description": "Sanduicheria com opções vegetarianas, bar e casa de música ao vivo em Barão Geraldo, Campinas/SP.",
+    "servesCuisine": ["Sanduicheria", "Lanches", "Vegetariano", "Bar"],
+    "priceRange": "R$ 20–40 por pessoa",
+    "telephone": "+55-19-99565-9012",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua Josepha Antônia Maria Picelli, 53",
+      "addressNeighborhood": "Barão Geraldo",
+      "addressLocality": "Campinas",
+      "addressRegion": "SP",
+      "postalCode": "13084-311",
+      "addressCountry": "BR"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "11:00",
+      "closes": "22:00"
+    },
+    "sameAs": ["https://www.instagram.com/reune_comida_cultura"],
+    "hasMap": "https://maps.google.com/?q=Re%C3%9Ane+Comida+e+Cultura+Rua+Josepha+Antonia+Maria+Picelli+53+Bar%C3%A3o+Geraldo+Campinas",
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.7", "reviewCount": "305" }
+  }
+  </script>
+
+  <style>
+    /* ==========================================================
+       REÚNE — versão moderna: "noite de show no quintal"
+       Tinta verde-noite, luz de pisca-pisca, pimenta e papel de
+       flyer. Assinatura: o Ú-pin pulsando como ponto de encontro
+       + agenda em flyers colados. Tema noite (padrão) ↔ tarde.
+       ========================================================== */
+
+    :root {
+      --noite:    #141B17;
+      --noite-2:  #1C2420;
+      --madeira:  #4A3B30;
+      --pimenta:  #D6452E;
+      --lampada:  #E8A13D;
+      --papel:    #F3EAD9;
+      --papel-2:  #EBDFC8;
+      --folha:    #8FAE8B;
+
+      --bg: var(--noite);
+      --bg-2: var(--noite-2);
+      --fg: var(--papel);
+      --fg-suave: rgba(243, 234, 217, .72);
+      --linha: rgba(243, 234, 217, .14);
+      --cartao: rgba(243, 234, 217, .05);
+      --sombra-flyer: rgba(0, 0, 0, .45);
+    }
+    :root[data-tema="tarde"] {
+      --bg: var(--papel);
+      --bg-2: var(--papel-2);
+      --fg: var(--noite);
+      --fg-suave: rgba(20, 27, 23, .72);
+      --linha: rgba(20, 27, 23, .16);
+      --cartao: rgba(255, 253, 246, .7);
+      --sombra-flyer: rgba(74, 59, 48, .28);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Epilogue', system-ui, sans-serif;
+      background: var(--bg); color: var(--fg);
+      line-height: 1.6; font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      transition: background .5s ease, color .5s ease;
+      overflow-x: hidden;
+    }
+    h1, h2, h3, .display {
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-weight: 800; line-height: 1.02; letter-spacing: -.02em;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 0 22px; }
+
+    ::selection { background: var(--pimenta); color: var(--papel); }
+    :focus-visible { outline: 3px solid var(--lampada); outline-offset: 3px; border-radius: 4px; }
+
+    /* ---------- topo ---------- */
+    .topo {
+      position: fixed; inset: 0 0 auto 0; z-index: 90;
+      padding: 14px 0;
+      background: transparent; transition: background .35s ease, box-shadow .35s ease;
+    }
+    .topo.rolou { background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(10px); box-shadow: 0 1px 0 var(--linha); }
+    .topo-inner { display: flex; align-items: center; justify-content: space-between; gap: 14px; }
+    .marca { display: flex; align-items: center; gap: 10px; text-decoration: none; font-family: 'Bricolage Grotesque'; font-weight: 800; font-size: 22px; letter-spacing: -.02em; }
+    .marca .pin { width: 17px; height: 17px; }
+    .acoes-topo { display: flex; gap: 10px; align-items: center; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 12px 20px; border-radius: 999px; font-weight: 700; font-size: 14.5px;
+      text-decoration: none; border: 2px solid var(--pimenta); cursor: pointer;
+      transition: transform .18s ease, background .25s ease, color .25s ease;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-chefe { background: var(--pimenta); color: #fff; }
+    .btn-chefe:hover { background: color-mix(in srgb, var(--pimenta) 85%, #000); }
+    .btn-fantasma { border-color: var(--linha); color: var(--fg); background: transparent; }
+    .btn-fantasma:hover { border-color: var(--fg); }
+    .btn-tema {
+      border: 2px solid var(--linha); background: transparent; color: var(--fg);
+      width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center;
+      cursor: pointer; font-size: 17px;
+    }
+
+    /* ---------- hero ---------- */
+    .hero {
+      min-height: 100svh; display: flex; flex-direction: column; justify-content: center;
+      position: relative; padding: 120px 0 40px; overflow: hidden;
+    }
+    .hero::before {
+      /* luz de pisca-pisca atrás do texto */
+      content: ""; position: absolute; inset: -40% -20% auto auto; width: 60vw; height: 60vw;
+      background: radial-gradient(circle, rgba(232,161,61,.16), transparent 62%);
+      animation: respira 7s ease-in-out infinite;
+      pointer-events: none;
+    }
+    @keyframes respira { 0%,100% { opacity: .6; transform: scale(1); } 50% { opacity: 1; transform: scale(1.08); } }
+
+    .hero-tag {
+      display: inline-flex; gap: 9px; align-items: center;
+      font-size: 12px; font-weight: 700; letter-spacing: .24em; text-transform: uppercase;
+      color: var(--lampada); margin-bottom: 20px;
+    }
+    .hero-tag::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--pimenta); box-shadow: 0 0 0 0 rgba(214,69,46,.6); animation: pulsa 2.4s infinite; }
+    @keyframes pulsa { 70% { box-shadow: 0 0 0 12px rgba(214,69,46,0); } 100% { box-shadow: 0 0 0 0 rgba(214,69,46,0); } }
+
+    .hero h1 { font-size: clamp(58px, 12vw, 150px); }
+    .hero h1 .linha { display: block; overflow: hidden; }
+    .hero h1 .linha > span { display: inline-block; transform: translateY(110%); animation: sobe .9s cubic-bezier(.2,.7,.2,1) forwards; }
+    .hero h1 .linha:nth-child(2) > span { animation-delay: .12s; }
+    @keyframes sobe { to { transform: translateY(0); } }
+    .hero h1 .u-pin { position: relative; color: var(--lampada); }
+    .hero h1 .u-pin svg {
+      position: absolute; top: -.22em; left: 50%; transform: translateX(-50%);
+      width: .34em; height: .34em; animation: flutua 3.2s ease-in-out infinite;
+    }
+    @keyframes flutua { 0%,100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(-.09em); } }
+    .hero h1 .riscado { color: var(--pimenta); font-style: italic; }
+    .hero-sub {
+      margin: 22px 0 30px; font-size: clamp(16px, 2vw, 19px); max-width: 52ch; color: var(--fg-suave);
+      opacity: 0; animation: aparece .8s ease .45s forwards;
+    }
+    @keyframes aparece { to { opacity: 1; } }
+    .hero-acoes { display: flex; gap: 12px; flex-wrap: wrap; opacity: 0; animation: aparece .8s ease .6s forwards; }
+    .hero-nota {
+      margin-top: 26px; font-size: 14px; color: var(--fg-suave);
+      display: flex; align-items: center; gap: 10px;
+      opacity: 0; animation: aparece .8s ease .75s forwards;
+    }
+    .estrela { color: var(--lampada); letter-spacing: 2px; }
+    .hero-nota b { color: var(--fg); }
+    .rolar {
+      position: absolute; bottom: 26px; left: 50%; transform: translateX(-50%);
+      font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--fg-suave);
+      text-decoration: none; animation: seta 2.2s ease-in-out infinite;
+    }
+    @keyframes seta { 0%,100% { transform: translate(-50%, 0); } 50% { transform: translate(-50%, 7px); } }
+
+    /* ---------- letreiro ---------- */
+    .letreiro {
+      border-block: 2px solid var(--fg); padding: 14px 0; overflow: hidden;
+      background: var(--pimenta); color: #fff; transform: rotate(-1.2deg) scale(1.02);
+    }
+    .letreiro-track { display: flex; gap: 48px; width: max-content; animation: roda 26s linear infinite; }
+    .letreiro span { font-family: 'Bricolage Grotesque'; font-weight: 800; font-size: 22px; letter-spacing: .02em; white-space: nowrap; }
+    .letreiro i { font-style: normal; color: var(--lampada); }
+    @keyframes roda { to { transform: translateX(-50%); } }
+
+    /* ---------- seções ---------- */
+    .secao { padding: 92px 0; position: relative; }
+    .num-secao {
+      font-family: 'Bricolage Grotesque'; font-weight: 800; font-size: 13px;
+      color: var(--lampada); letter-spacing: .3em; margin-bottom: 14px; display: block;
+    }
+    .secao h2 { font-size: clamp(34px, 5.5vw, 56px); max-width: 18ch; }
+    .secao-head p { margin-top: 14px; color: var(--fg-suave); max-width: 52ch; }
+
+    /* revela ao rolar — só esconde quando o JS está ativo (sem JS: tudo visível) */
+    .js .revela { opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); }
+    .js .revela.visto { opacity: 1; transform: none; }
+
+    /* cardápio */
+    .menu-grid { margin-top: 44px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .prato {
+      background: var(--cartao); border: 1px solid var(--linha); border-radius: 18px;
+      padding: 24px 22px 20px; position: relative; overflow: hidden;
+      transition: transform .3s ease, border-color .3s ease;
+    }
+    .prato:hover { transform: translateY(-6px); border-color: var(--pimenta); }
+    .prato .num {
+      position: absolute; right: 16px; top: 10px;
+      font-family: 'Bricolage Grotesque'; font-weight: 800; font-size: 44px;
+      color: transparent; -webkit-text-stroke: 1.5px var(--linha);
+    }
+    .prato .tag {
+      display: inline-block; font-size: 10.5px; font-weight: 800; letter-spacing: .16em;
+      text-transform: uppercase; color: var(--folha); border: 1px solid currentColor;
+      border-radius: 999px; padding: 2px 10px; margin-bottom: 14px;
+    }
+    .prato .tag.casa { color: var(--lampada); }
+    .prato h3 { font-size: 21px; margin-bottom: 8px; }
+    .prato p { font-size: 14.5px; color: var(--fg-suave); }
+
+    /* agenda em flyers */
+    .agenda { margin-top: 46px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    .flyer {
+      background: var(--papel); color: var(--noite); border-radius: 6px;
+      padding: 20px 18px 16px; position: relative;
+      box-shadow: 6px 8px 14px var(--sombra-flyer);
+      transition: transform .3s cubic-bezier(.2,.7,.2,1);
+    }
+    .flyer:nth-child(1) { rotate: -2.4deg; }
+    .flyer:nth-child(2) { rotate: 1.6deg; }
+    .flyer:nth-child(3) { rotate: -1.2deg; }
+    .flyer:nth-child(4) { rotate: 2.2deg; }
+    .flyer:hover { transform: rotate(0deg) translateY(-8px) scale(1.03); z-index: 2; }
+    .flyer::before {
+      /* fita adesiva */
+      content: ""; position: absolute; top: -11px; left: 50%; transform: translateX(-50%) rotate(-3deg);
+      width: 84px; height: 22px; background: rgba(232,161,61,.5); border: 1px dashed rgba(20,27,23,.2);
+    }
+    .flyer .dia { font-family: 'Bricolage Grotesque'; font-weight: 800; font-size: 13px; letter-spacing: .18em; text-transform: uppercase; color: var(--pimenta); }
+    .flyer .big { font-family: 'Bricolage Grotesque'; font-weight: 800; font-size: 42px; line-height: 1; margin: 6px 0 2px; }
+    .flyer .hora { font-size: 12.5px; color: rgba(20,27,23,.6); font-weight: 600; }
+    .flyer .estilo { margin-top: 10px; font-size: 14px; font-weight: 700; border-top: 1px dashed rgba(20,27,23,.25); padding-top: 10px; }
+    .flyer .obs { font-size: 12.5px; color: rgba(20,27,23,.6); }
+    .agenda-aviso {
+      margin-top: 22px; font-size: 13px; color: var(--fg-suave);
+      display: flex; gap: 8px; align-items: baseline;
+    }
+    .agenda-aviso a { color: var(--lampada); font-weight: 700; }
+
+    /* galeria */
+    .galeria { margin-top: 44px; display: grid; grid-template-columns: repeat(6, 1fr); grid-auto-rows: 190px; gap: 12px; }
+    .galeria figure { overflow: hidden; border-radius: 14px; position: relative; }
+    .galeria img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s cubic-bezier(.2,.7,.2,1); }
+    .galeria figure:hover img { transform: scale(1.06); }
+    .galeria .grande { grid-column: span 3; grid-row: span 2; }
+    .galeria .media  { grid-column: span 3; }
+    .galeria figcaption {
+      position: absolute; inset: auto 0 0 0; padding: 28px 14px 10px;
+      background: linear-gradient(transparent, rgba(20,27,23,.75));
+      color: #fff; font-size: 12.5px; font-weight: 600; opacity: 0; transition: opacity .3s ease;
+    }
+    .galeria figure:hover figcaption { opacity: 1; }
+
+    /* citação de avaliação */
+    .citacao { text-align: center; max-width: 780px; margin: 0 auto; }
+    .citacao .estrelas { font-size: 22px; color: var(--lampada); letter-spacing: 6px; }
+    .citacao blockquote {
+      font-family: 'Bricolage Grotesque'; font-weight: 700;
+      font-size: clamp(21px, 3.2vw, 30px); line-height: 1.3; margin: 18px 0 14px;
+    }
+    .citacao cite { font-style: normal; font-size: 13.5px; color: var(--fg-suave); }
+    .citacao cite b { color: var(--fg); }
+
+    /* horários/local */
+    .final-grid { margin-top: 44px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .painel {
+      background: var(--cartao); border: 1px solid var(--linha); border-radius: 20px; padding: 30px 28px;
+    }
+    .painel h3 { font-size: 24px; margin-bottom: 18px; }
+    .horas { width: 100%; border-collapse: collapse; font-size: 15px; }
+    .horas td { padding: 7px 0; border-bottom: 1px dashed var(--linha); color: var(--fg-suave); }
+    .horas td:last-child { text-align: right; color: var(--fg); font-weight: 700; }
+    .horas .fechado { color: var(--pimenta); }
+    .painel address { font-style: normal; font-size: 15.5px; color: var(--fg-suave); margin-bottom: 16px; line-height: 1.7; }
+    .painel address b { color: var(--fg); }
+    .mini-mapa {
+      margin-top: 4px; border-radius: 12px; overflow: hidden; border: 1px solid var(--linha);
+    }
+    .mini-mapa img { width: 100%; height: 150px; object-fit: cover; filter: saturate(.9); }
+
+    /* rodapé */
+    .rodape { border-top: 1px solid var(--linha); padding: 60px 0 30px; }
+    .rodape-final { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; }
+    .rodape .marca { font-size: 30px; }
+    .rodape small { display: block; margin-top: 10px; color: var(--fg-suave); font-size: 13px; }
+    .rodape nav { display: flex; gap: 20px; flex-wrap: wrap; font-size: 14px; }
+    .rodape nav a { color: var(--fg-suave); text-decoration: none; }
+    .rodape nav a:hover { color: var(--lampada); }
+
+    /* ---------- responsivo ---------- */
+    @media (max-width: 900px) {
+      .secao { padding: 64px 0; }
+      .menu-grid { grid-template-columns: repeat(2, 1fr); }
+      .agenda { grid-template-columns: repeat(2, 1fr); }
+      .galeria { grid-auto-rows: 160px; }
+      .final-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .hero { padding-top: 96px; }
+      .btn span.txt-longo { display: none; }
+      .menu-grid, .agenda { grid-template-columns: 1fr; }
+      .galeria { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 150px; }
+      .galeria .grande { grid-column: span 2; }
+      .galeria .media { grid-column: span 1; }
+      .letreiro span { font-size: 17px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+      .hero h1 .linha > span { transform: none; animation: none; }
+      .hero-sub, .hero-acoes, .hero-nota { opacity: 1; }
+      .revela { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================= TOPO ================= -->
+  <header class="topo" id="topo">
+    <div class="wrap topo-inner">
+      <a class="marca" href="#inicio" aria-label="ReÚne - Comida e Cultura">
+        <svg class="pin" viewBox="0 0 64 64" aria-hidden="true"><path d="M32,10 C23,10 17,17 17,24 C17,32 32,48 32,48 C32,48 47,32 47,24 C47,17 41,10 32,10 Z" fill="#D6452E"/><circle cx="32" cy="24" r="6" fill="#F3EAD9"/></svg>
+        re<span style="position:relative">u<svg viewBox="0 0 20 20" style="position:absolute;width:.42em;height:.42em;top:-.34em;left:50%;transform:translateX(-50%)" aria-hidden="true"><path d="M10,2 C6.5,2 4,4.7 4,7.5 C4,11 10,18 10,18 C10,18 16,11 16,7.5 C16,4.7 13.5,2 10,2 Z" fill="#D6452E"/></svg></span>ne
+      </a>
+      <div class="acoes-topo">
+        <button class="btn-tema" id="troca-tema" aria-label="Alternar entre tema noite e tarde" title="Alternar tema">🌙</button>
+        <a class="btn btn-chefe" href="https://wa.me/5519995659012?text=Oi%2C%20Re%C3%9Ane!%20Queria%20fazer%20um%20pedido." rel="noopener">
+          <!-- EDITÁVEL/A CONFIRMAR: número do WhatsApp oficial (ficha Google via snippet, 2026-11-20) -->
+          <span class="txt-longo">Pedir pelo WhatsApp</span> 💬
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="inicio">
+
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+      <div class="wrap">
+        <p class="hero-tag">Barão Geraldo · Campinas/SP</p>
+        <h1>
+          <span class="linha"><span>o quintal</span></span>
+          <span class="linha"><span>onde o <span class="riscado">Barão</span></span></span>
+          <span class="linha"><span class="u-pin">se re<span style="position:relative;display:inline-block">u<svg viewBox="0 0 20 20" style="position:absolute;width:.36em;height:.36em;top:-.075em;left:50%;transform:translateX(-50%)" aria-hidden="true"><path d="M10,1.4 C6.3,1.4 3.6,4.4 3.6,7.4 C3.6,11.2 10,18.6 10,18.6 C10,18.6 16.4,11.2 16.4,7.4 C16.4,4.4 13.7,1.4 10,1.4 Z" fill="#D6452E"/><circle cx="10" cy="7.4" r="3" fill="#F3EAD9"/></svg></span>ne</span></span>
+        </h1>
+        <p class="hero-sub">
+          Sandubas na chapa, molhos com pimenta que viram assunto, chope bem tirado
+          e <strong>música ao vivo de quarta a domingo</strong>. Comida e cultura
+          no mesmo endereço — desde o primeiro grau de bateria até a última queijada.
+        </p>
+        <div class="hero-acoes">
+          <a class="btn btn-chefe" href="https://wa.me/5519995659012?text=Oi%2C%20Re%C3%9Ane!%20Queria%20fazer%20um%20pedido." rel="noopener">Pedir pelo WhatsApp</a>
+          <a class="btn btn-fantasma" href="#agenda">Ver a agenda da semana</a>
+        </div>
+        <p class="hero-nota">
+          <span class="estrela" aria-hidden="true">★★★★★</span>
+          <span><b>4,7</b> no Google ·
+          <!-- A CONFIRMAR número exato na onboarding (Places API): agregado do Google via Restaurant Guru, jan/2026 -->
+          ~305 avaliações · quem foi, volta</span>
+        </p>
+      </div>
+      <a class="rolar" href="#cardapio">desce a tampa ↓</a>
+    </section>
+
+    <!-- ================= LETREIRO ================= -->
+    <div class="letreiro" aria-hidden="true">
+      <div class="letreiro-track">
+        <span>comida &amp; cultura <i>✦</i> música ao vivo <i>✦</i> chapa acesa <i>✦</i> chope gelado <i>✦</i> molhos da casa <i>✦</i> options vegetarianas <i>✦</i></span>
+        <span>comida &amp; cultura <i>✦</i> música ao vivo <i>✦</i> chapa acesa <i>✦</i> chope gelado <i>✦</i> molhos da casa <i>✦</i> options vegetarianas <i>✦</i></span>
+      </div>
+    </div>
+
+    <!-- ================= CARDÁPIO ================= -->
+    <section class="secao" id="cardapio">
+      <div class="wrap">
+        <span class="num-secao revela">01 — A chapa</span>
+        <h2 class="revela">Sai quente, sai falado.</h2>
+        <p class="revela secao-head-p" style="color:var(--fg-suave);margin-top:14px;max-width:52ch">
+          Os destaques que o público cita nas avaliações — ticket médio R$ 20–40
+          por pessoa. Cardápio completo na casa e pelo WhatsApp.
+        </p>
+        <!-- Itens vindos de avaliações públicas (Restaurant Guru, coleta 2026-11-20) -->
+        <div class="menu-grid">
+          <article class="prato revela">
+            <span class="num" aria-hidden="true">1</span>
+            <span class="tag casa">Assinatura</span>
+            <h3>Sanduba de porco desfiada</h3>
+            <p>Desfiada no ponto, com os molhos da casa pra escolher — pimenta defumada e tonkatsu.</p>
+          </article>
+          <article class="prato revela">
+            <span class="num" aria-hidden="true">2</span>
+            <span class="tag">Veg</span>
+            <h3>Chapa de tofu com shimeji</h3>
+            <p>Tofu grelhado, cogumelos salteados, legumes na chapa e farofa. Fecha o olho e agradece.</p>
+          </article>
+          <article class="prato revela">
+            <span class="num" aria-hidden="true">3</span>
+            <span class="tag">Veg</span>
+            <h3>Sanduba de grão</h3>
+            <p>O queridinho vegano das avaliações — suculento, bem temperado, sem saudade de nada.</p>
+          </article>
+          <article class="prato revela">
+            <span class="num" aria-hidden="true">4</span>
+            <span class="tag casa">Do bar</span>
+            <h3>Chope &amp; caipirinha</h3>
+            <p>Chope bem tirado e drinks pra acompanhar o primeiro bloco do show.</p>
+          </article>
+          <article class="prato revela">
+            <span class="num" aria-hidden="true">5</span>
+            <span class="tag casa">Assinatura</span>
+            <h3>Molhos &amp; pimentas</h3>
+            <p>A linha de molhos artesanais que o cliente pede pra levar — escolhe o seu grau.</p>
+          </article>
+          <article class="prato revela">
+            <span class="num" aria-hidden="true">6</span>
+            <span class="tag casa">Doce final</span>
+            <h3>Queijadas</h3>
+            <p>Para fechar em doce enquanto o som termina — citação recorrente do público.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= AGENDA ================= -->
+    <section class="secao" id="agenda">
+      <div class="wrap">
+        <span class="num-secao revela">02 — A palco</span>
+        <h2 class="revela">A semana no ReÚne.</h2>
+        <p class="revela" style="color:var(--fg-suave);margin-top:14px;max-width:52ch">
+          Música ao vivo de quarta a domingo — rock, reggae e tributos no quintal.
+        </p>
+        <!-- EDITÁVEL: agenda ilustrativa da estrutura — confirmar programação real com o cliente -->
+        <div class="agenda">
+          <article class="flyer revela">
+            <span class="dia">Quarta</span>
+            <div class="big">11h–22h</div>
+            <span class="hora">cozinha e bar abertos</span>
+            <p class="estilo">Som na varanda</p>
+            <p class="obs">a semana começa cedo</p>
+          </article>
+          <article class="flyer revela">
+            <span class="dia">Quinta</span>
+            <div class="big">11h–22h</div>
+            <span class="hora">almoço e happy hour</span>
+            <p class="estilo">Música ao vivo</p>
+            <p class="obs">sobe o volume no fim da tarde</p>
+          </article>
+          <article class="flyer revela">
+            <span class="dia">Sexta</span>
+            <div class="big">11h–22h</div>
+            <span class="hora">chapa acesa o dia todo</span>
+            <p class="estilo">Noite de show</p>
+            <p class="obs">chega antes das 20h</p>
+          </article>
+          <article class="flyer revela">
+            <span class="dia">Sáb · Dom</span>
+            <div class="big">11h–22h</div>
+            <span class="hora">o dia inteiro no quintal</span>
+            <p class="estilo">Tarde + noite ao vivo</p>
+            <p class="obs">mesa de madeira, sol ou lâmpada</p>
+          </article>
+        </div>
+        <p class="agenda-aviso revela">
+          📍 A programação confirmada da semana sai primeiro no
+          <a href="https://www.instagram.com/reune_comida_cultura" rel="noopener">@reune_comida_cultura</a>
+          — e em breve aqui nesta página.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= GALERIA ================= -->
+    <section class="secao" aria-label="Fotos da casa">
+      <div class="wrap">
+        <span class="num-secao revela">03 — O quintal</span>
+        <h2 class="revela">Mesa de madeira, prato cheio.</h2>
+        <!-- Fotos públicas da ficha (via Restaurant Guru). EDITÁVEL: substituir pelas oficiais -->
+        <div class="galeria">
+          <figure class="grande revela">
+            <img src="foto-01-chapa-tofu.jpg" alt="Chapa de tofu com shimeji, legumes grelhados e farofa" loading="lazy">
+            <figcaption>Chapa de tofu com shimeji — a veg que convence carnívoro</figcaption>
+          </figure>
+          <figure class="media revela">
+            <img src="foto-03-pratos-sandubas.jpg" alt="Sandubas e pratos nas mesas de madeira" loading="lazy">
+            <figcaption>Sandubas e molhos da casa</figcaption>
+          </figure>
+          <figure class="media revela">
+            <img src="foto-05-pratos-chope-varanda.jpg" alt="Prato completo, chope e varanda com plantas" loading="lazy">
+            <figcaption>Varanda, prato e chope</figcaption>
+          </figure>
+          <figure class="media revela">
+            <img src="mapa-localizacao.jpg" alt="Mapa de localização do ReÚne no Barão Geraldo" loading="lazy">
+            <figcaption>R. Josepha Antônia Maria Picelli, 53 — Barão Geraldo</figcaption>
+          </figure>
+          <figure class="media revela">
+            <img src="foto-04-bar-drinks-sobremesa.jpg" alt="Bebidas, drinks e sobremesa" loading="lazy">
+            <figcaption>Bar e sobremesa</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CITAÇÃO ================= -->
+    <section class="secao">
+      <div class="wrap citacao revela">
+        <div class="estrelas" aria-hidden="true">★★★★★</div>
+        <blockquote>
+          "Estava muito bom… ficou ainda melhor com os molhos oferecidos —
+          a pimenta defumada e o tonkatsu são diferenciados."
+        </blockquote>
+        <!-- Review pública do Google (via Restaurant Guru, jan/2026) -->
+        <cite><b>Vini</b> · avaliação no Google</cite>
+      </div>
+    </section>
+
+    <!-- ================= HORÁRIOS + LOCAL ================= -->
+    <section class="secao" id="horarios">
+      <div class="wrap">
+        <span class="num-secao revela">04 — O mapa</span>
+        <h2 class="revela">Onde o Barão se encontra.</h2>
+        <div class="final-grid">
+          <div class="painel revela">
+            <h3>Horários</h3>
+            <!-- Fonte: Restaurant Guru (pág. jan/2026). VALIDAR com o cliente antes de publicar -->
+            <table class="horas">
+              <tr><td>Segunda</td><td class="fechado">Fechado</td></tr>
+              <tr><td>Terça</td><td class="fechado">Fechado</td></tr>
+              <tr><td>Quarta</td><td>11h – 22h</td></tr>
+              <tr><td>Quinta</td><td>11h – 22h</td></tr>
+              <tr><td>Sexta</td><td>11h – 22h</td></tr>
+              <tr><td>Sábado</td><td>11h – 22h</td></tr>
+              <tr><td>Domingo</td><td>11h – 22h</td></tr>
+            </table>
+          </div>
+          <div class="painel revela">
+            <h3>Endereço</h3>
+            <!-- Fonte: OSM/ViaCEP (2026-11-20). Um agregador cita o endereço antigo
+                 (Manoel Antunes Novo, 481). VALIDAR com o cliente antes de publicar -->
+            <address>
+              <b>Rua Josepha Antônia Maria Picelli, 53</b><br>
+              Barão Geraldo — Campinas/SP · CEP 13084-311<br>
+              Ao ar livre · aceita cartões · sem reserva · acessível ·
+              estacionamento gratuito na rua
+            </address>
+            <div class="mini-mapa">
+              <!-- Mapa ilustrativo (OSM via Restaurant Guru). EDITÁVEL: trocar por embed oficial -->
+              <img src="mapa-localizacao.jpg" alt="Mapa de localização do ReÚne no Barão Geraldo">
+            </div>
+            <p style="margin-top:14px">
+              <a class="btn btn-fantasma" target="_blank" rel="noopener"
+                 href="https://maps.google.com/?q=Re%C3%9Ane+Comida+e+Cultura+Rua+Josepha+Antonia+Maria+Picelli+53+Bar%C3%A3o+Geraldo+Campinas">
+                Abrir no Google Maps ↗
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= RODAPÉ ================= -->
+  <footer class="rodape">
+    <div class="wrap rodape-final">
+      <div>
+        <span class="marca">re<span style="position:relative">u<svg viewBox="0 0 20 20" style="position:absolute;width:.4em;height:.4em;top:-.34em;left:50%;transform:translateX(-50%)" aria-hidden="true"><path d="M10,2 C6.5,2 4,4.7 4,7.5 C4,11 10,18 10,18 C10,18 16,11 16,7.5 C16,4.7 13.5,2 10,2 Z" fill="#D6452E"/></svg></span>ne</span>
+        <small>Comida e cultura no coração do Barão Geraldo.</small>
+      </div>
+      <nav aria-label="Contatos">
+        <a href="https://wa.me/5519995659012" rel="noopener">WhatsApp</a>
+        <a href="https://www.instagram.com/reune_comida_cultura" rel="noopener">Instagram</a>
+        <a href="#cardapio">Cardápio</a>
+        <a href="#agenda">Agenda</a>
+        <a href="#horarios">Onde estamos</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    /* JS leve e progressivo: tema, sombra do topo, revelação ao rolar.
+       Respeita prefers-reduced-motion (CSS já neutraliza as animações). */
+    (function () {
+      var raiz = document.documentElement;
+
+      /* tema: noite (padrão) ↔ tarde; lembra a escolha do visitante */
+      var botaoTema = document.getElementById('troca-tema');
+      var guardar = null;
+      try {
+        guardar = localStorage.getItem('reune-tema');
+        if (guardar) { raiz.setAttribute('data-tema', guardar); }
+      } catch (e) { /* localStorage indisponível: segue com o padrão */ }
+      function icone() { botaoTema.textContent = raiz.getAttribute('data-tema') === 'noite' ? '🌙' : '☀️'; }
+      icone();
+      botaoTema.addEventListener('click', function () {
+        var novo = raiz.getAttribute('data-tema') === 'noite' ? 'tarde' : 'noite';
+        raiz.setAttribute('data-tema', novo);
+        icone();
+        try { localStorage.setItem('reune-tema', novo); } catch (e) {}
+      });
+
+      /* fundo do topo após rolar */
+      var topo = document.getElementById('topo');
+      function sombreia() { topo.classList.toggle('rolou', window.scrollY > 24); }
+      window.addEventListener('scroll', sombreia, { passive: true });
+      sombreia();
+
+      /* revelação ao rolar */
+      var alvos = document.querySelectorAll('.revela');
+      if ('IntersectionObserver' in window) {
+        var obs = new IntersectionObserver(function (entradas) {
+          entradas.forEach(function (e) {
+            if (e.isIntersecting) { e.target.classList.add('visto'); obs.unobserve(e.target); }
+          });
+        }, { threshold: .12, rootMargin: '0px 0px -6% 0px' });
+        alvos.forEach(function (el, i) { el.style.transitionDelay = (i % 4) * 70 + 'ms'; obs.observe(el); });
+      } else {
+        alvos.forEach(function (el) { el.classList.add('visto'); });
+      }
+    })();
+  </script>
+
+</body>
+</html>
