@@ -86,6 +86,10 @@
       --papel-2:  #EBDFC8;
       --folha:    #8FAE8B;
 
+      /* acento de TEXTO: lâmpada na noite, âmbar queimado (bronze) na tarde —
+         o âmbar claro some sobre o papel; o bronze mantém a cor e dá contraste */
+      --acento: var(--lampada);
+
       --bg: var(--noite);
       --bg-2: var(--noite-2);
       --fg: var(--papel);
@@ -102,6 +106,7 @@
       --linha: rgba(20, 27, 23, .16);
       --cartao: rgba(255, 253, 246, .7);
       --sombra-flyer: rgba(74, 59, 48, .28);
+      --acento: color-mix(in srgb, var(--lampada) 32%, var(--madeira));
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -123,7 +128,7 @@
     .wrap { max-width: 1100px; margin: 0 auto; padding: 0 22px; }
 
     ::selection { background: var(--pimenta); color: var(--papel); }
-    :focus-visible { outline: 3px solid var(--lampada); outline-offset: 3px; border-radius: 4px; }
+    :focus-visible { outline: 3px solid var(--acento); outline-offset: 3px; border-radius: 4px; }
 
     /* ---------- topo ---------- */
     .topo {
@@ -143,7 +148,7 @@
       transition: transform .18s ease, background .25s ease, color .25s ease;
     }
     .btn:hover { transform: translateY(-2px); }
-    .btn-chefe { background: var(--pimenta); color: #fff; }
+    .btn-chefe { background: color-mix(in srgb, var(--pimenta) 93%, #000); color: #fff; }
     .btn-chefe:hover { background: color-mix(in srgb, var(--pimenta) 85%, #000); }
     .btn-fantasma { border-color: var(--linha); color: var(--fg); background: transparent; }
     .btn-fantasma:hover { border-color: var(--fg); }
@@ -156,7 +161,7 @@
     /* ---------- hero ---------- */
     .hero {
       min-height: 100svh; display: flex; flex-direction: column; justify-content: center;
-      position: relative; padding: 120px 0 40px; overflow: hidden;
+      position: relative; padding: 120px 0 88px; overflow: hidden;
     }
     .hero::before {
       /* luz de pisca-pisca atrás do texto */
@@ -170,7 +175,7 @@
     .hero-tag {
       display: inline-flex; gap: 9px; align-items: center;
       font-size: 12px; font-weight: 700; letter-spacing: .24em; text-transform: uppercase;
-      color: var(--lampada); margin-bottom: 20px;
+      color: var(--acento); margin-bottom: 20px;
     }
     .hero-tag::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--pimenta); box-shadow: 0 0 0 0 rgba(214,69,46,.6); animation: pulsa 2.4s infinite; }
     @keyframes pulsa { 70% { box-shadow: 0 0 0 12px rgba(214,69,46,0); } 100% { box-shadow: 0 0 0 0 rgba(214,69,46,0); } }
@@ -180,7 +185,7 @@
     .hero h1 .linha > span { display: inline-block; transform: translateY(110%); animation: sobe .9s cubic-bezier(.2,.7,.2,1) forwards; }
     .hero h1 .linha:nth-child(2) > span { animation-delay: .12s; }
     @keyframes sobe { to { transform: translateY(0); } }
-    .hero h1 .u-pin { position: relative; color: var(--lampada); }
+    .hero h1 .u-pin { position: relative; color: var(--acento); }
     .hero h1 .u-pin svg {
       position: absolute; top: -.22em; left: 50%; transform: translateX(-50%);
       width: .34em; height: .34em; animation: flutua 3.2s ease-in-out infinite;
@@ -198,7 +203,7 @@
       display: flex; align-items: center; gap: 10px;
       opacity: 0; animation: aparece .8s ease .75s forwards;
     }
-    .estrela { color: var(--lampada); letter-spacing: 2px; }
+    .estrela { color: var(--acento); letter-spacing: 2px; }
     .hero-nota b { color: var(--fg); }
     .rolar {
       position: absolute; bottom: 26px; left: 50%; transform: translateX(-50%);
@@ -221,7 +226,7 @@
     .secao { padding: 92px 0; position: relative; }
     .num-secao {
       font-family: 'Bricolage Grotesque'; font-weight: 800; font-size: 13px;
-      color: var(--lampada); letter-spacing: .3em; margin-bottom: 14px; display: block;
+      color: var(--acento); letter-spacing: .3em; margin-bottom: 14px; display: block;
     }
     .secao h2 { font-size: clamp(34px, 5.5vw, 56px); max-width: 18ch; }
     .secao-head p { margin-top: 14px; color: var(--fg-suave); max-width: 52ch; }
@@ -248,7 +253,7 @@
       text-transform: uppercase; color: var(--folha); border: 1px solid currentColor;
       border-radius: 999px; padding: 2px 10px; margin-bottom: 14px;
     }
-    .prato .tag.casa { color: var(--lampada); }
+    .prato .tag.casa { color: var(--acento); }
     .prato h3 { font-size: 21px; margin-bottom: 8px; }
     .prato p { font-size: 14.5px; color: var(--fg-suave); }
 
@@ -270,16 +275,19 @@
       content: ""; position: absolute; top: -11px; left: 50%; transform: translateX(-50%) rotate(-3deg);
       width: 84px; height: 22px; background: rgba(232,161,61,.5); border: 1px dashed rgba(20,27,23,.2);
     }
-    .flyer .dia { font-family: 'Bricolage Grotesque'; font-weight: 800; font-size: 13px; letter-spacing: .18em; text-transform: uppercase; color: var(--pimenta); }
+    /* dia do flyer: vermelho um ponto mais profundo (tinta de serigrafia) — o
+       --pimenta puro sobre papel fica a ~3:1, abaixo do AA para texto pequeno */
+    .flyer .dia { font-family: 'Bricolage Grotesque'; font-weight: 800; font-size: 13px; letter-spacing: .18em; text-transform: uppercase; color: color-mix(in srgb, var(--pimenta) 86%, #000); }
     .flyer .big { font-family: 'Bricolage Grotesque'; font-weight: 800; font-size: 42px; line-height: 1; margin: 6px 0 2px; }
     .flyer .hora { font-size: 12.5px; color: rgba(20,27,23,.6); font-weight: 600; }
     .flyer .estilo { margin-top: 10px; font-size: 14px; font-weight: 700; border-top: 1px dashed rgba(20,27,23,.25); padding-top: 10px; }
     .flyer .obs { font-size: 12.5px; color: rgba(20,27,23,.6); }
     .agenda-aviso {
-      margin-top: 22px; font-size: 13px; color: var(--fg-suave);
-      display: flex; gap: 8px; align-items: baseline;
+      /* bloco comum: como flex, cada trecho de texto virava um item e o parágrafo
+         quebrava em "colunas" em telas estreitas */
+      margin-top: 22px; font-size: 13px; color: var(--fg-suave); max-width: 56ch;
     }
-    .agenda-aviso a { color: var(--lampada); font-weight: 700; }
+    .agenda-aviso a { color: var(--acento); font-weight: 700; }
 
     /* galeria */
     .galeria { margin-top: 44px; display: grid; grid-template-columns: repeat(6, 1fr); grid-auto-rows: 190px; gap: 12px; }
@@ -294,10 +302,12 @@
       color: #fff; font-size: 12.5px; font-weight: 600; opacity: 0; transition: opacity .3s ease;
     }
     .galeria figure:hover figcaption { opacity: 1; }
+    /* touch não tem hover: legenda sempre visível */
+    @media (hover: none) { .galeria figcaption { opacity: 1; } }
 
     /* citação de avaliação */
     .citacao { text-align: center; max-width: 780px; margin: 0 auto; }
-    .citacao .estrelas { font-size: 22px; color: var(--lampada); letter-spacing: 6px; }
+    .citacao .estrelas { font-size: 22px; color: var(--acento); letter-spacing: 6px; }
     .citacao blockquote {
       font-family: 'Bricolage Grotesque'; font-weight: 700;
       font-size: clamp(21px, 3.2vw, 30px); line-height: 1.3; margin: 18px 0 14px;
@@ -314,7 +324,12 @@
     .horas { width: 100%; border-collapse: collapse; font-size: 15px; }
     .horas td { padding: 7px 0; border-bottom: 1px dashed var(--linha); color: var(--fg-suave); }
     .horas td:last-child { text-align: right; color: var(--fg); font-weight: 700; }
-    .horas .fechado { color: var(--pimenta); }
+    /* "Fechado": vermelho clareado sobre o fundo escuro; no tema tarde, tinta mais
+       profunda sobre o papel (o --pimenta puro fica na borda do contraste AA) */
+    .horas .fechado { color: color-mix(in srgb, var(--pimenta) 76%, var(--papel)); }
+    [data-tema="tarde"] .horas .fechado { color: color-mix(in srgb, var(--pimenta) 86%, #000); }
+    /* o verde-folha claro some sobre o papel: escurece só no tema tarde */
+    [data-tema="tarde"] .prato .tag:not(.casa) { color: color-mix(in srgb, var(--folha) 55%, #000); }
     .painel address { font-style: normal; font-size: 15.5px; color: var(--fg-suave); margin-bottom: 16px; line-height: 1.7; }
     .painel address b { color: var(--fg); }
     .mini-mapa {
@@ -329,7 +344,7 @@
     .rodape small { display: block; margin-top: 10px; color: var(--fg-suave); font-size: 13px; }
     .rodape nav { display: flex; gap: 20px; flex-wrap: wrap; font-size: 14px; }
     .rodape nav a { color: var(--fg-suave); text-decoration: none; }
-    .rodape nav a:hover { color: var(--lampada); }
+    .rodape nav a:hover { color: var(--acento); }
 
     /* ---------- responsivo ---------- */
     @media (max-width: 900px) {
@@ -659,6 +674,9 @@
       } else {
         alvos.forEach(function (el) { el.classList.add('visto'); });
       }
+      /* rede de segurança: após 4s tudo aparece, mesmo sem rolar — garante que
+         nada fica invisível (impressão/PDF, webviews e viewport sem IO) */
+      setTimeout(function () { alvos.forEach(function (el) { el.classList.add('visto'); }); }, 4000);
     })();
   </script>
 

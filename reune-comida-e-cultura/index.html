@@ -112,6 +112,10 @@
       --lampada:  #E8A13D;
       --folha:    #5F7D5C;
       --linha:    rgba(28, 36, 32, .16);
+      /* Versões mais escuras p/ TEXTO pequeno (AA >= 4.5:1 sobre papel e cartões).
+         A pimenta/folha "brutas" ficam p/ acentos grandes (h1 em, bordas, sombras). */
+      --pimenta-texto: #B23A20;
+      --folha-texto:   #4E6B4A;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -134,7 +138,7 @@
       letter-spacing: -.02em;
     }
 
-    img { max-width: 100%; display: block; }
+    img { max-width: 100%; height: auto; display: block; }
     a { color: inherit; }
 
     .wrap { max-width: 1060px; margin: 0 auto; padding: 0 20px; }
@@ -161,6 +165,8 @@
       text-decoration: none; font-weight: 700; font-size: 14px;
       padding: 10px 18px; border-radius: 999px; white-space: nowrap;
     }
+    /* No mobile o rótulo curto substitui o longo (sem JS): o botão nunca vira só emoji */
+    .topo-cta .cta-curto { display: none; }
     .topo-cta:hover { background: var(--pimenta); }
 
     /* ---------- hero ---------- */
@@ -169,7 +175,7 @@
     .kicker {
       display: inline-flex; align-items: center; gap: 8px;
       font-size: 12px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase;
-      color: var(--pimenta); margin-bottom: 18px;
+      color: var(--pimenta-texto); margin-bottom: 18px;
     }
     .kicker::before { content: ""; width: 26px; height: 2px; background: var(--pimenta); }
     .hero h1 { font-size: clamp(40px, 7vw, 68px); }
@@ -225,11 +231,11 @@
     }
     .prato .tag {
       display: inline-block; font-size: 10.5px; font-weight: 800; letter-spacing: .14em;
-      text-transform: uppercase; color: var(--folha); border: 1px solid currentColor;
+      text-transform: uppercase; color: var(--folha-texto); border: 1px solid currentColor;
       border-radius: 999px; padding: 2px 9px; margin-bottom: 10px;
     }
-    .prato .tag.veg { color: var(--folha); }
-    .prato .tag.casa { color: var(--pimenta); }
+    .prato .tag.veg { color: var(--folha-texto); }
+    .prato .tag.casa { color: var(--pimenta-texto); }
     .prato h3 { font-size: 19px; margin-bottom: 6px; }
     .prato p { font-size: 14px; color: var(--madeira); }
 
@@ -256,7 +262,7 @@
     .horas { width: 100%; border-collapse: collapse; font-size: 14.5px; }
     .horas td { padding: 5px 0; border-bottom: 1px dashed var(--linha); }
     .horas td:last-child { text-align: right; font-weight: 600; }
-    .horas .fechado { color: var(--pimenta); font-weight: 600; }
+    .horas .fechado { color: var(--pimenta-texto); font-weight: 600; }
     .horas .hoje { background: rgba(232, 161, 61, .18); }
     .info-card address { font-style: normal; font-size: 15px; color: var(--madeira); margin-bottom: 14px; }
     .info-card .btn { margin-top: 4px; padding: 10px 16px; font-size: 13.5px; }
@@ -285,8 +291,11 @@
       .menu-grid, .info-grid { grid-template-columns: 1fr; }
       .fotos { grid-template-columns: repeat(2, 1fr); }
       .fotos img:nth-child(n+3) { display: none; }
-      .topo-cta span { display: none; }
+      /* CTA segue legível sem scroll: rótulo curto "WhatsApp" em vez de emoji puro */
+      .topo-cta .cta-longo { display: none; }
+      .topo-cta .cta-curto { display: inline; }
       .topo-cta { padding: 10px 14px; }
+      .marca img { height: 34px; }
     }
 
     :focus-visible { outline: 3px solid var(--pimenta); outline-offset: 3px; border-radius: 4px; }
@@ -306,7 +315,9 @@
       <a class="topo-cta" href="https://wa.me/5519995659012?text=Oi%2C%20Re%C3%9Ane!%20Queria%20fazer%20um%20pedido."
          rel="noopener">
         <!-- EDITÁVEL/A CONFIRMAR: número do WhatsApp oficial (fonte: ficha Google via snippet, 2026-11-20) -->
-        <span>Pedir pelo WhatsApp</span> 💬
+        <span class="cta-longo">Pedir pelo WhatsApp</span>
+        <span class="cta-curto">WhatsApp</span>
+        <span aria-hidden="true">💬</span>
       </a>
     </div>
   </header>
