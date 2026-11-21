@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marmitaria Dudali | Marmitex e Self Service no Jardim Myrian, Campinas - SP</title>
+  <meta name="description" content="Marmitaria Dudali — comida caseira no Jardim Myrian, Campinas/SP. Self service quilo ou à vontade, marmitex P, M e G e marmita montada por quilo, de segunda a sábado, 10h30 às 14h30. Peça pelo WhatsApp (19) 98117-2799.">
+  <meta name="theme-color" content="#211d19">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Marmitaria Dudali">
+  <meta property="og:locale" content="pt_BR">
+  <!-- EDITÁVEL: substitua pela URL definitiva quando o site for publicado -->
+  <!-- <meta property="og:url" content="https://marmitariadudali.com.br/"> -->
+  <meta property="og:title" content="Marmitaria Dudali | Marmitex e Self Service no Jardim Myrian, Campinas - SP">
+  <meta property="og:description" content="Comida caseira de verdade: self service quilo ou à vontade, marmitex P, M e G e marmita montada por quilo. Segunda a sábado, 10h30 às 14h30. Peça pelo WhatsApp.">
+  <!-- EDITÁVEL: trocar por URL absoluta da fachada quando o domínio definitivo existir
+       (scrapers de WhatsApp/Facebook não aceitam caminho relativo) -->
+  <meta property="og:image" content="fachada.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- DEMO PRIVADA: fora do Google, fora de IAs e sem renderização por bots.
+       Remover esta linha (e o robots.txt) quando o site for publicado de verdade. -->
+  <meta name="robots" content="noindex, nofollow, noimageindex">
+  <meta name="googlebot" content="noindex, nofollow, noimageindex">
+
+  <!-- Favicon: chapéu de chef do logo oficial -->
+  <link rel="icon" type="image/png" href="favicon-64.png">
+
+  <!-- Fontes: Oswald (condensada, a caixa alta da placa), Pacifico (script do "Dudali")
+       e Inter (texto/UI) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Pacifico&family=Inter:ital,wght@0,400;0,500;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+  <!--
+    ============================================================
+    DADOS ESTRUTURADOS (Schema.org — Restaurant)
+    Dados coletados em 2026-11-21:
+    - Endereço e telefone: ficha Google ("Marmitaria Dudali
+      Campinas") via share.google + Solutudo (2026-11-11);
+      número 510 conferido na fachada.
+    - Horários: lona da fachada ("Segunda a Sábado 10h30 às
+      14h30") + ficha Google ("Abre seg. às 10:30").
+    VALIDAR COM A CLIENTE ANTES DE PUBLICAR.
+    Marmitex P/M/G e self service: bio do Instagram + lona.
+    Preços dos itens: A CONFIRMAR com a cliente.
+    ============================================================
+  -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Marmitaria Dudali",
+    "alternateName": "Marmitaria Dudali Campinas",
+    "description": "Marmitaria no Jardim Myrian, Campinas/SP. Comida caseira: self service quilo ou à vontade, marmitex P, M e G e marmita montada por quilo. Segunda a sábado, 10h30 às 14h30.",
+    "servesCuisine": ["Comida caseira", "Marmitex", "Self service"],
+    "priceRange": "R$ 20–40",
+    "telephone": "+55-19-3395-7833",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua Guerino Bristotti, 510",
+      "addressNeighborhood": "Jardim Myrian Moreira da Costa",
+      "addressLocality": "Campinas",
+      "addressRegion": "SP",
+      "postalCode": "13098-404",
+      "addressCountry": "BR"
+    },
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "10:30",
+      "closes": "14:30"
+    }],
+    "sameAs": ["https://www.instagram.com/marmitaria_dudali"],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.4",
+      "reviewCount": "150"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Cardápio",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "MenuItem", "name": "Self service — quilo ou à vontade" } },
+        { "@type": "Offer", "itemOffered": { "@type": "MenuItem", "name": "Marmitex P" } },
+        { "@type": "Offer", "itemOffered": { "@type": "MenuItem", "name": "Marmitex M" } },
+        { "@type": "Offer", "itemOffered": { "@type": "MenuItem", "name": "Marmitex G" } },
+        { "@type": "Offer", "itemOffered": { "@type": "MenuItem", "name": "Marmita montada por quilo" } }
+      ]
+    }
+  }
+  </script>
+
+  <style>
+    /* ==========================================================
+       MARMITARIA DUDALI — "Comida de verdade, do jeito da placa"
+       Identidade extraída do logo e da fachada: preto tinta,
+       dourado da escrita (#D6B62D) e branco. Oswald = a caixa
+       alta da placa; Pacifico = o script do "Dudali".
+       Versão BASE: uma página, sem JS pesado, carrega rápido.
+       ========================================================== */
+
+    :root {
+      --tinta:      #211d19;
+      --tinta-2:    #2d2e32;   /* grafite da placa */
+      --dourado:    #d6b62d;
+      --dourado-2:  #f4cb1a;
+      --creme:      #f7f1e5;
+      --creme-2:    #efe6d8;
+      --papel:      #fffdf8;
+      --texto:      #332e28;
+      --texto-2:    #6e645a;
+      --line:       rgba(33, 29, 25, .14);
+      --verde-zap:  #25d366;
+      --radius:     14px;
+      --shadow:     0 10px 30px rgba(33, 29, 25, .08);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      color: var(--texto);
+      background: var(--papel);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+
+    h1, h2, h3 { font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: .02em; line-height: 1.15; }
+
+    .script { font-family: 'Pacifico', cursive; text-transform: none; letter-spacing: 0; }
+
+    /* ---------- header ---------- */
+    .header {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(255, 253, 248, .92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line);
+    }
+    .header-in { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 10px 20px; max-width: 1080px; margin: 0 auto; }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--tinta); }
+    .brand img { width: 44px; height: 44px; border-radius: 10px; object-fit: cover; }
+    .brand-name { font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 1.05rem; text-transform: uppercase; }
+    .brand-name .script { color: #b8941e; font-size: 1.25rem; margin-left: 4px; }
+    .nav { display: flex; gap: 22px; }
+    .nav a { color: var(--texto-2); text-decoration: none; font-size: .95rem; font-weight: 500; }
+    .nav a:hover { color: var(--tinta); }
+    .btn-zap-top {
+      background: var(--verde-zap); color: #fff; text-decoration: none;
+      font-weight: 700; font-size: .9rem; padding: 10px 18px; border-radius: 999px;
+      display: inline-flex; align-items: center; gap: 8px;
+    }
+    @media (max-width: 760px) { .nav { display: none; } }
+
+    /* ---------- hero ---------- */
+    .hero { background: linear-gradient(160deg, var(--tinta) 0%, var(--tinta-2) 100%); color: #fff; }
+    .hero-in {
+      max-width: 1080px; margin: 0 auto; padding: 72px 20px 64px;
+      display: grid; grid-template-columns: 1.15fr .85fr; gap: 48px; align-items: center;
+    }
+    .kicker {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--dourado-2); color: var(--tinta);
+      font-weight: 800; font-size: .78rem; letter-spacing: .12em; text-transform: uppercase;
+      padding: 8px 14px; border-radius: 999px; margin-bottom: 20px;
+    }
+    .hero h1 { font-size: clamp(2rem, 4.6vw, 3.2rem); color: #fff; }
+    .hero h1 .script { display: block; font-size: clamp(2.6rem, 6vw, 4.2rem); color: var(--dourado-2); margin-top: 4px; }
+    .hero p.lead { margin: 18px 0 26px; color: #e6e0d5; font-size: 1.06rem; max-width: 46ch; }
+    .hero-facts { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; }
+    .fact {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.14);
+      color: #f1ead9; font-size: .88rem; font-weight: 500;
+      padding: 8px 14px; border-radius: 999px;
+    }
+    .fact strong { color: var(--dourado-2); }
+    .star { color: var(--dourado-2); }
+    .hero-cta { display: flex; flex-wrap: wrap; gap: 14px; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 14px 26px; border-radius: 999px;
+      font-weight: 700; font-size: 1rem; text-decoration: none;
+    }
+    .btn-zap { background: var(--verde-zap); color: #fff; }
+    .btn-ghost { border: 1.5px solid rgba(255,255,255,.35); color: #fff; }
+    .btn-ghost:hover { border-color: var(--dourado-2); color: var(--dourado-2); }
+    .hero-photo { position: relative; }
+    .hero-photo img {
+      width: 100%; border-radius: var(--radius); display: block;
+      box-shadow: 0 24px 60px rgba(0,0,0,.45);
+      border: 1px solid rgba(255,255,255,.15);
+    }
+    .hero-photo figcaption {
+      position: absolute; left: 14px; bottom: 14px;
+      background: rgba(33,29,25,.82); color: #f1ead9;
+      font-size: .78rem; padding: 6px 12px; border-radius: 999px;
+    }
+    @media (max-width: 860px) {
+      .hero-in { grid-template-columns: 1fr; padding: 48px 20px; }
+      .hero-photo { order: -1; }
+    }
+
+    /* ---------- seções ---------- */
+    .section { padding: 72px 0; }
+    .section.alt { background: var(--creme); }
+    .section-head { text-align: center; max-width: 640px; margin: 0 auto 44px; }
+    .section-head .tag { color: #b8941e; font-weight: 800; font-size: .8rem; letter-spacing: .16em; text-transform: uppercase; }
+    .section-head h2 { font-size: clamp(1.5rem, 3vw, 2.1rem); color: var(--tinta); margin: 8px 0 10px; }
+    .section-head p { color: var(--texto-2); }
+
+    /* cardápio */
+    .menu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .menu-card {
+      background: var(--papel); border: 1px solid var(--line); border-radius: var(--radius);
+      padding: 30px 26px; box-shadow: var(--shadow);
+      display: flex; flex-direction: column; gap: 12px;
+    }
+    .menu-card .ico { font-size: 2rem; }
+    .menu-card h3 { font-size: 1.15rem; color: var(--tinta); }
+    .menu-card p { color: var(--texto-2); font-size: .95rem; }
+    .menu-card .hint { margin-top: auto; font-size: .82rem; color: #b8941e; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
+    @media (max-width: 860px) { .menu-grid { grid-template-columns: 1fr; } }
+
+    /* prova social */
+    .social { display: grid; grid-template-columns: .9fr 1.1fr; gap: 40px; align-items: center; }
+    .score-card {
+      background: var(--tinta); color: #fff; border-radius: var(--radius);
+      padding: 40px 36px; text-align: center; box-shadow: var(--shadow);
+    }
+    .score-card .nota { font-family: 'Oswald', sans-serif; font-size: 4rem; font-weight: 700; color: var(--dourado-2); line-height: 1; }
+    .score-card .estrelas { color: var(--dourado-2); font-size: 1.4rem; letter-spacing: 4px; margin: 8px 0 4px; }
+    .score-card .base { color: #d8d0c5; font-size: .92rem; }
+    .score-card .fonte { color: #a99f92; font-size: .78rem; margin-top: 14px; }
+    blockquote.review {
+      background: var(--papel); border-left: 4px solid var(--dourado); border-radius: 10px;
+      padding: 22px 24px; margin-bottom: 16px; box-shadow: var(--shadow);
+    }
+    blockquote.review p { font-size: 1.02rem; color: var(--texto); }
+    blockquote.review footer { color: var(--texto-2); font-size: .85rem; margin-top: 10px; }
+    @media (max-width: 860px) { .social { grid-template-columns: 1fr; } }
+
+    /* horários + local */
+    .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .info-card {
+      background: var(--papel); border: 1px solid var(--line); border-radius: var(--radius);
+      padding: 30px; box-shadow: var(--shadow);
+    }
+    .info-card h3 { font-size: 1.1rem; color: var(--tinta); margin-bottom: 14px; display: flex; gap: 10px; align-items: center; }
+    .hours-table { width: 100%; border-collapse: collapse; font-size: .95rem; }
+    .hours-table td { padding: 9px 0; border-bottom: 1px dashed var(--line); color: var(--texto-2); }
+    .hours-table td:last-child { text-align: right; color: var(--texto); font-weight: 600; }
+    .hours-table tr.closed td { color: #b3a99e; }
+    .info-card p { color: var(--texto-2); font-size: .95rem; margin-bottom: 12px; }
+    .info-card a { color: #b8941e; font-weight: 700; text-decoration: none; }
+    @media (max-width: 860px) { .info-grid { grid-template-columns: 1fr; } }
+
+    /* ---------- CTA final ---------- */
+    .cta { background: var(--creme-2); padding: 64px 0; text-align: center; }
+    .cta h2 { font-size: clamp(1.4rem, 3vw, 2rem); color: var(--tinta); margin-bottom: 10px; }
+    .cta p { color: var(--texto-2); margin-bottom: 26px; }
+
+    /* ---------- footer ---------- */
+    .footer { background: var(--tinta); color: #d8d0c5; padding: 40px 0 30px; }
+    .footer-in { max-width: 1080px; margin: 0 auto; padding: 0 20px; display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: space-between; }
+    .footer .brand { color: #fff; }
+    .footer .brand-name .script { color: var(--dourado-2); }
+    .footer a { color: #d8d0c5; text-decoration: none; }
+    .footer a:hover { color: var(--dourado-2); }
+    .footer small { color: #a99f92; }
+    .credit { text-align: center; margin-top: 22px; font-size: .78rem; color: #a99f92; }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-in">
+      <a class="brand" href="#inicio">
+        <img src="logo.webp" alt="Logo Marmitaria Dudali">
+        <span class="brand-name">Marmitaria <span class="script">Dudali</span></span>
+      </a>
+      <nav class="nav">
+        <a href="#cardapio">Cardápio</a>
+        <a href="#avaliacoes">Avaliações</a>
+        <a href="#contato">Horários &amp; Local</a>
+      </nav>
+      <a class="btn-zap-top" href="https://wa.me/5519981172799?text=Ol%C3%A1!%20Quero%20fazer%20um%20pedido%20na%20Marmitaria%20Dudali" target="_blank" rel="noopener">Pedir no WhatsApp</a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="hero" id="inicio">
+      <div class="hero-in">
+        <div>
+          <span class="kicker">★ 4,4 no Google · 150 avaliações</span>
+          <h1>Comida caseira de verdade é na <span class="script">Dudali</span></h1>
+          <p class="lead">Self service quilo ou à vontade no salão, marmitex P, M e G e marmita montada por quilo — feita no tempero de casa, no coração do Jardim Myrian, Campinas.</p>
+          <div class="hero-facts">
+            <span class="fact">🕑 Seg a Sáb · <strong>10h30–14h30</strong></span>
+            <span class="fact">🥘 <strong>R$ 20–40</strong> por pessoa</span>
+            <span class="fact">📍 Jardim Myrian · Campinas/SP</span>
+          </div>
+          <div class="hero-cta">
+            <a class="btn btn-zap" href="https://wa.me/5519981172799?text=Ol%C3%A1!%20Quero%20fazer%20um%20pedido%20na%20Marmitaria%20Dudali" target="_blank" rel="noopener">Pedir pelo WhatsApp</a>
+            <a class="btn btn-ghost" href="#cardapio">Ver o cardápio</a>
+          </div>
+        </div>
+        <figure class="hero-photo">
+          <img src="fachada.webp" alt="Fachada da Marmitaria Dudali, Rua Guerino Bristotti 510, Jardim Myrian, Campinas" width="1040" height="780">
+          <figcaption>Rua Guerino Bristotti, 510</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt" id="cardapio">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="tag">Cardápio</span>
+          <h2>Do jeito que você gosta de comer</h2>
+          <p>Serve no salão ou leva pra casa — o tempero é o mesmo.</p>
+        </div>
+        <div class="menu-grid">
+          <article class="menu-card">
+            <span class="ico" aria-hidden="true">🍚</span>
+            <h3>Self service</h3>
+            <p>Quilo ou à vontade, no salão com ar-condicionado. Pico do almoço às 12h — chegue cedo!</p>
+            <span class="hint">No salão</span>
+          </article>
+          <article class="menu-card">
+            <span class="ico" aria-hidden="true">🍱</span>
+            <h3>Marmitex P, M e G</h3>
+            <p>Os tamanhos que já são tradição: P, M e G, com comida caseira de verdade e entrega no bairro.</p>
+            <span class="hint">Retirada ou entrega</span>
+          </article>
+          <article class="menu-card">
+            <span class="ico" aria-hidden="true">⚖️</span>
+            <h3>Montada por quilo</h3>
+            <p>Monte sua marmita com o que você quiser, pesada por quilo — do seu jeito, na medida certa.</p>
+            <span class="hint">Do seu jeito</span>
+          </article>
+        </div>
+        <!-- EDITÁVEL: preços e pratos do dia A CONFIRMAR com a cliente (cardápio completo não é público). -->
+      </div>
+    </section>
+
+    <section class="section" id="avaliacoes">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="tag">Quem comeu, recomenda</span>
+          <h2>4,4 estrelas, 150 avaliações no Google</h2>
+        </div>
+        <div class="social">
+          <div class="score-card">
+            <div class="nota">4,4</div>
+            <div class="estrelas" aria-hidden="true">★★★★☆</div>
+            <div class="base">150 avaliações no Google</div>
+            <div class="fonte">Nota da ficha "Marmitaria Dudali Campinas"<br>consultada em 21/11/2026</div>
+          </div>
+          <div>
+            <blockquote class="review">
+              <p>“Entregas organizadas, tudo pelo site deles, prático e a comida é uma delícia!”</p>
+              <footer>— Bruna Leão, avaliação no Google</footer>
+            </blockquote>
+            <blockquote class="review">
+              <p>“Comida caseira de verdade, no capricho — o tempero que lembra a comida de casa.”</p>
+              <footer>— Resumo das avaliações da ficha no Google<!-- EDITÁVEL: substituir por 2ª review real copiada da ficha --></footer>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="contato">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="tag">Horários &amp; local</span>
+          <h2>Onde e quando nos encontrar</h2>
+        </div>
+        <div class="info-grid">
+          <div class="info-card">
+            <h3>🕑 Horários</h3>
+            <table class="hours-table">
+              <tr><td>Segunda a sexta</td><td>10h30 – 14h30</td></tr>
+              <tr><td>Sábado</td><td>10h30 – 14h30</td></tr>
+              <tr class="closed"><td>Domingo</td><td>Fechado</td></tr>
+            </table>
+            <!-- Fonte: lona da fachada + ficha Google (2026-11-21). Validar com a cliente antes de publicar. -->
+          </div>
+          <div class="info-card">
+            <h3>📍 Localização &amp; pedidos</h3>
+            <p>Rua Guerino Bristotti, 510 — Jardim Myrian Moreira da Costa<br>Campinas/SP, CEP 13098-404</p>
+            <p>☎️ <a href="tel:+551933957833">(19) 3395-7833</a> · 💬 <a href="https://wa.me/5519981172799" target="_blank" rel="noopener">(19) 98117-2799</a></p>
+            <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Marmitaria%20Dudali%20Campinas%20Rua%20Guerino%20Bristotti%20510" target="_blank" rel="noopener">Abrir no Google Maps →</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="wrap">
+        <h2>Bateu a fome de comida de casa?</h2>
+        <p>Chama no WhatsApp que a gente separa sua marmita — retirada ou entrega.</p>
+        <a class="btn btn-zap" href="https://wa.me/5519981172799?text=Ol%C3%A1!%20Quero%20fazer%20um%20pedido%20na%20Marmitaria%20Dudali" target="_blank" rel="noopener">Pedir pelo WhatsApp</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-in">
+      <a class="brand" href="#inicio">
+        <img src="logo.webp" alt="" width="36" height="36" style="border-radius:8px;">
+        <span class="brand-name">Marmitaria <span class="script">Dudali</span></span>
+      </a>
+      <a href="https://www.instagram.com/marmitaria_dudali" target="_blank" rel="noopener">Instagram · @marmitaria_dudali</a>
+      <small>Rua Guerino Bristotti, 510 — Jardim Myrian, Campinas/SP</small>
+    </div>
+    <div class="credit">© <span id="ano">2026</span> Marmitaria Dudali — demo privada, não indexada · Localíssimo</div>
+  </footer>
+
+  <script>
+    document.getElementById('ano').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
