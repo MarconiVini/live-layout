@@ -31,7 +31,8 @@
        e Inter (texto/UI) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Pacifico&family=Inter:ital,wght@0,400;0,500;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  <!-- Só os pesos usados na página (menos arquivos de fonte baixados) -->
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Pacifico&family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
 
   <!--
     ============================================================
@@ -106,6 +107,7 @@
       --tinta-2:    #2d2e32;   /* grafite da placa */
       --dourado:    #d6b62d;
       --dourado-2:  #f4cb1a;
+      --dourado-txt:#7d620c;  /* dourado p/ TEXTO sobre fundo claro (≥4.5:1 sobre creme) */
       --creme:      #f7f1e5;
       --creme-2:    #efe6d8;
       --papel:      #fffdf8;
@@ -146,16 +148,26 @@
     .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--tinta); }
     .brand img { width: 44px; height: 44px; border-radius: 10px; object-fit: cover; }
     .brand-name { font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 1.05rem; text-transform: uppercase; }
-    .brand-name .script { color: #b8941e; font-size: 1.25rem; margin-left: 4px; }
+    .brand-name .script { color: var(--dourado-txt); font-size: 1.25rem; margin-left: 4px; }
     .nav { display: flex; gap: 22px; }
-    .nav a { color: var(--texto-2); text-decoration: none; font-size: .95rem; font-weight: 500; }
+    .nav a { color: var(--texto-2); text-decoration: none; font-size: .95rem; font-weight: 500; white-space: nowrap; }
     .nav a:hover { color: var(--tinta); }
     .btn-zap-top {
       background: var(--verde-zap); color: #fff; text-decoration: none;
       font-weight: 700; font-size: .9rem; padding: 10px 18px; border-radius: 999px;
-      display: inline-flex; align-items: center; gap: 8px;
+      display: inline-flex; align-items: center; gap: 8px; white-space: nowrap;
     }
+    @media (max-width: 960px) { .nav { gap: 14px; } .header-in { gap: 12px; } }
     @media (max-width: 760px) { .nav { display: none; } }
+    /* telas estreitas: marca e botão compactos para caberem em uma linha só */
+    @media (max-width: 480px) {
+      .header-in { gap: 8px; padding: 10px 14px; }
+      .brand { gap: 8px; }
+      .brand img { width: 32px; height: 32px; border-radius: 8px; }
+      .brand-name { font-size: .88rem; }
+      .brand-name .script { font-size: 1.05rem; }
+      .btn-zap-top { font-size: .8rem; padding: 8px 12px; }
+    }
 
     /* ---------- hero ---------- */
     .hero { background: linear-gradient(160deg, var(--tinta) 0%, var(--tinta-2) 100%); color: #fff; }
@@ -192,7 +204,8 @@
     .btn-ghost:hover { border-color: var(--dourado-2); color: var(--dourado-2); }
     .hero-photo { position: relative; }
     .hero-photo img {
-      width: 100%; border-radius: var(--radius); display: block;
+      width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover;
+      border-radius: var(--radius); display: block;
       box-shadow: 0 24px 60px rgba(0,0,0,.45);
       border: 1px solid rgba(255,255,255,.15);
     }
@@ -202,16 +215,19 @@
       font-size: .78rem; padding: 6px 12px; border-radius: 999px;
     }
     @media (max-width: 860px) {
-      .hero-in { grid-template-columns: 1fr; padding: 48px 20px; }
-      .hero-photo { order: -1; }
+      /* texto primeiro, foto depois: título + CTA ficam no primeiro viewport */
+      .hero-in { grid-template-columns: 1fr; padding: 36px 20px 44px; gap: 32px; }
+      .kicker { margin-bottom: 14px; }
+      .hero p.lead { font-size: 1rem; margin: 14px 0 20px; }
+      .hero-facts { margin-bottom: 24px; }
     }
 
     /* ---------- seções ---------- */
     .section { padding: 72px 0; }
     .section.alt { background: var(--creme); }
     .section-head { text-align: center; max-width: 640px; margin: 0 auto 44px; }
-    .section-head .tag { color: #b8941e; font-weight: 800; font-size: .8rem; letter-spacing: .16em; text-transform: uppercase; }
-    .section-head h2 { font-size: clamp(1.5rem, 3vw, 2.1rem); color: var(--tinta); margin: 8px 0 10px; }
+    .section-head .tag { color: var(--dourado-txt); font-weight: 800; font-size: .8rem; letter-spacing: .16em; text-transform: uppercase; }
+    .section-head h2 { font-size: clamp(1.5rem, 3vw, 2.1rem); color: var(--tinta); margin: 8px 0 10px; text-wrap: balance; }
     .section-head p { color: var(--texto-2); }
 
     /* cardápio */
@@ -224,7 +240,7 @@
     .menu-card .ico { font-size: 2rem; }
     .menu-card h3 { font-size: 1.15rem; color: var(--tinta); }
     .menu-card p { color: var(--texto-2); font-size: .95rem; }
-    .menu-card .hint { margin-top: auto; font-size: .82rem; color: #b8941e; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
+    .menu-card .hint { margin-top: auto; font-size: .82rem; color: var(--dourado-txt); font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
     @media (max-width: 860px) { .menu-grid { grid-template-columns: 1fr; } }
 
     /* prova social */
@@ -254,15 +270,15 @@
     .info-card h3 { font-size: 1.1rem; color: var(--tinta); margin-bottom: 14px; display: flex; gap: 10px; align-items: center; }
     .hours-table { width: 100%; border-collapse: collapse; font-size: .95rem; }
     .hours-table td { padding: 9px 0; border-bottom: 1px dashed var(--line); color: var(--texto-2); }
-    .hours-table td:last-child { text-align: right; color: var(--texto); font-weight: 600; }
-    .hours-table tr.closed td { color: #b3a99e; }
+    .hours-table td:last-child { text-align: right; color: var(--texto); font-weight: 700; }
+    .hours-table tr.closed td { color: var(--texto-2); }
     .info-card p { color: var(--texto-2); font-size: .95rem; margin-bottom: 12px; }
-    .info-card a { color: #b8941e; font-weight: 700; text-decoration: none; }
+    .info-card a { color: var(--dourado-txt); font-weight: 700; text-decoration: none; white-space: nowrap; }
     @media (max-width: 860px) { .info-grid { grid-template-columns: 1fr; } }
 
     /* ---------- CTA final ---------- */
     .cta { background: var(--creme-2); padding: 64px 0; text-align: center; }
-    .cta h2 { font-size: clamp(1.4rem, 3vw, 2rem); color: var(--tinta); margin-bottom: 10px; }
+    .cta h2 { font-size: clamp(1.4rem, 3vw, 2rem); color: var(--tinta); margin-bottom: 10px; text-wrap: balance; }
     .cta p { color: var(--texto-2); margin-bottom: 26px; }
 
     /* ---------- footer ---------- */
@@ -415,7 +431,7 @@
   <footer class="footer">
     <div class="footer-in">
       <a class="brand" href="#inicio">
-        <img src="logo.webp" alt="" width="36" height="36" style="border-radius:8px;">
+        <img src="logo.webp" alt="" width="36" height="36" loading="lazy" style="border-radius:8px;">
         <span class="brand-name">Marmitaria <span class="script">Dudali</span></span>
       </a>
       <a href="https://www.instagram.com/marmitaria_dudali" target="_blank" rel="noopener">Instagram · @marmitaria_dudali</a>
