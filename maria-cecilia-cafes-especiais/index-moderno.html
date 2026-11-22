@@ -1,0 +1,1417 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maria Cecília Cafés Especiais | Café especial 100% Arábica de Muzambinho, Sul de Minas - MG</title>
+  <meta name="description" content="Maria Cecília Cafés Especiais — café especial 100% Arábica torrado fresco em Muzambinho, Sul de Minas/MG. Grãos e moído 250g e 500g, cappuccino, drip, cápsulas e kit degustação. Encomende pelo WhatsApp (35) 99160-7419.">
+  <meta name="theme-color" content="#1c0f08">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Maria Cecília Cafés Especiais">
+  <meta property="og:locale" content="pt_BR">
+  <!-- EDITÁVEL: substitua pela URL definitiva quando o site for publicado -->
+  <!-- <meta property="og:url" content="https://mariaceciliacafes.com.br/"> -->
+  <meta property="og:title" content="Maria Cecília Cafés Especiais | Café especial 100% Arábica de Muzambinho, MG">
+  <meta property="og:description" content="Café especial 100% Arábica com torra fresca do Sul de Minas. Grãos e moído 250g/500g, cappuccino, drip, cápsulas e kit degustação — encomende pelo WhatsApp.">
+  <!-- EDITÁVEL: trocar por URL absoluta da foto quando o domínio definitivo existir
+       (scrapers de WhatsApp/Facebook não aceitam caminho relativo) -->
+  <meta property="og:image" content="foto-embalagens.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- DEMO PRIVADA: fora do Google, fora de IAs e sem renderização por bots.
+       Remover esta linha (e o robots.txt) quando o site for publicado de verdade. -->
+  <meta name="robots" content="noindex, nofollow, noimageindex">
+  <meta name="googlebot" content="noindex, nofollow, noimageindex">
+
+  <!-- Favicon: logo da marca (variante do perfil, otimizado) -->
+  <link rel="icon" type="image/png" href="favicon-64.png">
+
+  <!-- Fontes: Fraunces (display serif com personalidade) + Inter (texto/UI) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+  <!--
+    ============================================================
+    DADOS ESTRUTURADOS (Schema.org — CafeOrCoffeeShop)
+    Fontes (2026-11-22): nome, cidade e Instagram do perfil
+    oficial do Instagram; WhatsApp da bio do perfil. Endereço
+    completo, nota e avaliações da ficha Google: A CONFIRMAR —
+    validar com o cliente antes de publicar.
+    ============================================================
+  -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CafeOrCoffeeShop",
+    "name": "Maria Cecília Cafés Especiais",
+    "description": "Cafés especiais 100% Arábica com torra fresca em Muzambinho, Sul de Minas/MG. Grãos e moído 250g/500g, cappuccino, drip, cápsulas e kit degustação. Encomendas pelo WhatsApp.",
+    "telephone": "+55-35-99160-7419",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Muzambinho",
+      "addressRegion": "MG",
+      "addressCountry": "BR"
+    },
+    "sameAs": ["https://www.instagram.com/mariaceciliacafesespeciais/"],
+    "makesOffer": [
+      { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Café especial 100% Arábica em grãos — 250g e 500g" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Café especial 100% Arábica moído — 250g e 500g" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Cappuccino artesanal — 200g" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Café drip — filtro pronto" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Cápsulas compatíveis (torra média-clara)" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Kit degustação de cafés especiais — 200g" } }
+    ]
+  }
+  </script>
+
+  <style>
+    /* ==========================================================
+       MARIA CECÍLIA — versão MODERNA ("espetáculo")
+       Espresso profundo + creme de embalagem + vermelho do logo.
+       Tema escuro/claro alternável; tipografia display gigante;
+       animações de scroll, vapor, grãos flutuantes e contadores.
+       Paleta extraída do logo/etiquetas (NOTAS.md, 2026-11-22).
+       ========================================================== */
+
+    :root {
+      --header-h: 78px;
+      --radius: 22px;
+      --radius-sm: 14px;
+      --font-display: "Fraunces", Georgia, serif;
+      --font-body: "Inter", "Helvetica Neue", Arial, sans-serif;
+      --ease: cubic-bezier(.22, .61, .21, 1);
+      --ease-out: cubic-bezier(.16, 1, .3, 1);
+      --wa: #25d366;
+      --accent: #9d130e;
+      --accent-soft: #c94840;
+      --kraft: #c9a876;
+      --kraft-soft: #e2cda6;
+
+      /* tema escuro (padrão): espresso */
+      --bg: #1c0f08;
+      --bg-2: #241409;
+      --surface: #2c1a0e;
+      --surface-2: #352114;
+      --line: rgba(247, 236, 217, .14);
+      --line-soft: rgba(247, 236, 217, .08);
+      --ink: #f7ecd9;
+      --text: #e4d3ba;
+      --muted: #b39a80;
+      --muted-2: #937a61;
+      --hero-glow: rgba(201, 168, 118, .16);
+      --hero-glow-2: rgba(157, 19, 14, .22);
+      --card-shadow: 0 40px 90px -42px rgba(0, 0, 0, .85);
+      --marquee-bg: #120a05;
+      --wa-shadow: rgba(37, 211, 102, .55);
+    }
+    :root[data-theme="light"] {
+      --bg: #fbeedc;
+      --bg-2: #f5e3cb;
+      --surface: #fff8ee;
+      --surface-2: #f7ead6;
+      --line: rgba(62, 43, 34, .18);
+      --line-soft: rgba(62, 43, 34, .1);
+      --ink: #2e1d14;
+      --text: #4a362a;
+      --muted: #7a6353;
+      --muted-2: #96806e;
+      --hero-glow: rgba(201, 168, 118, .5);
+      --hero-glow-2: rgba(157, 19, 14, .1);
+      --card-shadow: 0 40px 90px -46px rgba(62, 43, 34, .5);
+      --marquee-bg: #2e1d14;
+      --wa-shadow: rgba(37, 211, 102, .45);
+      --accent-soft: #9d130e;
+    }
+
+    /* ---------- Reset / base ---------- */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: 1rem;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      transition: background-color .45s var(--ease), color .45s var(--ease);
+    }
+    body.no-scroll { overflow: hidden; }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; }
+    ::selection { background: var(--accent); color: #fff6ea; }
+    :focus-visible { outline: 2px solid var(--accent-soft); outline-offset: 3px; border-radius: 4px; }
+
+    h1, h2, h3 {
+      font-family: var(--font-display);
+      font-weight: 560;
+      line-height: 1.02;
+      letter-spacing: -.02em;
+      margin: 0;
+      color: var(--ink);
+      text-wrap: balance;
+    }
+    p { margin: 0; }
+
+    ::-webkit-scrollbar { width: 12px; }
+    ::-webkit-scrollbar-track { background: var(--bg-2); }
+    ::-webkit-scrollbar-thumb { background: var(--surface-2); border-radius: 8px; border: 2px solid var(--bg-2); }
+    ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+    .skip-link {
+      position: absolute; left: 16px; top: -60px; z-index: 120;
+      background: var(--accent); color: #fff6ea;
+      font: 700 .85rem var(--font-body); padding: 10px 18px; border-radius: var(--radius-sm);
+      text-decoration: none; transition: top .2s var(--ease);
+    }
+    .skip-link:focus { top: 12px; }
+
+    .container { width: min(1240px, 100% - 48px); margin-inline: auto; }
+    .section { padding-block: clamp(84px, 11vw, 150px); position: relative; scroll-margin-top: var(--header-h); }
+
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 12px;
+      font: 600 .76rem/1 var(--font-body);
+      letter-spacing: .3em; text-transform: uppercase;
+      color: var(--accent-soft);
+      margin-bottom: 22px;
+    }
+    .eyebrow::before { content: ""; width: 34px; height: 2px; background: var(--accent); border-radius: 2px; }
+
+    .section-head { max-width: 760px; margin-bottom: clamp(40px, 6vw, 72px); }
+    .section-title { font-size: clamp(2.3rem, 5.6vw, 4.2rem); }
+    .section-title em {
+      font-style: italic; font-weight: 480;
+      color: var(--accent-soft);
+    }
+    .section-sub { color: var(--muted); margin-top: 20px; font-size: clamp(1rem, 1.5vw, 1.12rem); max-width: 58ch; }
+
+    /* ---------- Barra de progresso do scroll ---------- */
+    .scroll-progress {
+      position: fixed; top: 0; left: 0; z-index: 110;
+      height: 3px; width: 100%;
+      transform-origin: left; transform: scaleX(0);
+      background: linear-gradient(90deg, var(--accent), var(--kraft));
+      pointer-events: none;
+    }
+
+    /* ---------- Botões ---------- */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      min-height: 56px; padding: 0 30px;
+      border-radius: 999px; border: 1px solid transparent;
+      font: 600 .9rem/1 var(--font-body);
+      letter-spacing: .06em;
+      text-decoration: none; cursor: pointer; white-space: nowrap;
+      transition: transform .25s var(--ease), box-shadow .3s var(--ease),
+                  background-color .25s var(--ease), border-color .25s var(--ease), color .25s var(--ease);
+    }
+    .btn svg { width: 18px; height: 18px; flex: none; }
+    .btn-primary {
+      background: var(--accent); color: #fff6ea;
+      box-shadow: 0 16px 40px -14px rgba(157, 19, 14, .75);
+    }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 22px 52px -14px rgba(157, 19, 14, .9); }
+    .btn-primary:active { transform: translateY(0) scale(.97); }
+    .btn-ghost { background: transparent; color: var(--ink); border-color: var(--line); }
+    .btn-ghost:hover { border-color: var(--accent-soft); color: var(--accent-soft); transform: translateY(-3px); }
+    .btn-ghost:active { transform: translateY(0) scale(.97); }
+    .btn-sm { min-height: 46px; padding: 0 22px; font-size: .8rem; }
+
+    /* ---------- Header ---------- */
+    .header {
+      position: fixed; inset-inline: 0; top: 0; z-index: 100;
+      transition: background-color .35s var(--ease), border-color .35s var(--ease), box-shadow .35s var(--ease);
+      border-bottom: 1px solid transparent;
+    }
+    .header.is-scrolled {
+      background: color-mix(in srgb, var(--bg) 86%, transparent);
+      -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px);
+      border-color: var(--line-soft);
+      box-shadow: 0 18px 50px -30px rgba(0, 0, 0, .55);
+    }
+    .header-inner { display: flex; align-items: center; gap: 26px; height: var(--header-h); }
+
+    .logo { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; }
+    .logo-mark {
+      width: 44px; height: 44px; flex: none; object-fit: contain; border-radius: 50%;
+      transition: transform .5s var(--ease);
+    }
+    .logo:hover .logo-mark { transform: rotate(14deg) scale(1.06); }
+    .logo-text { display: flex; flex-direction: column; line-height: 1; }
+    .logo-name { font: 600 1.16rem var(--font-display); letter-spacing: .02em; color: var(--ink); }
+    .logo-tag {
+      font: 600 .55rem var(--font-body);
+      letter-spacing: .4em; text-transform: uppercase;
+      color: var(--accent-soft); margin-top: 5px;
+    }
+
+    .nav { margin-left: auto; }
+    .nav-list { display: flex; gap: clamp(18px, 2.4vw, 34px); list-style: none; margin: 0; padding: 0; }
+    .nav-link {
+      position: relative; text-decoration: none;
+      font: 500 .8rem/1 var(--font-body);
+      letter-spacing: .16em; text-transform: uppercase;
+      color: var(--muted); padding: 8px 0;
+      transition: color .2s var(--ease);
+    }
+    .nav-link::after {
+      content: ""; position: absolute; left: 0; bottom: 0;
+      width: 100%; height: 2px; border-radius: 2px;
+      background: linear-gradient(90deg, var(--accent), var(--kraft));
+      transform: scaleX(0); transform-origin: left;
+      transition: transform .3s var(--ease);
+    }
+    .nav-link:hover, .nav-link.is-active { color: var(--ink); }
+    .nav-link:hover::after, .nav-link.is-active::after { transform: scaleX(1); }
+
+    .header-actions { display: flex; align-items: center; gap: 12px; }
+    .theme-toggle {
+      width: 46px; height: 46px; border-radius: 50%;
+      border: 1px solid var(--line); background: transparent; color: var(--ink);
+      display: grid; place-items: center; cursor: pointer;
+      transition: transform .3s var(--ease), border-color .2s var(--ease), color .2s var(--ease);
+    }
+    .theme-toggle:hover { transform: rotate(28deg) scale(1.06); border-color: var(--accent-soft); color: var(--accent-soft); }
+    .theme-toggle svg { width: 20px; height: 20px; }
+    :root[data-theme="dark"] .theme-icon-moon { display: none; }
+    :root[data-theme="light"] .theme-icon-sun { display: none; }
+
+    .menu-toggle {
+      display: none; margin-left: auto;
+      width: 48px; height: 48px; border-radius: var(--radius-sm);
+      background: transparent; border: 1px solid var(--line); cursor: pointer;
+      position: relative;
+    }
+    .menu-toggle span {
+      position: absolute; left: 13px; right: 13px; height: 1.8px; border-radius: 2px;
+      background: var(--ink); transition: transform .3s var(--ease), opacity .2s var(--ease), top .3s var(--ease);
+    }
+    .menu-toggle span:nth-child(1) { top: 17px; }
+    .menu-toggle span:nth-child(2) { top: 23px; }
+    .menu-toggle span:nth-child(3) { top: 29px; }
+    .menu-toggle[aria-expanded="true"] span:nth-child(1) { top: 23px; transform: rotate(45deg); }
+    .menu-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+    .menu-toggle[aria-expanded="true"] span:nth-child(3) { top: 23px; transform: rotate(-45deg); }
+
+    .mobile-menu {
+      position: fixed; inset: 0; z-index: 90;
+      background: color-mix(in srgb, var(--bg) 97%, transparent);
+      -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px);
+      display: flex; flex-direction: column; justify-content: center;
+      padding: calc(var(--header-h) + 24px) 28px 40px;
+      opacity: 0; visibility: hidden; transform: translateY(-14px);
+      transition: opacity .35s var(--ease), transform .35s var(--ease), visibility .35s;
+    }
+    .mobile-menu.is-open { opacity: 1; visibility: visible; transform: translateY(0); }
+    .mobile-menu-list { list-style: none; margin: 0 0 36px; padding: 0; display: flex; flex-direction: column; }
+    .mobile-menu-list a {
+      display: block; padding: 15px 4px;
+      font: 500 clamp(1.9rem, 8vw, 2.6rem) var(--font-display);
+      text-decoration: none; color: var(--ink);
+      border-bottom: 1px solid var(--line-soft);
+      transition: color .2s var(--ease), padding-left .25s var(--ease);
+    }
+    .mobile-menu-list a:hover { color: var(--accent-soft); padding-left: 14px; }
+    .mobile-menu-cta { display: grid; gap: 14px; }
+    .mobile-menu-note { margin-top: 22px; font: 400 .82rem/1.6 var(--font-body); color: var(--muted-2); }
+
+    /* ---------- HERO (espetáculo) ---------- */
+    .hero {
+      position: relative; min-height: 100svh;
+      display: flex; align-items: center;
+      padding-top: calc(var(--header-h) + 30px); padding-bottom: 120px;
+      overflow: hidden;
+      background:
+        radial-gradient(58% 46% at 78% 26%, var(--hero-glow), transparent 70%),
+        radial-gradient(50% 42% at 10% 92%, var(--hero-glow-2), transparent 72%),
+        var(--bg);
+    }
+    .hero-photo {
+      position: absolute; inset: 0; z-index: 0;
+      overflow: hidden; opacity: .17;
+    }
+    .hero-photo img {
+      width: 100%; height: 100%; object-fit: cover;
+      filter: saturate(.72);
+      animation: kenburns 26s var(--ease) infinite alternate;
+    }
+    :root[data-theme="light"] .hero-photo { opacity: .13; }
+    @keyframes kenburns {
+      from { transform: scale(1) translateY(0); }
+      to   { transform: scale(1.14) translateY(-3%); }
+    }
+    @media (prefers-reduced-motion: reduce) { .hero-photo img { animation: none; } }
+    .hero::after {
+      content: ""; position: absolute; inset-inline: 0; bottom: 0; height: 160px; z-index: 1;
+      background: linear-gradient(to bottom, transparent, var(--bg));
+      pointer-events: none;
+    }
+    .hero .container { position: relative; z-index: 2; }
+
+    .hero-title {
+      font-size: clamp(3rem, 8.6vw, 6.6rem);
+      font-weight: 480;
+    }
+    .hero-title .line { display: block; overflow: hidden; }
+    .hero-title .line > span {
+      display: inline-block;
+      transform: translateY(110%);
+      animation: riseIn 1s var(--ease-out) forwards;
+      animation-delay: calc(.15s + var(--i, 0) * .14s);
+    }
+    @keyframes riseIn { to { transform: translateY(0); } }
+    .hero-title .italic-accent {
+      font-style: italic; font-weight: 420;
+      background: linear-gradient(96deg, var(--accent) 8%, var(--kraft) 46%, var(--accent-soft) 82%);
+      background-size: 220% 100%;
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+      animation: shimmerText 7s var(--ease) infinite alternate;
+      padding-right: .06em;
+    }
+    @keyframes shimmerText { from { background-position: 0% 50%; } to { background-position: 100% 50%; } }
+    @media (prefers-reduced-motion: reduce) {
+      .hero-title .line > span { animation: none; transform: none; }
+      .hero-title .italic-accent { animation: none; }
+    }
+
+    .hero-sub {
+      color: var(--muted);
+      font-size: clamp(1.02rem, 1.7vw, 1.2rem);
+      max-width: 50ch; margin-top: 30px;
+      opacity: 0; transform: translateY(18px);
+      animation: fadeUp .9s var(--ease) .62s forwards;
+    }
+    .hero-actions {
+      display: flex; flex-wrap: wrap; gap: 14px; margin-top: 40px;
+      opacity: 0; transform: translateY(18px);
+      animation: fadeUp .9s var(--ease) .74s forwards;
+    }
+    @keyframes fadeUp { to { opacity: 1; transform: none; } }
+    .hero-meta {
+      display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px;
+      margin-top: 40px;
+      font: 500 .8rem/1.5 var(--font-body);
+      letter-spacing: .12em; text-transform: uppercase; color: var(--muted-2);
+      opacity: 0; animation: fadeUp .9s var(--ease) .86s forwards;
+    }
+    .hero-meta .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--kraft); }
+
+    .hero-steam {
+      position: absolute; right: clamp(6px, 6vw, 120px); bottom: 90px; z-index: 2;
+      width: clamp(120px, 18vw, 220px); opacity: .9;
+      pointer-events: none;
+    }
+    .steam-line {
+      fill: none; stroke: var(--muted); stroke-width: 2.4; stroke-linecap: round;
+      opacity: 0;
+      animation: steam 3.6s ease-in-out infinite;
+    }
+    .steam-line.s2 { animation-delay: 1.2s; }
+    .steam-line.s3 { animation-delay: 2.4s; }
+    @keyframes steam {
+      0%   { opacity: 0; transform: translateY(6px) scaleY(.8); }
+      35%  { opacity: .5; }
+      100% { opacity: 0; transform: translateY(-26px) scaleY(1.15) translateX(6px); }
+    }
+    @media (prefers-reduced-motion: reduce) { .steam-line { animation: none; opacity: .35; } }
+
+    .hero-scroll {
+      position: absolute; left: 50%; bottom: 26px; z-index: 2;
+      transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 8px;
+      font: 600 .64rem/1 var(--font-body); letter-spacing: .3em; text-transform: uppercase;
+      color: var(--muted-2); text-decoration: none;
+    }
+    .hero-scroll::after {
+      content: ""; width: 1.5px; height: 42px;
+      background: linear-gradient(var(--accent-soft), transparent);
+      animation: scrollPulse 2s var(--ease) infinite;
+    }
+    @keyframes scrollPulse { 0%, 100% { transform: scaleY(.5); opacity: .5; } 50% { transform: scaleY(1); opacity: 1; } }
+
+    .bean { position: absolute; z-index: 1; pointer-events: none; opacity: .5; }
+    .bean svg { width: 100%; height: 100%; }
+    .bean.b1 { width: 54px; top: 22%; left: 6%; animation: floatBean 9s ease-in-out infinite; }
+    .bean.b2 { width: 34px; top: 64%; left: 44%; animation: floatBean 11s ease-in-out 1.4s infinite; }
+    .bean.b3 { width: 44px; top: 34%; right: 8%; animation: floatBean 10s ease-in-out .7s infinite; }
+    @keyframes floatBean {
+      0%, 100% { transform: translateY(0) rotate(-8deg); }
+      50% { transform: translateY(-22px) rotate(10deg); }
+    }
+    @media (prefers-reduced-motion: reduce) { .bean { animation: none; } }
+    @media (max-width: 860px) { .hero-steam, .bean { display: none; } }
+
+    /* ---------- MARQUEE gigante ---------- */
+    .marquee {
+      position: relative; z-index: 3;
+      background: var(--marquee-bg);
+      color: #f7ecd9;
+      border-block: 1px solid var(--line-soft);
+      overflow: hidden;
+      padding-block: clamp(18px, 3vw, 30px);
+      transform: rotate(-1.2deg) scale(1.02);
+    }
+    .marquee-track {
+      display: flex; width: max-content;
+      animation: marquee 30s linear infinite;
+      font: 480 clamp(1.7rem, 4.2vw, 3rem) var(--font-display);
+      letter-spacing: .01em; white-space: nowrap;
+    }
+    .marquee-track em { font-style: italic; color: var(--kraft); }
+    .marquee-track .sep { margin-inline: clamp(20px, 3vw, 42px); color: var(--accent-soft); }
+    @keyframes marquee { to { transform: translateX(-50%); } }
+    @media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } }
+
+    /* ---------- SOBRE ---------- */
+    .about-grid { display: grid; grid-template-columns: .92fr 1.08fr; gap: clamp(40px, 6vw, 90px); align-items: center; }
+    .about-visual { position: relative; }
+    .about-visual::before {
+      content: ""; position: absolute; inset: -8% -6% 12% 30%;
+      background: radial-gradient(60% 60% at 50% 50%, var(--hero-glow), transparent 70%);
+      z-index: 0;
+    }
+    .about-frame {
+      position: relative; z-index: 1;
+      border-radius: 30px; overflow: hidden;
+      box-shadow: var(--card-shadow);
+      transform: rotate(-1.6deg);
+      transition: transform .6s var(--ease);
+    }
+    .about-frame:hover { transform: rotate(0deg) scale(1.01); }
+    .about-frame img { width: 100%; height: clamp(400px, 48vw, 600px); object-fit: cover; }
+    .about-stamp {
+      position: absolute; z-index: 2;
+      right: -14px; bottom: 34px;
+      width: clamp(110px, 12vw, 140px); aspect-ratio: 1; border-radius: 50%;
+      background: var(--accent); color: #fff6ea;
+      display: grid; place-items: center; text-align: center;
+      font: 700 .62rem/1.5 var(--font-body); letter-spacing: .14em; text-transform: uppercase;
+      box-shadow: 0 24px 50px -18px rgba(157, 19, 14, .8);
+      animation: stampSpin 14s linear infinite;
+    }
+    @keyframes stampSpin {
+      /* gira suave e volta — selo vivo */
+      0%, 84% { transform: rotate(0); }
+      92% { transform: rotate(8deg); }
+      100% { transform: rotate(0); }
+    }
+    .about-copy .lead { font-size: clamp(1.05rem, 1.6vw, 1.18rem); color: var(--text); margin-top: 22px; }
+    .about-points { list-style: none; margin: 30px 0 0; padding: 0; display: grid; gap: 16px; }
+    .about-points li {
+      display: flex; gap: 14px; align-items: flex-start;
+      color: var(--muted); font-size: .98rem;
+      padding: 14px 18px;
+      background: color-mix(in srgb, var(--surface) 72%, transparent);
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius-sm);
+      transition: transform .25s var(--ease), border-color .25s var(--ease);
+    }
+    .about-points li:hover { transform: translateX(6px); border-color: var(--line); }
+    .about-points svg { width: 20px; height: 20px; flex: none; color: var(--accent-soft); margin-top: 3px; }
+
+    /* ---------- PRODUTOS ---------- */
+    .products-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(18px, 2.4vw, 28px); perspective: 1200px; }
+    .p-card {
+      position: relative;
+      background: var(--surface);
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius);
+      padding: 30px 28px 26px;
+      display: flex; flex-direction: column; gap: 12px;
+      transition: border-color .3s var(--ease), box-shadow .4s var(--ease);
+      transform-style: preserve-3d;
+      will-change: transform;
+    }
+    .p-card:hover { border-color: var(--line); box-shadow: var(--card-shadow); }
+    .p-card .glow {
+      position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
+      background: radial-gradient(300px circle at var(--mx, 50%) var(--my, 50%), rgba(201, 168, 118, .12), transparent 65%);
+      opacity: 0; transition: opacity .3s var(--ease);
+    }
+    .p-card:hover .glow { opacity: 1; }
+    .p-ico {
+      width: 56px; height: 56px; border-radius: 18px;
+      display: grid; place-items: center;
+      background: color-mix(in srgb, var(--accent) 12%, transparent);
+      color: var(--accent-soft);
+      transform: translateZ(30px);
+      transition: transform .35s var(--ease);
+    }
+    .p-card:hover .p-ico { transform: translateZ(44px) rotate(-6deg); }
+    .p-ico svg { width: 27px; height: 27px; }
+    .p-card h3 { font-size: 1.32rem; transform: translateZ(20px); }
+    .p-card p { color: var(--muted); font-size: .93rem; transform: translateZ(12px); }
+    .p-tag {
+      position: absolute; top: 22px; right: 22px;
+      font: 700 .62rem/1 var(--font-body); letter-spacing: .14em; text-transform: uppercase;
+      color: var(--accent-soft); background: color-mix(in srgb, var(--accent) 10%, transparent);
+      padding: 7px 12px; border-radius: 999px;
+    }
+    .p-price { margin-top: auto; padding-top: 14px; font: 600 .84rem var(--font-body); color: var(--muted); }
+    .p-price b { color: var(--accent-soft); }
+    .p-note { font: 400 .72rem/1.5 var(--font-body); color: var(--muted-2); }
+
+    /* ---------- NÚMEROS (faixa) ---------- */
+    .numbers { background: var(--marquee-bg); color: #f7ecd9; }
+    .numbers-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(24px, 4vw, 48px); text-align: center; }
+    .num .value {
+      font: 480 clamp(2.6rem, 6vw, 4.4rem)/1 var(--font-display);
+      color: #f7ecd9;
+      display: block;
+    }
+    .num .value i { font-style: normal; color: var(--kraft); }
+    .num .label {
+      margin-top: 12px; display: block;
+      font: 600 .72rem/1.4 var(--font-body);
+      letter-spacing: .22em; text-transform: uppercase;
+      color: #b39a80;
+    }
+    .num .bar {
+      width: 46px; height: 3px; border-radius: 3px;
+      background: linear-gradient(90deg, var(--accent), var(--kraft));
+      margin: 16px auto 0;
+    }
+
+    /* ---------- GALERIA ---------- */
+    .gallery-grid { display: grid; grid-template-columns: repeat(12, 1fr); grid-auto-rows: clamp(90px, 11vw, 150px); gap: clamp(14px, 1.8vw, 20px); }
+    .g-item {
+      position: relative; margin: 0; border-radius: var(--radius); overflow: hidden;
+      background: var(--surface);
+    }
+    .g-item--a { grid-column: span 7; grid-row: span 3; }
+    .g-item--b { grid-column: span 5; grid-row: span 2; }
+    .g-item--c { grid-column: span 5; grid-row: span 2; }
+    .g-item--d { grid-column: span 4; grid-row: span 2; }
+    .g-item--e { grid-column: span 8; grid-row: span 2; }
+    .g-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s var(--ease), filter .8s var(--ease); }
+    .g-item:hover img { transform: scale(1.06) rotate(.5deg); }
+    .g-item figcaption {
+      position: absolute; inset-inline: 0; bottom: 0;
+      padding: 54px 20px 16px;
+      background: linear-gradient(to top, rgba(18, 10, 5, .82), transparent);
+      color: #f7ecd9; font: 500 .84rem var(--font-body);
+      transform: translateY(8px); opacity: .92;
+      transition: transform .4s var(--ease), opacity .4s var(--ease);
+    }
+    .g-item:hover figcaption { transform: translateY(0); opacity: 1; }
+
+    /* ---------- CTA ---------- */
+    .cta { position: relative; overflow: hidden; background: var(--accent); color: #fff6ea; }
+    .cta::before {
+      content: ""; position: absolute; inset: 0;
+      background:
+        radial-gradient(46% 60% at 80% 20%, rgba(255, 246, 234, .16), transparent 70%),
+        radial-gradient(40% 50% at 12% 84%, rgba(42, 24, 15, .35), transparent 70%);
+    }
+    .cta .container { position: relative; text-align: center; }
+    .cta .eyebrow { color: #ffd9c9; justify-content: center; }
+    .cta .eyebrow::before { background: #ffd9c9; }
+    .cta-title { color: #fff6ea; font-size: clamp(2.4rem, 6vw, 4.6rem); }
+    .cta-title em { color: #ffe4d4; font-style: italic; }
+    .cta-sub { color: rgba(255, 246, 234, .82); margin: 22px auto 0; max-width: 54ch; }
+    .cta-actions { margin-top: 38px; display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+    .btn-wa {
+      background: var(--wa); color: #06331a;
+      box-shadow: 0 18px 46px -12px var(--wa-shadow);
+      animation: waPulse 2.6s var(--ease) infinite;
+    }
+    .btn-wa:hover { transform: translateY(-3px); animation-play-state: paused; }
+    @keyframes waPulse {
+      0%, 100% { box-shadow: 0 18px 46px -12px var(--wa-shadow), 0 0 0 0 rgba(37, 211, 102, .35); }
+      50% { box-shadow: 0 18px 46px -12px var(--wa-shadow), 0 0 0 16px rgba(37, 211, 102, 0); }
+    }
+    @media (prefers-reduced-motion: reduce) { .btn-wa { animation: none; } }
+    .btn-cream { background: #fff6ea; color: var(--accent); }
+    .btn-cream:hover { transform: translateY(-3px); box-shadow: 0 20px 44px -16px rgba(0, 0, 0, .4); }
+    .cta-note { margin-top: 20px; font: 400 .86rem var(--font-body); color: rgba(255, 246, 234, .75); }
+    .rating-card {
+      margin: 48px auto 0; max-width: 580px;
+      display: flex; align-items: center; gap: 22px;
+      background: rgba(42, 24, 15, .28);
+      border: 1px solid rgba(255, 246, 234, .22);
+      border-radius: var(--radius);
+      padding: 22px 28px;
+      text-align: left;
+      -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+    }
+    .rating-score { font: 480 2.6rem/1 var(--font-display); color: #fff6ea; }
+    .rating-score span { color: #ffd9c9; font-size: 1.7rem; margin-left: 4px; }
+    .rating-stars { display: inline-flex; gap: 3px; color: #ffd9c9; }
+    .rating-stars svg { width: 17px; height: 17px; }
+    .rating-meta { font: 400 .8rem/1.55 var(--font-body); color: rgba(255, 246, 234, .8); margin-top: 6px; }
+
+    /* ---------- CONTATO ---------- */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px, 3.4vw, 44px); align-items: stretch; }
+    .contact-card {
+      background: var(--surface);
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius);
+      padding: clamp(26px, 3.2vw, 40px);
+    }
+    .contact-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 24px; }
+    .contact-item { display: flex; gap: 16px; }
+    .contact-item-icon {
+      width: 48px; height: 48px; flex: none; border-radius: 16px;
+      display: grid; place-items: center;
+      background: color-mix(in srgb, var(--accent) 12%, transparent);
+      color: var(--accent-soft);
+      transition: transform .3s var(--ease);
+    }
+    .contact-item:hover .contact-item-icon { transform: rotate(-8deg) scale(1.05); }
+    .contact-item-icon svg { width: 22px; height: 22px; }
+    .contact-item h3 { font-size: 1.04rem; }
+    .contact-item p { color: var(--muted); font-size: .92rem; margin-top: 2px; }
+    .contact-item a { color: var(--accent-soft); font-weight: 600; text-decoration: none; }
+    .contact-item a:hover { text-decoration: underline; }
+    .contact-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .map-card {
+      position: relative; border-radius: var(--radius); overflow: hidden;
+      background:
+        radial-gradient(70% 60% at 72% 18%, var(--hero-glow), transparent 70%),
+        radial-gradient(60% 50% at 18% 88%, var(--hero-glow-2), transparent 70%),
+        var(--bg-2);
+      border: 1px solid var(--line-soft);
+      display: flex; flex-direction: column; justify-content: space-between;
+      padding: clamp(26px, 3.2vw, 40px); min-height: 340px;
+    }
+    .map-card h3 { font-size: clamp(1.5rem, 2.6vw, 2rem); max-width: 18ch; }
+    .map-card .origin { color: var(--muted); font-size: .95rem; margin-top: 12px; max-width: 42ch; }
+    .map-card .beans-line { font-size: 1.7rem; opacity: .5; letter-spacing: 12px; }
+
+    /* ---------- FOOTER ---------- */
+    .footer { background: var(--marquee-bg); color: #937a61; padding-block: 72px 34px; overflow: hidden; }
+    .footer-grid { display: grid; grid-template-columns: 1.25fr .65fr .95fr; gap: clamp(30px, 4vw, 60px); }
+    .footer h3 { color: #f7ecd9; font-size: 1rem; margin-bottom: 16px; }
+    .footer-logo img { width: 68px; height: 68px; border-radius: 50%; transition: transform .5s var(--ease); }
+    .footer-logo:hover img { transform: rotate(12deg); }
+    .footer-brand p { margin-top: 18px; font-size: .9rem; max-width: 42ch; }
+    .footer-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; font-size: .9rem; }
+    .footer-list a { text-decoration: none; color: #b39a80; transition: color .2s var(--ease), padding-left .2s var(--ease); }
+    .footer-list a:hover { color: #f7ecd9; padding-left: 6px; }
+    .footer-list svg { width: 15px; height: 15px; vertical-align: -2px; margin-right: 8px; }
+    .footer-word {
+      font: 480 clamp(3rem, 11vw, 9rem)/0.95 var(--font-display);
+      color: rgba(247, 236, 217, .06);
+      text-align: center; margin-top: clamp(40px, 6vw, 70px);
+      user-select: none; white-space: nowrap;
+    }
+    .footer-bottom {
+      margin-top: 30px; padding-top: 24px;
+      border-top: 1px solid rgba(247, 236, 217, .1);
+      display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+      font-size: .8rem; color: #937a61;
+    }
+
+    /* ---------- WhatsApp flutuante ---------- */
+    .wa-float {
+      position: fixed; right: 22px; bottom: 22px; z-index: 80;
+      width: 60px; height: 60px; border-radius: 50%;
+      background: var(--wa); color: #fff;
+      display: grid; place-items: center;
+      box-shadow: 0 16px 40px -12px var(--wa-shadow);
+      transition: transform .25s var(--ease);
+    }
+    .wa-float:hover { transform: translateY(-4px) scale(1.06); }
+    .wa-float svg { width: 29px; height: 29px; }
+
+    /* ---------- Reveal genérico ---------- */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .85s var(--ease), transform .85s var(--ease); transition-delay: var(--d, 0s); }
+    .reveal.is-in { opacity: 1; transform: none; }
+    .reveal-zoom { opacity: 0; transform: scale(.92); transition: opacity .9s var(--ease), transform .9s var(--ease); transition-delay: var(--d, 0s); }
+    .reveal-zoom.is-in { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal, .reveal-zoom { opacity: 1; transform: none; transition: none; }
+    }
+
+    /* ---------- Responsivo ---------- */
+    @media (max-width: 1020px) {
+      .products-grid { grid-template-columns: repeat(2, 1fr); }
+      .numbers-grid { grid-template-columns: repeat(2, 1fr); }
+      .g-item--a { grid-column: span 12; grid-row: span 2; }
+      .g-item--b, .g-item--c { grid-column: span 6; }
+      .g-item--d { grid-column: span 6; }
+      .g-item--e { grid-column: span 12; grid-row: span 2; }
+    }
+    @media (max-width: 860px) {
+      .nav, .header-actions { display: none; }
+      .menu-toggle { display: block; }
+      .hero { min-height: auto; }
+      .about-grid, .contact-grid { grid-template-columns: 1fr; }
+      .about-visual { order: -1; }
+      .about-frame img { height: clamp(300px, 62vw, 440px); }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 560px) {
+      .container { width: calc(100% - 32px); }
+      .products-grid { grid-template-columns: 1fr; }
+      .numbers-grid { grid-template-columns: 1fr 1fr; gap: 34px; }
+      .g-item--b, .g-item--c, .g-item--d { grid-column: span 12; }
+      .cta-actions .btn { width: 100%; }
+      .rating-card { flex-direction: column; text-align: center; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a class="logo" href="#inicio" aria-label="Maria Cecília Cafés Especiais — voltar ao início">
+        <!-- LOGO: variante do perfil do Instagram (2026-11-22). A CONFIRMAR: versão oficial não-sazonal em alta. -->
+        <img class="logo-mark" src="logo.jpg" alt="Logo Maria Cecília Cafés Especiais" width="44" height="44">
+        <span class="logo-text">
+          <span class="logo-name">Maria Cecília</span>
+          <span class="logo-tag">Cafés Especiais</span>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Navegação principal">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="#inicio">Início</a></li>
+          <li><a class="nav-link" href="#produtos">Cafés</a></li>
+          <li><a class="nav-link" href="#sobre">Sobre</a></li>
+          <li><a class="nav-link" href="#galeria">Galeria</a></li>
+          <li><a class="nav-link" href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Alternar tema claro/escuro" title="Alternar tema">
+          <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>
+          <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 13.2A8.6 8.6 0 1110.8 3a7 7 0 0010.2 10.2z"/></svg>
+        </button>
+        <a class="btn btn-primary btn-sm js-wa" data-msg="Olá! Vim pelo site e quero encomendar cafés da Maria Cecília. ☕" href="https://wa.me/5535991607419" target="_blank" rel="noopener">Encomendar</a>
+      </div>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Menu mobile -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <nav aria-label="Menu mobile">
+      <ul class="mobile-menu-list">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#produtos">Cafés</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-menu-cta">
+      <a class="btn btn-primary js-wa" data-msg="Olá! Vim pelo site e quero encomendar cafés da Maria Cecília. ☕" href="https://wa.me/5535991607419" target="_blank" rel="noopener">Encomendar pelo WhatsApp</a>
+      <a class="btn btn-ghost" href="https://www.instagram.com/mariaceciliacafesespeciais/" target="_blank" rel="noopener">@mariaceciliacafesespeciais</a>
+    </div>
+    <p class="mobile-menu-note">Encomendas respondidas no WhatsApp • Muzambinho, Sul de Minas — MG</p>
+  </div>
+
+  <main id="main">
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="inicio">
+      <!-- FONTE: reels oficial do Instagram @mariaceciliacafesespeciais (19/11/2026) -->
+      <div class="hero-photo" aria-hidden="true">
+        <img src="foto-metodo.jpg" alt="" width="360" height="640" fetchpriority="high" decoding="async">
+      </div>
+
+      <svg class="bean b1" viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="32" rx="20" ry="28" fill="var(--kraft)" transform="rotate(-18 32 32)"/><path d="M20 14c8 10 8 26 0 36M44 14c-8 10-8 26 0 36" stroke="var(--marquee-bg)" stroke-width="4" fill="none" transform="rotate(-18 32 32)"/></svg>
+      <svg class="bean b2" viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="32" rx="20" ry="28" fill="var(--accent)" transform="rotate(14 32 32)"/><path d="M20 14c8 10 8 26 0 36M44 14c-8 10-8 26 0 36" stroke="var(--marquee-bg)" stroke-width="4" fill="none" transform="rotate(14 32 32)"/></svg>
+      <svg class="bean b3" viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="32" rx="20" ry="28" fill="var(--kraft)" transform="rotate(30 32 32)"/><path d="M20 14c8 10 8 26 0 36M44 14c-8 10-8 26 0 36" stroke="var(--marquee-bg)" stroke-width="4" fill="none" transform="rotate(30 32 32)"/></svg>
+
+      <div class="container">
+        <p class="eyebrow reveal is-in" style="opacity:0; animation: fadeUp .8s var(--ease) .1s forwards">Muzambinho · Sul de Minas — MG</p>
+        <h1 class="hero-title">
+          <span class="line"><span style="--i:0">O café que</span></span>
+          <span class="line"><span style="--i:1">acorda <span class="italic-accent">antes</span></span></span>
+          <span class="line"><span style="--i:2">de você.</span></span>
+        </h1>
+        <p class="hero-sub">
+          Café especial 100% Arábica, torra fresca e grãos selecionados do Sul de
+          Minas — feito sob encomenda pela Maria Cecília e enviado do jeito que
+          você toma: grãos, moído, drip, cappuccino ou cápsulas.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary js-wa" data-msg="Olá! Vim pelo site e quero encomendar cafés da Maria Cecília. ☕" href="https://wa.me/5535991607419" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            Encomendar pelo WhatsApp
+          </a>
+          <a class="btn btn-ghost" href="#produtos">Conhecer os cafés</a>
+        </div>
+        <p class="hero-meta">
+          <span>100% Arábica</span><span class="dot" aria-hidden="true"></span>
+          <span>Torra fresca</span><span class="dot" aria-hidden="true"></span>
+          <span>Sob encomenda</span><span class="dot" aria-hidden="true"></span>
+          <span>Envios</span>
+        </p>
+      </div>
+
+      <svg class="hero-steam" viewBox="0 0 200 150" aria-hidden="true">
+        <path class="steam-line s1" d="M70 110c-8-14 8-22 0-36s8-22 0-36"/>
+        <path class="steam-line s2" d="M100 112c-9-16 9-24 0-40s9-24 0-40"/>
+        <path class="steam-line s3" d="M130 110c-8-14 8-22 0-36s8-22 0-36"/>
+        <path d="M45 118h110l-9 24a10 10 0 01-9 6H63a10 10 0 01-9-6z" fill="var(--surface-2)" stroke="var(--line)"/>
+        <path d="M155 124h10a10 10 0 010 20h-14" fill="none" stroke="var(--line)" stroke-width="3"/>
+      </svg>
+
+      <a class="hero-scroll" href="#produtos">Desce o café</a>
+    </section>
+
+    <!-- ================= MARQUEE ================= -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Café especial</span><span class="sep">●</span>
+        <span><em>100% Arábica</em></span><span class="sep">●</span>
+        <span>Torra fresca</span><span class="sep">●</span>
+        <span><em>Sul de Minas</em></span><span class="sep">●</span>
+        <span>Café especial</span><span class="sep">●</span>
+        <span><em>100% Arábica</em></span><span class="sep">●</span>
+        <span>Torra fresca</span><span class="sep">●</span>
+        <span><em>Sul de Minas</em></span><span class="sep">●</span>
+      </div>
+    </div>
+
+    <!-- ================= SOBRE ================= -->
+    <section class="section" id="sobre">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-visual reveal-zoom">
+            <!-- FONTE: post oficial do Instagram @mariaceciliacafesespeciais -->
+            <div class="about-frame">
+              <img src="foto-embalagens.jpg" alt="Pacotes de café especial Maria Cecília 100% Arábica de 500g" width="615" height="614" loading="lazy" decoding="async">
+            </div>
+            <div class="about-stamp" aria-hidden="true">Café<br>100%<br>Arábica</div>
+          </div>
+          <div class="about-copy">
+            <p class="eyebrow reveal">Nossa história</p>
+            <h2 class="section-title reveal" style="--d:.05s">Do Sul de Minas,<br><em>pra sua xícara</em>.</h2>
+            <p class="lead reveal" style="--d:.1s">
+              A Maria Cecília Cafés Especiais nasce na região que produz o melhor
+              café do Brasil: o Sul de Minas. São grãos selecionados, torra fresca
+              e um cuidado artesanal que a gente enxerga em cada detalhe — da
+              etiqueta desenhada à mão ao cheiro do pacote recém-aberto.
+            </p>
+            <ul class="about-points">
+              <li class="reveal" style="--d:.16s">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+                <span><strong>100% Arábica</strong> — só grãos especiais, sem mistura com robusta.</span>
+              </li>
+              <li class="reveal" style="--d:.22s">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+                <span><strong>Torra fresca</strong> — torrado e enviado sob encomenda, nunca parado em prateleira.</span>
+              </li>
+              <li class="reveal" style="--d:.28s">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+                <span><strong>Artesanal de verdade</strong> — produção em microlotes com identidade própria.</span>
+              </li>
+              <li class="reveal" style="--d:.34s">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+                <span><strong>Do jeito que você toma</strong> — grãos, moído, drip, cappuccino ou cápsulas.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PRODUTOS ================= -->
+    <section class="section" id="produtos" style="padding-top: 0;">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow reveal">Nossa linha</p>
+          <h2 class="section-title reveal" style="--d:.05s">O café perfeito para <em>cada momento</em> do seu dia.</h2>
+          <p class="section-sub reveal" style="--d:.1s">
+            Da linha completa de grãos ao kit para presentear — encomende pelo
+            WhatsApp e receba com a torra fresquinha.
+          </p>
+        </div>
+        <div class="products-grid">
+          <!-- Preço de referência R$ 48,50: loja.muzambinho.com em 2026-11-22 (EDITÁVEL —
+               confirmar tabela de preços com o cliente antes de publicar) -->
+          <article class="p-card reveal">
+            <span class="glow" aria-hidden="true"></span>
+            <div class="p-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="5" ry="2.6"/><path d="M7 6v6c0 1.4 2.2 2.6 5 2.6s5-1.2 5-2.6V6"/><path d="M7 12v6c0 1.4 2.2 2.6 5 2.6s5-1.2 5-2.6v-6"/></svg>
+            </div>
+            <h3>Café em grãos</h3>
+            <p>100% Arábica, torra média-clara. Para moer na hora e extrair o melhor de cada xícara.</p>
+            <p class="p-tag">250g · 500g</p>
+            <p class="p-price">A partir de <b>R$ 48,50</b></p>
+          </article>
+          <article class="p-card reveal" style="--d:.06s">
+            <span class="glow" aria-hidden="true"></span>
+            <div class="p-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19h16"/><path d="M6 19c0-4 1.5-8 4-10"/><path d="M18 19c0-4-1.5-8-4-10"/><path d="M12 11c-1.2-1.2-1.2-3 0-4.2M12 11c1.2-1.2 1.2-3 0-4.2"/></svg>
+            </div>
+            <h3>Café moído</h3>
+            <p>Moagem pensada para o seu método: coado, prensado ou máquina. Pronto pra preparar.</p>
+            <p class="p-tag">250g · 500g</p>
+            <p class="p-price">Moído na hora do envio</p>
+          </article>
+          <article class="p-card reveal" style="--d:.12s">
+            <span class="glow" aria-hidden="true"></span>
+            <div class="p-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 9h11v6a5 5 0 01-5 5h-1a5 5 0 01-5-5V9z"/><path d="M16 10h2a2.5 2.5 0 010 5h-2"/><path d="M8 5c0 1 .8 1.2.8 2M11.5 4c0 1 .8 1.2.8 2"/></svg>
+            </div>
+            <h3>Cappuccino artesanal</h3>
+            <p>Mistura cremosa para o preparo perfeito — 200g. O abraço em forma de xícara.</p>
+            <p class="p-tag">200g</p>
+            <p class="p-price">Encomenda pelo WhatsApp</p>
+          </article>
+          <article class="p-card reveal" style="--d:.18s">
+            <span class="glow" aria-hidden="true"></span>
+            <div class="p-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h10l1.5 7a3.5 3.5 0 01-3.4 4.2H8.9A3.5 3.5 0 015.5 10L7 3z"/><path d="M12 17.5V21"/><path d="M9 21h6"/></svg>
+            </div>
+            <h3>Café drip</h3>
+            <p>Filtro pronto: a praticidade do café especial em qualquer lugar. Só despejar a água.</p>
+            <p class="p-tag">Filtro pronto</p>
+            <p class="p-price">Encomenda pelo WhatsApp</p>
+          </article>
+          <article class="p-card reveal" style="--d:.24s">
+            <span class="glow" aria-hidden="true"></span>
+            <div class="p-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="7" width="14" height="13" rx="2"/><path d="M5 7c0-1.6 1.4-3 3-3h8c1.6 0 3 1.4 3 3"/><path d="M9 12h6"/></svg>
+            </div>
+            <h3>Cápsulas</h3>
+            <p>Praticidade sem abrir mão do especial: cápsulas compatíveis com torra média-clara.</p>
+            <p class="p-tag">Compatíveis</p>
+            <p class="p-price">Consulte sabores no WhatsApp</p>
+          </article>
+          <article class="p-card reveal" style="--d:.3s">
+            <span class="glow" aria-hidden="true"></span>
+            <div class="p-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="12" rx="2"/><path d="M12 8v12"/><path d="M8 4h.01M16 4h.01M12 3h.01"/><path d="M9 12h.01M15 12h.01"/></svg>
+            </div>
+            <h3>Kit degustação</h3>
+            <p>Vários cafés em porções de 200g para conhecer a linha inteira — e presentear quem você gosta.</p>
+            <p class="p-tag">Presente</p>
+            <p class="p-price">Montamos com você no WhatsApp</p>
+          </article>
+        </div>
+        <p class="p-note reveal" style="margin-top:20px">
+          Preço de referência do Café Especial 100% Arábica: R$ 48,50 (loja.muzambinho.com, 22/11/2026) —
+          <!-- EDITÁVEL: confirmar tabela de preços oficial com o cliente antes de publicar -->
+          demais valores sob consulta.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= NÚMEROS ================= -->
+    <section class="section numbers" aria-label="Números da marca" style="padding-block: clamp(60px, 8vw, 100px);">
+      <div class="container">
+        <div class="numbers-grid">
+          <div class="num reveal">
+            <span class="value"><i data-count="100">0</i>%</span>
+            <span class="label">Arábica</span>
+            <span class="bar" aria-hidden="true"></span>
+          </div>
+          <div class="num reveal" style="--d:.08s">
+            <span class="value"><i data-count="6">0</i></span>
+            <span class="label">Produtos na linha</span>
+            <span class="bar" aria-hidden="true"></span>
+          </div>
+          <div class="num reveal" style="--d:.16s">
+            <span class="value"><i data-count="1">0</i><i>.139</i></span>
+            <span class="label">Seguidores no Instagram</span>
+            <span class="bar" aria-hidden="true"></span>
+          </div>
+          <div class="num reveal" style="--d:.24s">
+            <span class="value">∞<i style="font-size:.4em; vertical-align:super"> torra</i></span>
+            <span class="label">Sempre fresca</span>
+            <span class="bar" aria-hidden="true"></span>
+          </div>
+        </div>
+        <p class="p-note reveal" style="text-align:center; margin-top:26px; color:#937a61">
+          Seguidores: perfil oficial @mariaceciliacafesespeciais (22/11/2026). Linha de produtos: posts oficiais da marca.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= GALERIA ================= -->
+    <section class="section" id="galeria">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow reveal">Galeria</p>
+          <h2 class="section-title reveal" style="--d:.05s">O café que a gente <em>faz</em>.</h2>
+          <!-- FOTOS OFICIAIS do Instagram @mariaceciliacafesespeciais (coletadas 2026-11-22) -->
+        </div>
+        <div class="gallery-grid">
+          <figure class="g-item g-item--a reveal-zoom">
+            <img src="foto-embalagens.jpg" alt="Pacotes 500g do Café Especial Maria Cecília 100% Arábica" width="615" height="614" loading="lazy" decoding="async">
+            <figcaption>Café Especial 100% Arábica — 500g</figcaption>
+          </figure>
+          <figure class="g-item g-item--b reveal-zoom" style="--d:.08s">
+            <img src="foto-metodo.jpg" alt="Café coado no método V60 com pacote Maria Cecília" width="360" height="640" loading="lazy" decoding="async">
+            <figcaption>Na hora do café</figcaption>
+          </figure>
+          <figure class="g-item g-item--c reveal-zoom" style="--d:.14s">
+            <img src="foto-kit.jpg" alt="Kit degustação de cafés especiais Maria Cecília com saches kraft" width="640" height="640" loading="lazy" decoding="async">
+            <figcaption>Kit degustação</figcaption>
+          </figure>
+          <figure class="g-item g-item--d reveal-zoom" style="--d:.2s">
+            <img src="foto-produtos.jpg" alt="Linha de produtos Maria Cecília: cappuccino kraft e pacotes com etiqueta vermelha" width="640" height="640" loading="lazy" decoding="async">
+            <figcaption>A linha completa</figcaption>
+          </figure>
+          <figure class="g-item g-item--e reveal-zoom" style="--d:.26s">
+            <img src="foto-embalagens.jpg" alt="Detalhe das embalagens do café especial Maria Cecília" width="615" height="614" loading="lazy" decoding="async">
+            <figcaption>Embalagem assinada pela marca</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CHAMADA COMERCIAL ================= -->
+    <section class="cta" aria-labelledby="cta-title">
+      <div class="container">
+        <p class="eyebrow reveal">Encomende o seu</p>
+        <h2 class="cta-title reveal" id="cta-title" style="--d:.05s">Bora preparar<br><em>um cafezinho</em>?</h2>
+        <p class="cta-sub reveal" style="--d:.1s">
+          Manda um oi no WhatsApp, conta qual café você toma e a gente monta seu
+          pedido — com a torra fresquinha.
+        </p>
+        <div class="cta-actions reveal" style="--d:.15s">
+          <a class="btn btn-wa js-wa" data-msg="Olá! Vim pelo site e quero encomendar cafés da Maria Cecília. ☕" href="https://wa.me/5535991607419" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            Encomendar pelo WhatsApp
+          </a>
+          <a class="btn btn-cream" href="https://www.instagram.com/mariaceciliacafesespeciais/" target="_blank" rel="noopener">Ver o Instagram</a>
+        </div>
+        <p class="cta-note reveal" style="--d:.2s">Encomendas respondidas direto no WhatsApp • Muzambinho, Sul de Minas — MG</p>
+
+        <!-- A CONFIRMAR: nota/nº de avaliações da ficha Google não coletados em 2026-11-22
+             (scraping bloqueado). Preencher na demo com o dono antes de publicar. -->
+        <div class="rating-card reveal" style="--d:.25s">
+          <p class="rating-score" aria-hidden="true">☕<span>+</span></p>
+          <div>
+            <div class="rating-stars" aria-label="Prova social — importar avaliações do Google">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.26 6.6.72-4.9 4.55 1.34 6.47L12 16.9 6.06 20l1.34-6.47-4.9-4.55 6.6-.72z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.26 6.6.72-4.9 4.55 1.34 6.47L12 16.9 6.06 20l1.34-6.47-4.9-4.55 6.6-.72z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.26 6.6.72-4.9 4.55 1.34 6.47L12 16.9 6.06 20l1.34-6.47-4.9-4.55 6.6-.72z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.26 6.6.72-4.9 4.55 1.34 6.47L12 16.9 6.06 20l1.34-6.47-4.9-4.55 6.6-.72z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.26 6.6.72-4.9 4.55 1.34 6.47L12 16.9 6.06 20l1.34-6.47-4.9-4.55 6.6-.72z"/></svg>
+            </div>
+            <p class="rating-meta">
+              <!-- EDITÁVEL: importar nota + nº de avaliações da ficha Google quando confirmados -->
+              Avaliações do Google e clientes que já tomam — prova social entra aqui
+              (A confirmar com a ficha da marca).
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= LOCALIZAÇÃO E CONTATO ================= -->
+    <section class="section" id="contato">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow reveal">Encomendas &amp; contato</p>
+          <h2 class="section-title reveal" style="--d:.05s">Fale <em>direto</em> com a gente.</h2>
+          <p class="section-sub reveal" style="--d:.1s">Somos de Muzambinho, no coração do Sul de Minas — e atendemos por encomenda no WhatsApp.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-card reveal">
+            <ul class="contact-list">
+              <li class="contact-item">
+                <span class="contact-item-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-7.6 7-12.5A7 7 0 005 8.5C5 13.4 12 21 12 21z"/><circle cx="12" cy="8.5" r="2.5"/></svg>
+                </span>
+                <div>
+                  <h3>De onde somos</h3>
+                  <!-- FONTE: bio do Instagram oficial ("📍Muzambinho • Sul de Minas", 2026-11-22).
+                       Endereço completo: A CONFIRMAR com o cliente antes de publicar. -->
+                  <p data-bind="city"></p>
+                </div>
+              </li>
+              <li class="contact-item">
+                <span class="contact-item-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>
+                </span>
+                <div>
+                  <h3>WhatsApp</h3>
+                  <!-- FONTE: bio do Instagram oficial (wa.me/5535991607419, 2026-11-22) -->
+                  <p><a class="js-wa" data-msg="Olá! Vim pelo site e quero encomendar cafés da Maria Cecília. ☕" href="https://wa.me/5535991607419" target="_blank" rel="noopener">(35) 99160-7419</a></p>
+                </div>
+              </li>
+              <li class="contact-item">
+                <span class="contact-item-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                </span>
+                <div>
+                  <h3>Encomendas</h3>
+                  <!-- Canal assíncrono — sem horário fixo confirmado (A CONFIRMAR na demo) -->
+                  <p data-bind="hours"></p>
+                  <p>Respondemos assim que der — torra fresca não tem pressa, mas tem prazo.</p>
+                </div>
+              </li>
+              <li class="contact-item">
+                <span class="contact-item-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".8" fill="currentColor" stroke="none"/></svg>
+                </span>
+                <div>
+                  <h3>Instagram</h3>
+                  <p><a href="https://www.instagram.com/mariaceciliacafesespeciais/" target="_blank" rel="noopener">@mariaceciliacafesespeciais</a></p>
+                </div>
+              </li>
+            </ul>
+            <div class="contact-actions">
+              <a class="btn btn-ghost" href="https://www.instagram.com/mariaceciliacafesespeciais/" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".8" fill="currentColor" stroke="none"/></svg>
+                Ver Instagram
+              </a>
+              <a class="btn btn-primary js-wa" data-msg="Olá! Vim pelo site e quero encomendar cafés da Maria Cecília. ☕" href="https://wa.me/5535991607419" target="_blank" rel="noopener">Encomendar agora</a>
+            </div>
+          </div>
+
+          <div class="map-card reveal" style="--d:.1s">
+            <div>
+              <p class="beans-line" aria-hidden="true">● ● ●</p>
+              <h3>Torrado em Muzambinho, Sul de Minas — MG.</h3>
+              <p class="origin">
+                Uma das regiões produtoras de café mais premiadas do Brasil. É daqui
+                que sai o seu café, com envio para onde você estiver.
+                <!-- EDITÁVEL: adicionar endereço completo + mapa quando confirmado com o cliente -->
+              </p>
+            </div>
+            <a class="btn btn-primary js-wa" data-msg="Olá! Vim pelo site e quero encomendar cafés da Maria Cecília. ☕" href="https://wa.me/5535991607419" target="_blank" rel="noopener">Fazer minha encomenda</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="footer-logo" href="#inicio" aria-label="Maria Cecília Cafés Especiais — voltar ao início">
+            <img src="logo.jpg" alt="Logo Maria Cecília Cafés Especiais" width="68" height="68" loading="lazy" decoding="async">
+          </a>
+          <p>Cafés especiais 100% Arábica com torra fresca, feitos em Muzambinho, Sul de Minas — MG. Grãos, moído, drip, cappuccino e cápsulas sob encomenda.</p>
+        </div>
+
+        <div>
+          <h3>Navegação</h3>
+          <ul class="footer-list">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#produtos">Cafés</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#galeria">Galeria</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Contato</h3>
+          <ul class="footer-list">
+            <!-- Dados verificados em 2026-11-22 (bio do Instagram oficial). Editáveis em CONFIG. -->
+            <li><span data-bind="city"></span></li>
+            <li><a class="js-wa" data-msg="Olá! Vim pelo site e quero encomendar cafés da Maria Cecília. ☕" href="https://wa.me/5535991607419" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>
+              (35) 99160-7419
+            </a></li>
+            <li><a href="https://www.instagram.com/mariaceciliacafesespeciais/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".8" fill="currentColor" stroke="none"/></svg>
+              @mariaceciliacafesespeciais
+            </a></li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="footer-word" aria-hidden="true">MARIA CECÍLIA</p>
+
+      <div class="footer-bottom">
+        <p>© <span id="year">2026</span> Maria Cecília Cafés Especiais. Todos os direitos reservados.</p>
+        <p>Café especial 100% Arábica — Muzambinho/Sul de Minas — MG</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botão flutuante WhatsApp -->
+  <a class="wa-float js-wa" data-msg="Olá! Vim pelo site e quero encomendar cafés da Maria Cecília. ☕" href="https://wa.me/5535991607419" target="_blank" rel="noopener" aria-label="Encomendar pelo WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  </a>
+
+  <script>
+  (() => {
+    'use strict';
+
+    /* ============================================================
+       CONFIGURAÇÃO GERAL — EDITE AQUI
+       ------------------------------------------------------------
+       Dados verificados em 2026-11-22 (bio do Instagram oficial):
+       - WhatsApp: wa.me/5535991607419 — confirmar posse na aprovação
+       - Cidade: Muzambinho • Sul de Minas/MG
+       - Horários e endereço completo: A CONFIRMAR com o cliente
+       ============================================================ */
+    const CONFIG = {
+      whatsappNumber: '5535991607419',
+      defaultMessage: 'Olá! Vim pelo site e quero encomendar cafés da Maria Cecília. ☕',
+      city: 'Muzambinho, Sul de Minas — MG',
+      hours: 'Encomendas todos os dias pelo WhatsApp',
+    };
+
+    /* ---------- Helpers ---------- */
+    const $ = (sel, ctx = document) => ctx.querySelector(sel);
+    const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
+    const waLink = (msg) => `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(msg || CONFIG.defaultMessage)}`;
+
+    /* ---------- Bind de dados editáveis ---------- */
+    $$('[data-bind]').forEach((el) => {
+      const key = el.getAttribute('data-bind');
+      if (CONFIG[key]) el.textContent = CONFIG[key];
+    });
+
+    /* ---------- Links de WhatsApp ---------- */
+    $$('.js-wa').forEach((a) => {
+      a.href = waLink(a.getAttribute('data-msg'));
+    });
+
+    /* ---------- Tema claro/escuro (demo: sem persistência) ---------- */
+    const themeBtn = $('#theme-toggle');
+    if (themeBtn) {
+      themeBtn.addEventListener('click', () => {
+        const root = document.documentElement;
+        const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        const meta = document.querySelector('meta[name="theme-color"]');
+        if (meta) meta.setAttribute('content', next === 'dark' ? '#1c0f08' : '#fbeedc');
+      });
+    }
+
+    /* ---------- Header inteligente + barra de progresso ---------- */
+    const header = $('#header');
+    const progress = $('#scroll-progress');
+    let ticking = false;
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        header.classList.toggle('is-scrolled', window.scrollY > 24);
+        const max = document.documentElement.scrollHeight - window.innerHeight;
+        progress.style.transform = `scaleX(${max > 0 ? window.scrollY / max : 0})`;
+        ticking = false;
+      });
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    /* ---------- Menu mobile ---------- */
+    const toggle = $('.menu-toggle');
+    const mobileMenu = $('#mobile-menu');
+    function setMenu(open) {
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+      mobileMenu.classList.toggle('is-open', open);
+      mobileMenu.setAttribute('aria-hidden', String(!open));
+      document.body.classList.toggle('no-scroll', open);
+    }
+    toggle.addEventListener('click', () => setMenu(toggle.getAttribute('aria-expanded') !== 'true'));
+    $$('#mobile-menu a').forEach((a) => a.addEventListener('click', () => setMenu(false)));
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('is-open')) {
+        setMenu(false);
+        toggle.focus();
+      }
+    });
+
+    /* ---------- Animações de entrada (reveal + zoom) ---------- */
+    const revealEls = $$('.reveal, .reveal-zoom');
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-in');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+      revealEls.forEach((el) => io.observe(el));
+    } else {
+      revealEls.forEach((el) => el.classList.add('is-in'));
+    }
+
+    /* ---------- Contadores ---------- */
+    const counters = $$('[data-count]');
+    const runCount = (el) => {
+      const target = parseInt(el.getAttribute('data-count'), 10) || 0;
+      const dur = 1400;
+      const t0 = performance.now();
+      const step = (t) => {
+        const p = Math.min(1, (t - t0) / dur);
+        el.textContent = String(Math.round(target * (1 - Math.pow(1 - p, 3))));
+        if (p < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    };
+    if ('IntersectionObserver' in window && counters.length) {
+      const cio = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            runCount(entry.target);
+            cio.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.6 });
+      counters.forEach((el) => cio.observe(el));
+    } else {
+      counters.forEach((el) => { el.textContent = el.getAttribute('data-count'); });
+    }
+
+    /* ---------- Tilt 3D + brilho nos cards de produto ---------- */
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!reduceMotion) {
+      $$('.p-card').forEach((card) => {
+        card.addEventListener('pointermove', (e) => {
+          const r = card.getBoundingClientRect();
+          const px = (e.clientX - r.left) / r.width;
+          const py = (e.clientY - r.top) / r.height;
+          card.style.transform = `rotateY(${(px - .5) * 7}deg) rotateX(${(.5 - py) * 7}deg) translateY(-4px)`;
+          const glow = card.querySelector('.glow');
+          if (glow) {
+            glow.style.setProperty('--mx', `${px * 100}%`);
+            glow.style.setProperty('--my', `${py * 100}%`);
+          }
+        });
+        card.addEventListener('pointerleave', () => {
+          card.style.transform = '';
+        });
+      });
+    }
+
+    /* ---------- Link ativo na navegação ---------- */
+    const navLinks = $$('.nav-link');
+    const sectionMap = new Map();
+    navLinks.forEach((link) => {
+      const id = link.getAttribute('href').slice(1);
+      const section = document.getElementById(id);
+      if (section) sectionMap.set(section, link);
+    });
+    if ('IntersectionObserver' in window && sectionMap.size) {
+      const navIo = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            navLinks.forEach((l) => l.classList.remove('is-active'));
+            const link = sectionMap.get(entry.target);
+            if (link) link.classList.add('is-active');
+          }
+        });
+      }, { rootMargin: '-40% 0px -55% 0px' });
+      sectionMap.forEach((_, section) => navIo.observe(section));
+    }
+
+    /* ---------- Ano automático ---------- */
+    $('#year').textContent = String(new Date().getFullYear());
+  })();
+  </script>
+</body>
+</html>

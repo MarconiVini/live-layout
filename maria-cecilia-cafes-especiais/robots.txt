@@ -1,0 +1,4 @@
+# DEMO PRIVADA — nada aqui pode ser rastreado, indexado ou usado para treinar IA.
+# Remover este arquivo quando o site for publicado de verdade.
+User-agent: *
+Disallow: /
