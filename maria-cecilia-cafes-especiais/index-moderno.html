@@ -127,7 +127,7 @@
 
     /* ---------- Reset / base ---------- */
     *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
     body {
       margin: 0;
       background: var(--bg);
@@ -752,6 +752,9 @@
       .g-item--b, .g-item--c, .g-item--d { grid-column: span 12; }
       .cta-actions .btn { width: 100%; }
       .rating-card { flex-direction: column; text-align: center; align-items: center; }
+      /* eyebrow cabe em uma linha no celular (sem órfão "— MG") */
+      .eyebrow { font-size: .7rem; letter-spacing: .18em; }
+      .eyebrow::before { width: 22px; }
     }
   </style>
 </head>
@@ -1342,8 +1345,10 @@
 
     /* ---------- Contadores ---------- */
     const counters = $$('[data-count]');
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const runCount = (el) => {
       const target = parseInt(el.getAttribute('data-count'), 10) || 0;
+      if (reduceMotion) { el.textContent = String(target); return; }
       const dur = 1400;
       const t0 = performance.now();
       const step = (t) => {
@@ -1367,9 +1372,9 @@
       counters.forEach((el) => { el.textContent = el.getAttribute('data-count'); });
     }
 
-    /* ---------- Tilt 3D + brilho nos cards de produto ---------- */
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (!reduceMotion) {
+    /* ---------- Tilt 3D + brilho nos cards de produto (só mouse) ---------- */
+    const canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+    if (!reduceMotion && canHover) {
       $$('.p-card').forEach((card) => {
         card.addEventListener('pointermove', (e) => {
           const r = card.getBoundingClientRect();
